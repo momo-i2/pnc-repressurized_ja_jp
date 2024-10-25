@@ -68,4 +68,8 @@ public class ConfigHolder {
         AerialInterfaceBlockEntity.clearDimensionBlacklist();
         PressureDisenchantingRecipe.clearCachedBlacklist();
     }
+
+    static void saveClient() {
+        configClientSpec.save();
+    }
 }

@@ -42,17 +42,21 @@ public class ConfigHelper {
         ConfigHolder.client.armor.wirePath.set(wirePath);
         ConfigHolder.client.armor.xRayEnabled.set(xRayEnabled);
         ConfigHolder.client.armor.pathUpdateSetting.set(pathUpdateSetting);
+        ConfigHolder.saveClient();
     }
 
     public static void setShowPressureNumerically(boolean numeric) {
         ConfigHolder.client.armor.showPressureNumerically.set(numeric);
+        ConfigHolder.saveClient();
     }
 
     public static void setShowEnchantGlint(boolean show) {
         ConfigHolder.client.armor.showEnchantGlint.set(show);
+        ConfigHolder.saveClient();
     }
 
     public static void setComponentInit(ComponentInit when) {
         ConfigHolder.client.armor.componentInitMessages.set(when);
+        ConfigHolder.saveClient();
     }
 }
