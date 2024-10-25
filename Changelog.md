@@ -8,10 +8,19 @@ Changes are in reverse chronological order; newest changes at the top.
 
 ## [8.2.1]
 
+### Added
+* Added `IGuiAnimatedStat#setOpeningPredicate` API method
+  * Allows extra control over when stat panels can expand
+* Added `ICommonArmorHandler#addMessage` API method
+  * Like `IClientArmorRegistry#addHUDMessage` but can be called on both client and server
+
 ### Fixed
 * Fixed some log spam for `SemiblockTracker: not overwriting existing semiblock` messages
   * Note: excessive logging is fixed but root cause has not been determined (I've never been able to reproduce the problem)
   * Messages are now only logged once per blockpos per server run
+* Fixed some armor GUI settings not saving when adjusted, e.g. upgrade active/inactive status reporting on armor startup
+* Fixed API and source jars not getting deployed to Maven
+* Fixed transitive dependencies getting included in published artifacts
 
 ## [8.2.0]
 

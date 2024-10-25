@@ -150,6 +150,8 @@ neoForge {
 }
 
 configurations {
+	compileClasspath.extendsFrom localImplementation
+	runtimeClasspath.extendsFrom localImplementation
 	runtimeClasspath.extendsFrom localRuntime
 }
 
@@ -157,9 +159,10 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0-M2'
 	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0-M2'
 
-	implementation("mcjty.theoneprobe:theoneprobe:${top_version}") {
-		exclude group: "net.minecraftforge", module: "forge"
-	}
+	localImplementation("mcjty.theoneprobe:theoneprobe:${top_version}")
+//			{
+//		exclude group: "net.minecraftforge", module: "forge"
+//	}
 
 	compileOnly("mezz.jei:jei-1.21.1-common-api:${jei_version}")
 	compileOnly("mezz.jei:jei-1.21.1-neoforge-api:${jei_version}")
@@ -175,19 +178,19 @@ dependencies {
 	compileOnly("vazkii.patchouli:Patchouli:${patchouli_version}:api")
 	localRuntime("vazkii.patchouli:Patchouli:${patchouli_version}")
 
-	implementation("curse.maven:cc-tweaked-282001:${cc_tweaked_curse_id}")
+	localImplementation("curse.maven:cc-tweaked-282001:${cc_tweaked_curse_id}")
 
 	compileOnly("dev.ftb.mods:ftb-filter-system-neoforge:${ffs_version}") { transitive = false }
 	compileOnly("dev.ftb.mods:ftb-teams-neoforge:${ftb_teams_version}") { transitive = false }
 
-	implementation("blusunrize.immersiveengineering:ImmersiveEngineering:${immersive_engineering_version}")
+	localImplementation("blusunrize.immersiveengineering:ImmersiveEngineering:${immersive_engineering_version}")
 
 	compileOnly("mekanism:Mekanism:${mekanism_version}:api")
 	localRuntime("mekanism:Mekanism:${mekanism_version}")
 
 	compileOnly("com.simibubi.create:create-1.20.1:${create_version}:slim") { transitive = false }
 
-	implementation("curse.maven:jade-324717:${jade_curse_id}")
+	localImplementation("curse.maven:jade-324717:${jade_curse_id}")
 
 	compileOnly("com.blamejared.crafttweaker:CraftTweaker-neoforge-1.21.1:${crafttweaker_version}")
 
@@ -260,7 +263,7 @@ publishing {
         register('mavenJava', MavenPublication) {
 			artifactId = archive_base_name
 			groupId = mod_group_id
-			version = "${mod_version}${snapExt}+mc${minecraft_version}"
+			version = "${mod_version}+mc${minecraft_version}${snapExt}"
             from components.java
 			artifact sourcesJar
 			artifact apiJar
