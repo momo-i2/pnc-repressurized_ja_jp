@@ -63,6 +63,7 @@ import org.lwjgl.opengl.GL11;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.function.BooleanSupplier;
 
 import static net.minecraft.client.renderer.LightTexture.FULL_BRIGHT;
 
@@ -115,6 +116,7 @@ public class WidgetAnimatedStat extends AbstractWidget implements IGuiAnimatedSt
     private int foregroundColor = 0xFFFFFFFF;
     private int titleColor = 0xFFFFFF00;
     private List<Component> extraTooltipText = new ArrayList<>();
+    private BooleanSupplier displayPredicate = () -> true;
 
     public WidgetAnimatedStat(Screen gui, Component title, int xPos, int yPos, int backGroundColor,
                               IGuiAnimatedStat statAbove, boolean leftSided) {
@@ -445,12 +447,13 @@ public class WidgetAnimatedStat extends AbstractWidget implements IGuiAnimatedSt
 
     @Override
     public void renderWidget(GuiGraphics graphics, int mouseX, int mouseY, float partialTicks) {
-        if (!this.visible) return;
+        if (!this.visible) {
+            return;
+        }
 
         int baseX = leftSided ? this.getX() - this.width : this.getX();
         this.isHovered = mouseX >= baseX && mouseY >= this.effectiveY && mouseX < baseX + this.width && mouseY < this.effectiveY + this.height;
 
-        float zLevel = 0;
         Font fontRenderer = Minecraft.getInstance().font;
         int renderBaseX = (int) Mth.lerp(partialTicks, prevX, getX());
         int renderAffectedY = (int) Mth.lerp(partialTicks, prevEffectiveY, effectiveY);
@@ -709,12 +712,17 @@ public class WidgetAnimatedStat extends AbstractWidget implements IGuiAnimatedSt
 
     @Override
     public void openStat() {
-        isClicked = true;
+        isClicked = displayPredicate.getAsBoolean();
     }
 
     @Override
     public boolean isStatOpen() {
         return isClicked;
+    }
+
+    @Override
+    public void setOpeningPredicate(BooleanSupplier predicate) {
+        displayPredicate = predicate;
     }
 
     @Override

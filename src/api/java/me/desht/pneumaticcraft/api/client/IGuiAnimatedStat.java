@@ -28,6 +28,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.List;
+import java.util.function.BooleanSupplier;
 
 /**
  * This interface doesn't have to be implemented. In PneumaticCraft there already is a widget which implements this
@@ -231,7 +232,8 @@ public interface IGuiAnimatedStat extends ITickableWidget, GuiEventListener {
     void closeStat();
 
     /**
-     * Forces the stat to open.
+     * Forces the stat to open. See also {@link #setOpeningPredicate(BooleanSupplier)}; this predicate can be used to
+     * override stat opening.
      */
     void openStat();
 
@@ -241,6 +243,12 @@ public interface IGuiAnimatedStat extends ITickableWidget, GuiEventListener {
      * @return true if the stat is open
      */
     boolean isStatOpen();
+
+    /**
+     * An extra check to see if the stat should be openable right now. This can be used to enforce special circumstances
+     * where the stat should stay closed.
+     */
+    void setOpeningPredicate(BooleanSupplier predicate);
 
     /**
      * Enable/disable auto-line-wrapping functionality of the widget. This is enabled by default. When disabled, the
