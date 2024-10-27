@@ -25,6 +25,7 @@ import me.desht.pneumaticcraft.common.inventory.handler.ComparatorItemStackHandl
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.util.ContainerWrappedItemHandler;
+import net.minecraft.ResourceLocationException;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
@@ -97,8 +98,14 @@ public class ReinforcedChestBlockEntity extends AbstractPneumaticCraftBlockEntit
         super.loadAdditional(tag, provider);
 
         if (tag.contains(NBT_LOOT_TABLE, Tag.TAG_STRING)) {
-            lootTable = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(tag.getString(NBT_LOOT_TABLE)));
-            lootTableSeed = tag.getLong(NBT_LOOT_TABLE_SEED);
+            try {
+                lootTable = ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse(tag.getString(NBT_LOOT_TABLE)));
+                lootTableSeed = tag.getLong(NBT_LOOT_TABLE_SEED);
+                setChanged();
+            } catch (ResourceLocationException e) {
+                lootTable = null;
+                lootTableSeed = 0L;
+            }
         } else {
             inventory.deserializeNBT(provider, tag.getCompound(NBT_ITEMS));
         }
