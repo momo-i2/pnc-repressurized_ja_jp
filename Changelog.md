@@ -6,6 +6,12 @@ Changes are in reverse chronological order; newest changes at the top.
 
 # Minecraft 1.21.1
 
+## [8.2.2]
+
+### Fixed
+* Fixed crash when encountering Reinforced Chests with invalid loot table NBT
+  * Shouldn't happen with new worldgen, but it appears some PNC village house worldgen with early 1.21 releases had some invalid NBT data
+
 ## [8.2.1]
 
 ### Added
