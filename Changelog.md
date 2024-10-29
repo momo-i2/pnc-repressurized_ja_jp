@@ -10,6 +10,9 @@ Changes are in reverse chronological order; newest changes at the top.
 
 ### Fixed
 * Stopped the Pneumatic Armor Magnet upgrade working in spectator mode
+* Drones no longer drop items with Vanishing Curse when they die
+  * Exception: such items will still be dropped if the drone is wrenched by the owning player (and only the owning player)
+* Fixed a race condition when using Computercraft to control Air Cannons
 
 ## [6.0.17]
 
