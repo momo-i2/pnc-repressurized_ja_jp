@@ -50,8 +50,8 @@ public class HeatBehaviourHeatFrame extends HeatBehaviour {
     private HeatFrameEntity getHeatFrame() {
         if (semiBlock == null || !semiBlock.isAlive()) {
             ISemiBlock s = SemiblockTracker.getInstance().getSemiblock(getWorld(), getPos());
-            if (s instanceof HeatFrameEntity) {
-                semiBlock = (HeatFrameEntity) s;
+            if (s instanceof HeatFrameEntity h) {
+                semiBlock = h;
             }
         }
         return semiBlock;

@@ -26,7 +26,6 @@ import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.semiblock.SemiblockTracker;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
-import me.desht.pneumaticcraft.lib.Log;
 import me.desht.pneumaticcraft.lib.PneumaticValues;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -322,21 +321,9 @@ public abstract class AbstractSemiblockEntity extends Entity implements ISemiBlo
         Level level = level();
         if (!level.isClientSide) {
             SemiblockTracker tracker = SemiblockTracker.getInstance();
-            Direction dir = IDirectionalSemiblock.getDirection(this);
-            if (tracker.getSemiblock(level, blockPos, dir) != null) {
-                // shouldn't happen, but seems to occasionally... overwrite a stale entry in the tracker
-                if (!LOGGED_ERROR.add(new LogKey(level.dimension(), blockPos, dir))) {
-                    Log.error("SemiblockTracker: overwriting stale semiblock at {}, pos={}, dir={}!", level, blockPos, dir);
-                }
-                tracker.clearSemiblock(level, blockPos, dir);
-            }
-            if (tracker.putSemiblock(level, blockPos, this)) {
-                NeoForge.EVENT_BUS.post(new SemiblockEvent.PlaceEvent(level, blockPos, this));
-                level.markAndNotifyBlock(blockPos, level.getChunkAt(blockPos), getBlockState(), getBlockState(), Block.UPDATE_ALL, 512);
-            } else {
-                // REALLY shouldn't happen!
-                Log.error("SemiblockTracker: failed to add tracking for semiblock at {}, pos={}, dir={}!", level, blockPos, dir);
-            }
+            tracker.putSemiblock(level, blockPos, this);
+            NeoForge.EVENT_BUS.post(new SemiblockEvent.PlaceEvent(level, blockPos, this));
+            level.markAndNotifyBlock(blockPos, level.getChunkAt(blockPos), getBlockState(), getBlockState(), Block.UPDATE_ALL, 512);
         }
     }
 
