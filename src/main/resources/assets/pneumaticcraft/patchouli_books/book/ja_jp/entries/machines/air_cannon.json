@@ -1,0 +1,22 @@
+{
+  "name": "空気砲",
+  "icon": "pneumaticcraft:air_cannon",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)空気砲/$はアイテムを空中でかなり遠くまで輸送するために使用できる装置です。推進剤として$(l:base_concepts/pressure)圧縮空気/$を使用します。$(p)また、$(item)空気砲/$の狙いを定めるには$(l:tools/gps_tool)GPSツール/$も必要です(ただし、キャノンの狙いを定めた後はGPSツールを取り外して再利用できます)。$(p)$(#f00)レッドストーン信号/$によりキャノンが発射されます。"
+    },
+    {
+      "type": "text",
+      "title": "アップグレード",
+      "text": "$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$がインストールされている場合、$(item)空気砲/$はTNTやファイアーチャージなどの特定のアイテムに対して、通常の$(item)ディスペンサー/$のように動作します。$(p)$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカーアップグレード/$がインストールされている場合、$(item)空気砲/$はインベントリからアイテムを発射せず、トリガーされると最も近いエンティティ(あなたを含む！)を発射します。"
+    },
+    {
+      "type": "crafting",
+      "text": "空気砲のクラフト",
+      "recipe": "pneumaticcraft:air_cannon"
+    }
+  ]
+}

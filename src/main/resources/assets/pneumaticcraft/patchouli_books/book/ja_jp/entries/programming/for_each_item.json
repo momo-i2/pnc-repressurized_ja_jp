@@ -1,0 +1,24 @@
+{
+  "name": "アイテムループウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/for_each_item.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "この高度なウィジェットは接続されているすべての$(l:programming/item_filter)アイテムフィルター/$に対してサブルーチンを実行します。各フィルターに対して指定された変数をそのフィルターに設定し、接続されている$(l:programming/text)テキスト/$ウィジェットに一致する$(l:programming/label)ラベル/$にジャンプします。そのルーチンの実行が完了(通常はプログラムの最後に到達すると$(l:programming/start)開始/$に戻る)するとこのウィジェットに戻り、次の$(thing)アイテムフィルター/$に対して同じことを実行します。"
+    },
+    {
+      "type": "text",
+      "title": "中断",
+      "text": "$(thing)アイテムループ/$で使用されるアイテム変数を空のフィルターに設定することでループから抜け出すこと(これを行うには$(l:programming/item_assign)アイテム割当/$ウィジェットを使用します)ができます。次回、プログラムが$(thing)アイテムループ/$に戻るとプログラムがこれを認識し、フィルターのそれ以上の横断をキャンセルします。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/for_each_item.png"
+      ],
+      "text": "$(italic)アイテムループウィジェット/$"
+    }
+  ]
+}

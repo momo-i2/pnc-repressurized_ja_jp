@@ -1,0 +1,74 @@
+{
+  "name": "空気圧ヘルメット",
+  "icon": "pneumaticcraft:pneumatic_helmet",
+  "category": "pneumaticcraft:armor",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+
+    {
+      "type": "text",
+      "text": "$(item)空気圧ヘルメット/$は4つある$(thing)空気圧の防具/$のうちの1つです。$(p)長い間、入手可能な唯一の部位でした。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:pneumatic_helmet",
+      "text": "空気圧ヘルメットのクラフト"
+    },
+    {
+      "type": "spotlight",
+      "anchor": "entity_tracker",
+      "item": "pneumaticcraft:entity_tracker_upgrade",
+      "text": "$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカー/$アップグレードをインストールすると16ブロックの範囲内の生物は壁越しであっても自動的に追跡されます。エンティティが攻撃的なMobである場合、ターゲットにされると警告が表示されます。これにより戦闘(または脱出)に備えることができます。$(l:base_concepts/entity_filter)エンティティフィルター/$を使用して追跡する必要があるエンティティをGUIでフィルターできます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:block_tracker_upgrade",
+      "text": "$(l:base_concepts/upgrades#block_tracker)ブロックトラッカー/$アップグレードをインストールすると30ブロック以内の特殊ブロックが壁越しでも追跡されます。追跡されるブロックは次のとおりです:$(li)すべてのインベントリ(内容が表示されます)$(li)Mobスポナー(スポーン時間が表示されます)$(li)シルバーフィッシュブロック$(li)エンドポータルフレーム$(li)TNT$(li)トリップワイヤーフック"
+    },
+    {
+      "type": "text",
+      "title": "ブロックトラッカー(続き)",
+      "text": "これらのブロックの一部は比較的一般的なもの(プレイヤーの家のインベントリ、要塞のシルバーフィッシュブロック)であるため、特定の種類のブロックが一定数に達するとHUDはラベルの表示を自動的に停止します。ただし、クロスヘアをブロックの上に置くと追跡されているブロックに関する情報を取得することはできます。また、設定GUIでブロックのチェックを外すことで追跡するブロックを指定することもできます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:coordinate_tracker_upgrade",
+      "text": "$(l:base_concepts/upgrades#coordinate_tracker)座標トラッカー/$アップグレードはMinecraft独自のパスファインディングを使用して、選択した場所への最短経路を計算します。$(p)これは洞窟で迷って脱出したいときに非常に便利です。オプションメニューを開き($(thing)$(k:pneumaticcraft.armor.options)/$を押す)、$(bold)表層に移動/$を選択します。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:search_upgrade",
+      "text": "たくさんのチェストがある基地で特定のアイテムを探すのに苦労したことはありませんか？もしそうなら$(l:base_concepts/upgrades#search)検索アップグレード/$が役に立ちます。GUIでアイテムを検索できます。スクロールバーで探しているアイテムを参照するか、検索ボックスにアイテム名を入力します。アイテムが見つかったらターゲットスロットに配置します。"
+    },
+    {
+      "type": "text",
+      "title": "アイテム検索(続き)",
+      "text": "これで地面または16ブロックの範囲内のインベントリにある選択したアイテムはすべて、$(thing)緑色に輝きます。/$輝きの大きさはその場所にあるアイテムと見つかったアイテムの合計の比率によって決まります。$(p)ヘルメットには$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカー/$(地面にあるアイテムの場合)および/または$(l:base_concepts/upgrades#block_tracker)ブロックトラッカー/$(インベントリ内のアイテムの場合)のアップグレードも必要であることに注意してください。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:dispenser_upgrade",
+      "text": "$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$を$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカーアップグレード/$と一緒にインストールすると$(l:tools/drone)ドローン/$を監視/デバッグできます。$(item)ドローン/$を見ながら$(thing)$(k:pneumaticcraft.helmet.debugging.drone)/$を押すだけです。追跡アニメーションに赤い枠が表示されます。次に、$(thing)$(k:pneumaticcraft.armor.options)/$を押してヘルメットのオプションウィンドウを開き、$(bold)ドローンデバッグ/$パネルに移動します。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:range_upgrade",
+      "text": "$(l:base_concepts/upgrades#range)レンジアップグレード/$は$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカー/$と$(l:base_concepts/upgrades#block_tracker)ブロックトラッカー/$の範囲をアップグレードごとに5ブロック増加します。エンティティトラッカーには制限はありませんが、ブロックトラッカーの場合は最大5つのアップグレードが受け入れられます。$(p)このアップグレードによりヘルメットの空気使用量が増加することに注意してください。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:night_vision_upgrade",
+      "text": "$(l:base_concepts/upgrades#night_vision)暗視アップグレード/$はその名の通り、非常にわずかな$(l:base_concepts/pressure)空気コスト/$で暗闇でも見えるようにします。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:scuba_upgrade",
+      "text": "$(l:base_concepts/upgrades#scuba)スキューバアップグレード/$を使用するとヘルメットの予備空気を利用して水中で呼吸できるようになります。さらにフェイスマスクも付いているので、水中の視界がはるかに鮮明になります。$(l:base_concepts/upgrades#night_vision)暗視アップグレード/$と組み合わせると非常に素晴らしい景色が楽しめます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:ender_visor_upgrade",
+      "text": "$(l:base_concepts/upgrades#ender_visor)エンダーバイザーアップグレード/$は高性能$(thing)カボチャ/$研究に基づいており、実際のカボチャに頭を突っ込むときに通常伴う視覚的な困難を軽減しながら$(thing)エンダーマン/$の攻撃を回避するための切り替え可能な手段を提供します。"
+    }
+  ]
+}

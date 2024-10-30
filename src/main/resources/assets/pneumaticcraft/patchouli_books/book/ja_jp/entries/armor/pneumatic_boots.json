@@ -1,0 +1,52 @@
+{
+  "name": "空気圧ブーツ",
+  "icon": "pneumaticcraft:pneumatic_boots",
+  "category": "pneumaticcraft:armor",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)空気圧ブーツ/$は4つある$(thing)空気圧防具/$の内の1つです。$(p)ブーツは適度な空気コスト(無効化される落下ダメージに比例)で内蔵の落下保護を提供します。$(p)また、1ブロックのステップアシストも無料で利用できます(空気コストなし)。これはステップアシストであり、自動ジャンプではないことに注意してください。また、切り替え可能な機能です。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:pneumatic_boots",
+      "text": "空気圧ブーツのクラフト"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:jet_boots_upgrade_1",
+      "text": "何も気にせずに(残っている圧力以外で)空を飛びたいと思ったことがあるなら$(l:base_concepts/upgrades#jet_boots_1)ジェットブーツアップグレード/$が最適です。ジェットブーツアップグレードには5つのレベルがあり、段階的に飛行速度が上がり、空気の使用率も上がります。"
+    },
+    {
+      "type": "text",
+      "title": "ジェットブーツ(続き)",
+      "text": "アップグレードがアクティブなときは$(k:pneumaticcraft.boots.jet_boots)キーを押し続けるだけで見ている方向に推進できます。$(p)$(thing)ジェットブーツ/$は空気を大量に使用します。複数の$(l:base_concepts/upgrades#volume)ボリュームアップグレード/$をブーツ(および$(l:armor/pneumatic_chestplate)チェストプレート/$、$(l:base_concepts/upgrades#charging)充電アップグレード/$)に追加することを強くお勧めします。$(p)可能であればベースに適切な充電インフラストラクチャを設置するとともに、$(l:machines/aerial_interface)空中インターフェース/$を使用することも推奨されます。"
+    },
+    {
+      "type": "text",
+      "title": "ジェットブーツ(続き)",
+      "text": "$(l:base_concepts/upgrades#jet_boots_3)ジェットブーツアップグレード: ティアIII/$以上を使用すると$(thing)ビルダーモード/$にもアクセスできるようになります。これにより、よりクリエイティブなスタイル(ただし、低速)の飛行制御と空中掘削速度の向上が可能になります。$(p)これは防具のGUIでオンとオフを切り替えることができます(切替キーにバインドされます)。"
+    },
+    {
+      "type": "text",
+      "title": "ジェットブーツ(続き)",
+      "text": "$(l:base_concepts/upgrades#jet_boots_4)ジェットブーツアップグレード: ティアIV/$ 以上を使用すると、$(thing)フライトスタビライザー/$も利用できるようになります。これによりスラストキーを放すと即座に停止します(飛行コストは移動速度に比例します)。$(p)ビルダーモードと同様にこれも防具のGUIを介してオンとオフを切り替えることができます(切り替えキーにバインドされます)。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:dispenser_upgrade",
+      "text":  "ブーツに最大4つの $(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$を追加すると$(bold)空気圧キック/$を実行できるようになります。これによりエンティティ(生きているエンティティだけではありません！)に中程度のダメージを与えるだけでなく、適度な空気コストで大きなノックバックも発生します。$(p)キックするには$(thing)$(k:pneumaticcraft.boots.kick)/$を押します。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:flippers_upgrade",
+      "text":  "$(l:base_concepts/upgrades#flippers)フリッパーアップグレード/$をインストールすると水泳速度が適度に向上します。追加の空中コストがかからないため、水中にいるときはジェットブーツよりもはるかに安価な代替品となります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:stomp_upgrade",
+      "text":  "$(l:base_concepts/upgrades#stomp)ストンプアップグレード/$をインストールしてアクティブにすると敵に破壊の雨を降らせることができます。地面に着地する速さがダメージを受けるほど速ければ(そのダメージがブーツによって吸収されたとしても)到着した速さに比例して近くのMobが負傷します。これにより負傷したMobごとに空気が消費されます。"
+    }
+  ]
+}

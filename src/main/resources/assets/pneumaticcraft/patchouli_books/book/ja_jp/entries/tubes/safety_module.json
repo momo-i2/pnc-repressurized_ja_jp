@@ -1,0 +1,26 @@
+{
+  "name": "セーフティモジュール",
+  "icon": "pneumaticcraft:safety_tube_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このチューブモジュールはチューブ内の$(l:base_concepts/pressure)圧力/$を特定の値に制限して$(thing)爆発/$を防止するために使用されます。過剰な圧力は大気中に拡散され$(thing)エネルギー損失/$を意味します。したがって、このモジュールはレッドストーンを放出してコンプレッサーをオフにできる$(l:tubes/pressure_gauge_module)圧力計モジュール/$と組み合わせて使用するのが最適です。"
+    },
+    {
+      "type": "text",
+      "text": "$(item)セーフティモジュール/$のデフォルトの閾値レベルはチューブの危険レベルより0.1バール低い値です:$(li)基本的な$(item)圧力チューブ/$の場合は4.9バール、$(li)高機能圧力チューブ/$の場合は19.9バールです。$(p)これは1.12.2以降に変更されており、閾値を設定するにはレッドストーン信号が必要になったことに注意してください。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "$(l:tubes/module_expansion_card)モジュール拡張カード/$をセーフティモジュールに適用するとモジュールはGUI(右クリック)を取得し閾値レベルをより細かく制御できるようになります。GUIで正確な閾値を設定するか、$(bold)詳細設定/$チェックボックスを使用して信号に基づいて補間された閾値レベルを設定できます。これは$(l:tubes/pressure_gauge_module#img)圧力ゲージのGUI/$と非常によく似ていますが逆の働きをします。"
+    },
+    {
+      "type": "crafting",
+      "text": "セーフティモジュールのクラフト",
+      "recipe": "pneumaticcraft:safety_tube_module"
+    }
+  ]
+}

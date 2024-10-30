@@ -1,0 +1,18 @@
+{
+  "name": "組立プログラム",
+  "icon": "pneumaticcraft:assembly_program_laser",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)組立プログラム/$はどのような操作を実行する必要があるかを伝えるために、$(l:manufacturing/assembly_system)組立コントローラー/$に挿入する必要があります。これらは作成できず、代わりに$(thing)メカニックの村人/$から、または$(l:tools/amadron_tablet)アマドローンタブレット/$を介して取引する必要があります。"
+    },
+    {
+      "type": "spotlight",
+      "title": "ドリルとレーザー",
+      "item": "pneumaticcraft:assembly_program_drill_laser",
+      "text": "$(item)組立プログラム: ドリルとレーザー/$は少し特殊です。ドリルとレーザーの両方のレシピを扱うのではなく、ドリル$(italic)と/$レーザーのステップを含む2ステップのレシピを1つのプログラムで提供(例: $(l:tubes/pressure_tubes#advanced)高機能圧力チューブ/$)します。"
+    }
+  ]
+}

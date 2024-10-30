@@ -1,0 +1,25 @@
+{
+  "name": "ヒートパイプ",
+  "icon": "pneumaticcraft:heat_pipe",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)ヒートパイプ/$は隣接する空気または流体ブロックとの熱接続なしにブロック間で熱を伝達できる圧縮鉄の絶縁コアです。これは熱を伝達するために$(thing)圧縮鉄ブロック/$を使用するよりもコンパクト(かつ安価)な代替手段です。$(p)ヒートパイプは$(l:tools/camo_applicator)迷彩塗布器/$で偽装することができます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/heat_sinks.png"
+      ],
+      "border": "true",
+      "text": "$(italic)TODO: ヒートパイプ画像/$"
+    },
+    {
+      "type": "crafting",
+      "text": "ヒートパイプのクラフト",
+      "recipe": "pneumaticcraft:heat_pipe"
+    }
+  ]
+}

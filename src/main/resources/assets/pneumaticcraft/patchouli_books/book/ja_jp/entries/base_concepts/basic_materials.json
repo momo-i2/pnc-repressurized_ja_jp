@@ -1,0 +1,38 @@
+{
+    "name": "基本材料",
+    "icon": "pneumaticcraft:ingot_iron_compressed",
+    "category": "pneumaticcraft:base_concepts",
+    "pages": [
+        {
+            "type": "text",
+            "text": "$(pncr)は地面に余分な鉱石を生成しません。開始するには$(item)鉄インゴット/$だけが必要です。これはmod全体の多くのレシピで使用される$(item)圧縮鉄インゴット$()に変換されます。$(p)これを行うには$(item)鉄インゴット/$ を地面に投げて近くで爆発を引き起こします。$(item)TNT/$ でもうまくいきますが他の爆発でもかまいません。"
+        },
+        {
+            "type": "image",
+            "images": [
+                "pneumaticcraft:textures/patchouli/compressed_iron.png"
+            ],
+            "text": "$(italic)      一歩下がる/$"
+        },
+        {
+            "type": "spotlight",
+            "anchor": "compressed_iron_ingot",
+            "item": "pneumaticcraft:ingot_iron_compressed",
+            "text": "警告: 爆発の副作用としてインゴットの約20%が失われます。これを回避するには$(l:manufacturing/pressure_chamber)圧力室/$で$(item)圧縮鉄インゴット/$を作成することもできます。ただし、$(thing)圧力室/$自体を作成するには$(item)圧縮鉄インゴット/$がいくつか必要なので、初期に多少の損失は避けられません。"
+        },
+        {
+            "type": "pneumaticcraft:pressure_chamber",
+            "recipe": "pneumaticcraft:pressure_chamber/compressed_iron_ingot"
+        },
+        {
+            "type": "crafting",
+            "anchor": "compressed_iron_block",
+            "recipe": "pneumaticcraft:compressed_iron_block_from_ingot",
+            "text": "$(item)圧縮鉄ブロック/$は優れた$(l:base_concepts/heat)熱伝導体/$であり、熱を発生する機械に$(l:machines/heat_sink)ヒートシンク/$を取り付けるための面を増やすために使用できます。ただし、$(l:machines/heat_pipe)ヒートパイプ/$も参照してください。"
+        },
+        {
+            "type": "pneumaticcraft:pressure_chamber",
+            "recipe": "pneumaticcraft:pressure_chamber/compressed_iron_block"
+        }
+    ]
+}

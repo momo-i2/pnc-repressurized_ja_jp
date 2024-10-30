@@ -1,0 +1,17 @@
+{
+  "name": "作物サポート",
+  "icon": "pneumaticcraft:crop_support",
+  "category": "pneumaticcraft:semiblocks",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)作物/$のある農地に設置すると、その作物の成長速度が向上します。$(item)作物サポート/$が成長を加速させると$(thing)緑色のパーティクル/$が放出されます。$(p)$(item)作物サポート/$を削除するにはその下のブロックを壊すか、$(l:tools/logistics_configurator)物流コンフィギュレーター/$または別の$(item)作物サポート/$のあるブロックを$(thing)スニーク+右クリック/$します。"
+    },
+    {
+      "type": "crafting",
+      "text": "作物サポートのクラフト",
+      "recipe": "pneumaticcraft:crop_support"
+    }
+  ]
+}

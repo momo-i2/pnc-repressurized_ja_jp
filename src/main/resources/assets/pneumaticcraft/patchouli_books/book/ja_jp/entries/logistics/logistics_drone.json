@@ -1,0 +1,32 @@
+{
+  "name": "物流ドローン",
+  "icon": "pneumaticcraft:logistics_drone",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)物流ドローン/$は$(l:tools/drone)ドローン/$の特殊なタイプです。これらはプログラム可能ではなく、物流タスクの実行$(italic)のみ/$に限定されているため、下位層の$(thing)ドローン/$です。"
+    },
+    {
+      "type": "spotlight",
+      "title": "自動充填",
+      "item": "pneumaticcraft:charging_station",
+      "text": "すべての種類のドローンと同様に、これらのドローンは動作するために$(l:base_concepts/pressure)圧力/$を必要とし、空気が少なくなると$(l:tools/drone#charging)ディスペンサーアップグレード/$を備えた充填ステーションを自動的に探します。"
+    },
+    {
+      "type": "entity",
+      "entity": "pneumaticcraft:logistics_drone",
+      "offset": -0.3
+    },
+    {
+      "type": "text",
+      "text": "配備されると、$(item)物流ドローン/$はドローンが配備されたブロックを中心とした33x33x33の立方体内の$(l:logistics/frames)物流フレーム/$を備えた任意のインベントリ/タンクで動作します。$(p)これらのドローンは頻繁にアイテムを移動する必要があるため、移動速度と運搬能力を向上させるために$(l:base_concepts/upgrades#speed)スピード/$と$(l:base_concepts/upgrades#inventory)インベントリ/$アップグレードが推奨されます。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:logistics_drone",
+      "text": "物流ドローンのクラフト"
+    }
+  ]
+}

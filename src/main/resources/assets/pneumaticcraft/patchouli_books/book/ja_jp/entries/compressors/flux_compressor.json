@@ -1,0 +1,17 @@
+{
+  "name": "磁束コンプレッサー",
+  "icon": "pneumaticcraft:flux_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)磁束コンプレッサー/$は$(thing)Forgeエネルギー/$($(thing)レッドストーン磁束/$およびさまざまな他のMODのエネルギーシステムと互換性があります)を$(l:base_concepts/pressure)圧縮空気/$に変換します。基本40FE/tickを消費しますが、$(l:base_concepts/upgrades#speed)スピードアップグレード/$でアップグレードできます。$(p)磁束コンプレッサーの容量は100,000FEで、FEを消費する速度の2倍の速度で受け入れます。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)磁束コンプレッサー/$のクラフト$(p)このジェネレータは温度が上昇すると効率が低下して最終的には空気がまったく生成されなくなるため、$(l:base_concepts/heat)冷却/$する必要があります。",
+      "recipe": "pneumaticcraft:flux_compressor"
+    }
+  ]
+}

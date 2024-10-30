@@ -1,0 +1,19 @@
+{
+  "name": "ドローン条件: RFウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_drone_rf_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは$(l:programming/conditions)条件/$ウィジェットです。$(p)$(thing)ドローン条件: RF/$ウィジェットを使用すると、この$(l:tools/drone)ドローン/$が運ぶ$(thing)Forgeエネルギー(FE)/$の量を確認できます。$(p)$(italic)名前に反してこのウィジェットはRF(Redstone Flux)ではなくFEをチェックします。名前は歴史的なものです。/$"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_drone_rf_piece.png"
+      ],
+      "text": "$(italic)ドローン条件: RFウィジェット/$"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "物流コンフィギュレーター",
+  "icon": "pneumaticcraft:logistics_configurator",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)物流コンフィギュレーター/$の主な目的は$(l:logistics/overview)物流システム/$の構成を支援することです。$(p)任意の$(l:logistics/frames)物流フレーム/$上で$(thing)右クリック/$するとさまざまなフィルターを構成できます。$(p)$(thing)スニーク+右クリック/$するとフレームが接続されているインベントリからフレームが削除されます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:logistics_configurator",
+      "text": "$(item)物流コンフィギュレーター/$は$(l:semiblocks/transfer_gadget)転送ガジェット/$や$(l:semiblocks/crop_support)作物サポート/$などの他の接続可能なガジェットを削除するためにも使用($(thing)スニーク+右クリック/$によって)できます。"
+    },
+    {
+      "type": "crafting",
+      "text": "物流コンフィギュレーターのクラフト",
+      "recipe": "pneumaticcraft:logistics_configurator"
+    }
+  ]
+}

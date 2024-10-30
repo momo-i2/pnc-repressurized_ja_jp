@@ -1,0 +1,60 @@
+{
+  "name": "充填ステーション",
+  "icon": "pneumaticcraft:charging_station",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)充填ステーション/$は$(l:base_concepts/pressure)空気圧のアイテム/$を充填(または放出)できるマシンです。$(item)充填ステーション/$と空気圧アイテム間の相互作用はチューブ/機械間の相互作用と同じです。つまり、圧力の差は均等化されます。つまり、アイテムを完全に充填するには十分に加圧された$(item)充填ステーション/$が必要になります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:charging_station",
+      "text": "ほとんどの充填アイテムの最大圧力は10バールです。ただし、爆発の心配はありません。アイテムは過充填によって爆発することはなく、10バールを超えると充電が停止するだけです。$(p)$(thing)充填パッド/$は$(l:tools/camo_applicator)迷彩塗布器/$で偽装できます。"
+    },
+    {
+      "type": "text",
+      "title": "充填パッド",
+      "text": "$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$を挿入すると$(item)充填ステーション/$を$(thing)充填パッド/$に変えることができます。これにより以下のものが加(減)圧されます:$(li)充填ステーションの上の地面に置かれているアイテム$(li)充填ステーションの上に立っているプレイヤーが持っているアイテム$(li)充填ステーションの真上にあるすべての種類の$(l:tools/drone)ドローン/$"
+    },
+    {
+      "type": "text",
+      "title": "アップグレード管理",
+      "text": "$(item)充填ステーション/$は$(l:base_concepts/upgrades)アップグレード/$を受け入れるアイテムの管理システムとしても機能します。アイテムをアップグレードするには通常どおり$(item)充填ステーション/$にアイテムを配置し、アイテムスロットの上にある$(thing)上矢印/$ボタンをクリックします。これによりアップグレードを挿入できる新しいGUIが開きます。問題のアイテムに適用可能なすべてのアップグレードはGUIのサイドタブに文書化されています。"
+    },
+    {
+      "type": "relations",
+      "title": "充填可能アイテム",
+      "entries": [
+        "pneumaticcraft:components/air_canister",
+        "pneumaticcraft:tools/pneumatic_wrench",
+        "pneumaticcraft:logistics/logistics_configurator",
+        "pneumaticcraft:tools/camo_applicator",
+        "pneumaticcraft:tools/vortex_cannon",
+        "pneumaticcraft:tools/minigun",
+        "pneumaticcraft:tools/manometer",
+        "pneumaticcraft:armor/pneumatic_helmet",
+        "pneumaticcraft:armor/pneumatic_chestplate",
+        "pneumaticcraft:armor/pneumatic_leggings",
+        "pneumaticcraft:armor/pneumatic_boots"
+      ]
+    },
+    {
+      "type": "relations",
+      "title": "充填可能アイテム(続き)",
+      "entries": [
+        "pneumaticcraft:tools/drone",
+        "pneumaticcraft:tools/collector_drone",
+        "pneumaticcraft:tools/guard_drone",
+        "pneumaticcraft:tools/harvesting_drone",
+        "pneumaticcraft:logistics/logistics_drone"
+      ]
+    },
+    {
+      "type": "crafting",
+      "text": "充填ステーションのクラフト",
+      "recipe": "pneumaticcraft:charging_station"
+    }
+  ]
+}

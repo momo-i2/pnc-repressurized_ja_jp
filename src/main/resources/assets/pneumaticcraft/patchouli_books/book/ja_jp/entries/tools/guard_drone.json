@@ -1,0 +1,45 @@
+{
+  "name": "ガードドローン",
+  "icon": "pneumaticcraft:guard_drone[pneumaticcraft:air=120000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)ガードドローン/$は任意のインベントリブロックに対して展開する必要がある、特殊なプログラム不可能なタイプの$(l:tools/drone)ドローン/$です。武器として使用するアイテムを1つインポートし範囲内のMobを攻撃します。"
+    },
+    {
+      "type": "spotlight",
+      "title": "自動充填",
+      "item": "pneumaticcraft:charging_station",
+      "text": "すべての種類のドローンと同様に、これらのドローンは動作するために$(l:base_concepts/pressure)圧力/$を必要とし、空気が少なくなると$(l:tools/drone#charging)ディスペンサーアップグレード/$を備えた充填ステーションを自動的に探します。"
+    },
+    {
+      "type": "text",
+      "title": "範囲",
+      "text": "$(thing)ガードドローン/$は配置位置から水平方向に16ブロック、上方向に8ブロック、下方向に5ブロック以内の敵対的なMobをターゲットにします。$(p)垂直方向の範囲が狭い理由は洞窟の奥深くにいるMobの検出とテレポートを最小限に抑えるためです。テレポートすると空気が無駄になりドローンに何が起こったのか分からなくなってしまいます。"
+    },
+    {
+      "type": "spotlight",
+      "title": "武器",
+      "item": "minecraft:netherite_sword",
+      "text": "$(thing)ガードドローン/$はインベントリに何が入っているかは気にしません。そのため、役に立つ近接武器をそこに入れるように注意してください。武器が壊れてインベントリに代わりの武器がない場合、ドローンは武装せずに戦い続けることになり非常に非効率的です。"
+    },
+    {
+      "type": "spotlight",
+      "title": "遠距離戦闘",
+      "item": "pneumaticcraft:minigun_upgrade",
+      "text": "ドローンには代わりに$(l:base_concepts/upgrades#minigun)ミニガンアップグレード/$を装備することもできます。その場合は、代わりに$(l:tools/minigun_ammo)ミニガンの銃弾/$をインベントリに追加する必要があります。"
+    },
+    {
+      "type": "entity",
+      "entity": "pneumaticcraft:guard_drone",
+      "offset": -0.3
+    },
+    {
+      "type": "crafting",
+      "text": "ガードドローンのクラフト",
+      "recipe": "pneumaticcraft:guard_drone"
+    }
+  ]
+}

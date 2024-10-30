@@ -1,0 +1,7 @@
+{
+  "name": "ワールドインタラクションウィジェット",
+  "description": "何らかの方法でワールドと対話するウィジェットです。",
+  "icon": "pneumaticcraft:textures/progwidgets/dig_piece.png",
+  "parent": "pneumaticcraft:programming",
+  "sortnum": 2
+}

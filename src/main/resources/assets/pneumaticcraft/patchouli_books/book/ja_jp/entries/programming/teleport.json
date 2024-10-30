@@ -1,0 +1,19 @@
+{
+  "name": "テレポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/teleport_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)テレポート/$は$(l:programming/goto)場所移動/$ウィジェットのより高価なバージョン(使用される$(l:base_concepts/pressure)空気/$の点で)ですが同じくらい単純です。$(l:tools/drone)ドローン/$は指定された$(l:programming/area)エリア/$内の最も近い到達可能な場所にテレポートします。$(p)$(item)ドローン/$はテレポートに10,000mLの空気を使用します。これはアップグレードされていない$(item)ドローンの/$容量のほとんどであるため$(l:base_concepts/upgrades#volume)ボリュームアップグレード/$が推奨されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/teleport_piece.png"
+      ],
+      "text": "$(italic)今、私はここにいる。今、私はそこにいる。/$"
+    }
+  ]
+}

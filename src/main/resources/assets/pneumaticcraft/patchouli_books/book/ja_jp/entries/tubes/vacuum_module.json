@@ -1,0 +1,27 @@
+{
+  "name": "真空モジュール",
+  "icon": "pneumaticcraft:vacuum_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)真空モジュール/$は$(l:machines/vacuum_pump)真空ポンプ/$と同じ機能(負圧の提供)を少しだけコンパクトに実現します。フルサイズのポンプは水平方向にしか配置できませんが、真空モジュールは垂直のチューブに配置できます。$(p)利点はコンパクトさです。欠点は速度と容量の点でアップグレードが制限されることです。"
+    },
+    {
+      "type": "text",
+      "title": "配置",
+      "text": "真空モジュールは$(thing)インライン/$モジュールです。真空側となるチューブの端に取り付けます。チューブの広い/緑の端に最低2バールの圧力をかけるとモジュールが回転し、狭い/赤い端を越えたチューブから空気が除去されます。$(p)$(#f00)レッドストーン信号/$を適用するとモジュールの実行が防止されます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "$(l:tubes/module_expansion_card)モジュール拡張カード/$はモジュールの速度を速めます。これは真空ポンプに4つの$(l:base_concepts/upgrades#speed)スピードアップグレード/$を追加するのとほぼ同等です。スピードアップグレードを追加するのと同様にプラス面では空気の使用効率が低下します。"
+    },
+    {
+      "type": "crafting",
+      "text": "真空モジュールのクラフト",
+      "recipe": "pneumaticcraft:vacuum_module"
+    }
+  ]
+}

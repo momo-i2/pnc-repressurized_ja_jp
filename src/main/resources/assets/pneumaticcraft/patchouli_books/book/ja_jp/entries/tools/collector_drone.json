@@ -1,0 +1,37 @@
+{
+  "name": "収集ドローン",
+  "icon": "pneumaticcraft:collector_drone[pneumaticcraft:air=120000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)収集ドローン/$は$(l:tools/drone)ドローン/$の特殊な非プログラム型で、任意のインベントリブロック(チェストなど)に対してまたはその隣に配置する必要があります。近くにあるアイテムを収集してそのインベントリに入れます。"
+    },
+    {
+      "type": "spotlight",
+      "title": "自動充填",
+      "item": "pneumaticcraft:charging_station",
+      "text": "すべての種類のドローンと同様にこれらのドローンは動作するために$(l:base_concepts/pressure)圧力/$を必要とし、空気が少なくなると$(l:tools/drone#charging)ディスペンサーアップグレード/$を備えた充填ステーションを自動的に探します。"
+    },
+    {
+      "type": "text",
+      "title": "アイテムフィルタリング",
+      "text": "$(thing)収集ドローン/$には基本的なアイテムフィルタリング機能があります。インベントリブロックに対して$(italic)再/$配置するとそのインベントリにすでに存在するアイテムがフィルタリングされます。インベントリの$(italic)隣/$(または空のインベントリブロック)の地面に配置するとアイテムはフィルタリング$(italic)されません/$。$(p)ドローンのフィルターを変更する場合はフィルターをレンチで締めて再配置する必要があります。"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)収集ドローン/$のデフォルトの範囲は配置されたブロックを中心とした17x17x17の立方体です。この範囲は最大16個の$(l:base_concepts/upgrades#range)レンジアップグレード/$を追加することで拡大できます。"
+    },
+    {
+      "type": "entity",
+      "entity": "pneumaticcraft:collector_drone",
+      "offset": -0.3
+    },
+    {
+      "type": "crafting",
+      "text": "収集ドローンのクラフト",
+      "recipe": "pneumaticcraft:collector_drone"
+    }
+  ]
+}

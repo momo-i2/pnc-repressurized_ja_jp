@@ -1,0 +1,17 @@
+{
+  "name": "モジュール拡張カード",
+  "icon": "pneumaticcraft:module_expansion_card",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)モジュール拡張カード/$は$(l:tubes/tube_modules)チューブモジュール/$に取り付けてさまざまな方法で機能を拡張できるプラグ可能な回路基板です。$(thing)チューブモジュール上のカードを右クリック/$して適用します。$(p)モジュールの拡張方法の詳細については個々のチューブモジュールのページを参照してください。"
+    },
+    {
+      "type": "crafting",
+      "text": "モジュール拡張カードのクラフト",
+      "recipe": "pneumaticcraft:module_expansion_card"
+    }
+  ]
+}

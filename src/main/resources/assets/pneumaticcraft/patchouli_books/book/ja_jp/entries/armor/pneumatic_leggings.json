@@ -1,0 +1,38 @@
+{
+  "name": "空気圧レギンス",
+  "icon": "pneumaticcraft:pneumatic_leggings",
+  "category": "pneumaticcraft:armor",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+
+    {
+      "type": "text",
+      "text": "$(item)空気圧レギンス/$は4つある$(thing)空気圧の防具/$のうちの1つです。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:pneumatic_leggings",
+      "text": "空気圧レギンスのクラフト"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:speed_upgrade",
+      "text":  "防具の初期化時間を短縮することに加えて、レギンスの$(l:base_concepts/upgrades#speed)スピードアップグレード/$にはさらに重要な効果があります。それは非常にわずかな $(l:base_concepts/pressure)空気コスト/$で$(thing)走る速度/$を向上することです。最大4つのスピードアップグレードをインストールできます。"
+    },
+    {
+      "type": "text",
+      "title": "スピードアップグレード(続き)",
+      "text": "防具のGUIを使用するとアップグレードを交換するために$(l:machines/charging_station)充填ステーション/$を探す必要なく速度を変更したい場合、速度ブーストをその場で減らすことができます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:jumping_upgrade_1",
+      "text": "$(l:base_concepts/upgrades#jumping_1)ジャンプアップグレード/$を使用するとわずかな空中コストでジャンプ能力が向上します。ジャンプアップグレードには4つのレベルがあります。$(p)ジャンプ中に$(thing)$(k:key.sneak)/$を押すと、ジャンプの高さが1つのアップグレードと同等に下がります。"
+    },
+    {
+      "type": "text",
+      "title": "ジャンプアップグレード(続き)",
+      "text": "防具のGUIを使用するとアップグレードを交換するために$(l:machines/charging_station)充填ステーション/$を探す必要なくジャンプの高さを変更したい場合、ジャンプブーストをその場で減らすことができます。"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "灯油ランプ",
+  "icon": "pneumaticcraft:kerosene_lamp",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:refinery",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)灯油ランプ/$はご想像のとおり$(l:manufacturing/refinery)灯油/$で動作する強力な光源です。これは$(thing)ThaumcraftのArcane Lamp)/$のような、使い慣れている長距離光源に似ています。$(p)$(italic)技術的にはランプはどの燃焼燃料でも動作しますが、このランプでは灯油が他のどの燃料よりも効率的です。LPGでさえもです。/$"
+    },
+    {
+      "type": "text",
+      "text": "$(item)灯油ランプ/$のデフォルトの範囲は10ブロックです。ただし、これはGUIで最大30ブロックまで調整できます。範囲が広いほどランプの燃料消費量は2乗で増えることに注意してください。したがって、範囲を2倍にすると燃料消費量は4倍になります。$(p)ただし、ランプは少量の燃料しか使用しません。1,000mBの灯油とデフォルトの範囲10ブロックを使用するとランプは実時間で約$(ttcolor)$(t:ランプの効率はMODコンフィグで変更できます。「D:keroseneLampFuelEfficiency」を参照してください)40分/$動作できます。"
+    },
+    {
+      "type": "text",
+      "text": "$(item)灯油ランプ/$はほとんどの$(pncr)のブロックと同様に$(thing)レッドストーン/$で制御できます。通常のオン/オフモードとは別に$(bold)信号の補間/$モードもあります。これは(名前が示すように)信号強度に基づいてランプの範囲を補間します。$(p)たとえばデフォルトの最大範囲が10ブロックであると仮定し、$(#f00)レッドストーン信号/$として8(15のうち)が適用されると、ランプの範囲は5になります。"
+    },
+    {
+      "type": "crafting",
+      "text": "灯油ランプのクラフト",
+      "recipe": "pneumaticcraft:kerosene_lamp"
+    }
+  ]
+}

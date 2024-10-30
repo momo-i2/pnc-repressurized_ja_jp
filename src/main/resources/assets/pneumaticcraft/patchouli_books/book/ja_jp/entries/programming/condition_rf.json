@@ -1,0 +1,19 @@
+{
+  "name": "条件: RFウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_rf_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは$(l:programming/conditions)条件/$ウィジェットです。$(p)$(thing)条件: RF/$ウィジェットを使用すると接続された$(l:programming/area)エリア/$ウィジェット内のブロックの$(thing)Forgeエネルギー(FE)/$レベルが設定されたFEの閾値と一致するかどうかを(リモートで)確認できます。$(p)$(italic)名前にもかかわらず、このウィジェットはRF(Redstone Flux)ではなくFEをチェックします。名前は歴史的なものです。/$"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_rf_piece.png"
+      ],
+      "text": "$(italic)条件: RFウィジェット/$"
+    }
+  ]
+}

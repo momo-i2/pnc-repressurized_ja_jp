@@ -1,0 +1,17 @@
+{
+  "name": "流体コンプレッサー",
+  "icon": "pneumaticcraft:liquid_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)流体コンプレッサー/$は$(l:base_concepts/pressure)圧縮空気/$を生成できるシンプルなジェネレーターです。このジェネレーターは流体燃料を燃焼させて圧縮空気を生成します。使用できる燃料とその効果を確認するには流体コンプレッサーのGUIで$(bold)使用可能な燃料/$タブを開きます。これには溶岩などの高温の流体も含まれることに注意してください。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)流体コンプレッサー/$のクラフト",
+      "recipe": "pneumaticcraft:liquid_compressor"
+    }
+  ]
+}

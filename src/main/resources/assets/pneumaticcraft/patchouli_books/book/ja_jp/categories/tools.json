@@ -1,0 +1,6 @@
+{
+  "name": "ツール",
+  "description": "これらは便利な目的を果たすさまざまな手持ちアイテム(ツールや武器)です。",
+  "icon": "pneumaticcraft:pneumatic_wrench[pneumaticcraft:air=30000]",
+  "sortnum": 6
+}

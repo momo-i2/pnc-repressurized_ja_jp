@@ -1,0 +1,21 @@
+{
+  "name": "迷彩塗布器",
+  "icon": "pneumaticcraft:camo_applicator[pneumaticcraft:air=30000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)迷彩塗布器/$は特定の$(pncr)のブロックを偽装するために使用できます:$(li)$(l:tubes/pressure_tubes)圧力チューブ/$$(li)$(l:machines/pneumatic_door)空気圧ドアベース/$$(li)$(l:machines/elevators)エレベーターベースと呼出/$$(li)$(l:machines/charging_station)充填ステーション/$$(li)$(l:machines/heat_pipe)ヒートパイプ/$$(p)$(thing)任意の固体ブロックを右クリック/$して、その外観を塗布器にコピーするか$(thing)スニーク+右クリック/$でコピーしたブロックをクリアします。"
+    },
+    {
+      "type": "text",
+      "text": "次に、偽装可能なブロック(上記参照)を$(thing)右クリック/$して偽装を適用または削除します。$(p)偽装として適用するにはインベントリに実際のブロックが必要です。このブロックは使用(ただし、偽装を削除すると元に戻ります)されます。$(p)また、ツルハシなどの適切なツールで偽装されたブロックを壊して偽装を解除することもできます。その場合偽装が壊れます。"
+    },
+    {
+      "type": "crafting",
+      "text": "迷彩塗布器のクラフト",
+      "recipe": "pneumaticcraft:camo_applicator"
+    }
+  ]
+}

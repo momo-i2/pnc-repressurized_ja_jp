@@ -1,0 +1,19 @@
+{
+  "name": "場所移動ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/goto_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)場所移動/$は非常に簡単です。$(l:tools/drone)ドローン/$は指定された$(l:programming/area)エリア/$内の最も近い到達可能な場所に移動します。$(p)このウィジェットは$(ttcolor)$(t:ウィジェットをすぐに「完了」するように構成できます。セットアップGUIを表示するには右クリックします)ドローンがエリアに到達したとき/$、またはこのエリアに到達できないときに完了します。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/goto_piece.png"
+      ],
+      "text": "$(italic)場所移動ウィジェット/$"
+    }
+  ]
+}

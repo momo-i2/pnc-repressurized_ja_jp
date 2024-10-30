@@ -1,0 +1,19 @@
+{
+  "name": "物流ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/logistics_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このウィジェットは$(l:tools/drone)ドローン/$を$(l:logistics/logistics_drone)物流ドローン/$のように動作させますが、基本的な物流ドローン機能よりも柔軟性が高くなります:$(li)他のウィジェットと一緒に使用できます。たとえば、より効率的な空中使用のための$(l:programming/standby)スタンバイ/$ウィジェットなどです。$(li)カスタムの$(l:programming/area)エリア/$を定義できます(標準の物流ドローンにはドローンを中心とした33x33x33の領域があり、これは変更できません)"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/logistics_piece.png"
+      ],
+      "text": "$(italic)物流ウィジェット/$"
+    }
+  ]
+}

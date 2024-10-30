@@ -1,0 +1,27 @@
+{
+  "name": "座標演算ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/coordinate_operation_plus_minus.png",
+  "category": "pneumaticcraft:widget_other",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)座標演算/$ウィジェットは$(l:programming/variables)変数/$を定義および/または操作して高度なドローン機能を実現するために使用されます。このウィジェットは使用する値を定義するために1つ以上の接続された$(l:programming/coordinate)座標/$ウィジェットを必要とし、それらの接続された部分に対して特定の算術演算(ウィジェットのGUIで定義)を実行します。"
+    },
+    {
+      "type": "text",
+      "text": "使用可能な演算は次のとおりです:$(li)$(太字)加算/減算/$: 右側のウィジェットを加算し、左側のウィジェットを減算します。$(li)$(太字)乗算/除算/$: 右側のウィジェットを乗算し、その結果を左側のウィジェットで除算します。$(li)$(太字)最小/最大/$: 右側のウィジェットから最大のX/Y/Zを取得し、次に左側のウィジェットの最小値と以前に決定された最大値を取得します。"
+    },
+    {
+      "type": "text",
+      "text": "最終結果は座標演算GUIで入力された名前で定義された$(l:programming/variables)変数/$に保存されます。この$(thing)変数/$を使用して後で座標を取得できます。$(li)$(l:programming/area)エリア/$ウィジェットではGPS座標の代わりに、$(thing)変数/$名を使用できます。$(li)$(l:programming/condition_coordinate)条件: 座標/$を使用して、$(thing)変数/$でテストを実行できます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/coordinate_operation_plus_minus.png"
+      ],
+      "text": "$(italic)座標演算ウィジェット/$"
+    }
+  ]
+}

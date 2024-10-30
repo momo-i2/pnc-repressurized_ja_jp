@@ -1,0 +1,26 @@
+{
+  "name": "UVライトボックス",
+  "icon": "pneumaticcraft:uv_light_box",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:pcb_blueprint",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)UVライトボックス/$は$(l:components/pcb)PCB/$を特定の場所(PCBの上に置かれている$(l:components/pcb_blueprint)ブループリント/$によって決まる)でUVライトにさらすことができる機械です。$(p)さらすプロセスには最大10分かかります。機械に$(l:base_concepts/upgrades#speed)スピードアップグレード/$を追加するとさらに短くなります。"
+    },
+    {
+      "type": "text",
+      "text": "10分が経過すると$(item)PCB/$が$(l:manufacturing/etching_acid)エッチング酸/$で正常にエッチングされる可能性が100%になります。ただし、PCBを短時間露出させることもできます。その場合、PCBが正常にエッチングされる可能性は低くなります。$(p)露出の進行は全体の進行状況が低いほど速くなり、終わりに近づくにつれて遅くなることに注意してください。"
+    },
+    {
+      "type": "text",
+      "title": "閾値の自動化",
+      "text": "GUIのスライダーを使用して完了閾値を手動で調整できますがレッドストーン信号を使用して設定することもできます。レッドストーンモードを$(thing)信号の補間/$に設定します。このモードでは閾値は信号レベルごとに25%+5%に固定(ただし、信号が0の場合は機械が無効になるため、実際には30%～100%になります)されます。$(p)これは一度に多数のライトボックスの閾値を設定する場合に便利です。"
+    },
+    {
+      "type": "crafting",
+      "text": "UVライトボックスのクラフト",
+      "recipe": "pneumaticcraft:uv_light_box"
+    }
+  ]
+}

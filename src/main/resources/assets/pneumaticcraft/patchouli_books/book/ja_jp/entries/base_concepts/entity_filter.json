@@ -1,0 +1,59 @@
+{
+  "name": "エンティティフィルター",
+  "icon": "minecraft:player_head",
+  "category": "pneumaticcraft:base_concepts",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)エンティティフィルター/$は$(pncr)内のいくつかの場所で使用され、機械またはツールが何らかの方法で影響を与える必要がある$(thing)エンティティ/$を指定する必要があります。$(p)フィルターを入力できるほとんどの場所では$(thing)F1/$キーを押したままにするとポップアップヘルプが表示されます。"
+    },
+    {
+      "type": "text",
+      "text": "エンティティをエンティティタイプで一致させるにはタイプ名を指定するだけです(例: $(#800)creeper/$は $(thing)minecraft:creeper/$と一致します)。カスタム名(プレイヤーを含む)を持つエンティティを一致させるにはエンティティ名を引用符で囲みます(例: $(#800)'Minemaarten'/$ または $(#800)'desht'/$)。$(p)特定のエンティティ$(italic)タイプ/$(例: 動物、攻撃的なMob、一般的なプレイヤー)を指定する場合は先頭に'@'を付けます。受け入れられる$(thing)@ 指定子/$を含む例の完全なリストは次のとおりです。"
+    },
+    {
+      "type": "text",
+      "title": "例",
+      "text": "$(li)$(#800)@player/$は全てのプレイヤーに一致します$(li)$(#800)@mob/$はすべての攻撃的な生物に一致します$(li)$(#800)@animal/$はすべての受動的な生物に一致します(動物)$(li)$(#800)@animal(age=adult)/$はすべての成体動物に一致します$(li)$(#800)@animal(age=baby)/$はすべての幼体動物に一致します$(li)$(#800)@animal(breedable=yes)/$は現在繁殖できるすべての動物に一致します$(li)$(#800)sheep(shearable=yes)/$は毛刈りができる全ての羊に一致します"
+    },
+    {
+      "type": "text",
+      "title": "例(続き)",
+      "text": "$(li)$(#800)sheep(shearable=yes,color=black)/$は毛刈りができるすべての黒色の羊に一致します$(li)$(#800)wolf(color=blue)/$は青色の首輪をつけたすべてのオオカミ/イヌに一致します$(li)$(#800)cat(color=white)/$は白色の首輪をつけたすべてのネコに一致します$(li)$(#800)@minecart/$はトロッコに一致します$(li)$(#800)@boat/$はボートに一致します$(li)$(#800)@living/$は全ての生きているエンティティに一致します$(li)$(#800)@item/$はアイテムエンティティに一致します$(li)$(#800)@orb/$は経験値オーブに一致します"
+    },
+    {
+      "type": "text",
+      "title": "例(続き)",
+      "text": "$(li)$(#800)@drone/$は$(l:tools/drone)ドローン/$に一致します$(li)$(#800)@mob(mod=minecraft)/$はMobに一致しますが、名前空間$(thing)minecraft/$からのみに一致します$(li)$(#800)クリーパー/$はクリーパーに一致します$(li)$(#800)'MineMaarten'/$ (or $(#800)\"Minemaarten\"/$)は'MineMaarten'と名付けられたエンティティに一致します$(li)$(#800)c*/$は「c」で始まる文字のエンティティに一致します(クリーパー(creeper)や牛(cow)のように) $(li)$(#800)*pig*/$は「pig」を名前に含むエンティティに一致します(豚(pig)やゾンビピグリン(zombified_piglin)のように)"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(#800)@player(team=team1)/$はバニラのスコアボードチーム「team1」のプレイヤーに一致します$(li)$(#800)@player(holding=stick)/$は現在棒を持っているプレイヤーに一致します$(li)$(#800)@player(holding=#minecraft:planks)/$はアイテムタグ$(thing)minecraft:planks/$のアイテムを持っているプレイヤーに一致します"
+    },
+    {
+      "type": "text",
+      "flag": "mod:ftbteams",
+      "text": "$(li)$(#800)@player(ftbteam=<uuid>|<shortname>)/$は指定されてuuidまたはshortnameを持つ$(l:https://www.curseforge.com/minecraft/mc-mods/ftb-teams-forge)FTB Teams/$のチームメンバーであるプレイヤーに一致します$(p)また、プレイヤー修飾子$(#800)ftbteam_officer/$、$(#800)ftbteam_owner/$、$(#800)ftbteam_ally/$を使用して、チームの(少なくとも)役員、オーナー、または味方であるプレイヤーを一致させることもできます。また、$(#800)ftbteam_enemy/$を使用してチームの敵として明示的にマークされているプレイヤーを一致させることもできます。"
+    },
+    {
+      "type": "text",
+      "text": "すべての一致は大文字と小文字を区別しません。たとえば、$(#800)zombie/$と$(#800)Zombie/$は両方ともゾンビに一致します。$(p)';'(セミコロン)区切り文字を使用してフィルターの$(thing)シーケンス/$を指定できます。これは$(italic)match any/$関数です。$(li)$(#800)creeper;zombie/$はクリーパー$(italic)と/$ゾンビの両方に一致します。"
+    },
+    {
+      "type": "text",
+      "text": "フィルターを否定するにはフィルターの前に'!'を付けます:$(li)$(#800)!@player/$はプレーヤーでないものに一致します。$(italic)$(li)$(#800)!Creeper;Zombie/$はCreeperでもZombieでもないものに一致します。$(italic)$(li)$(#800)Creeper;!Zombie/$は$(#f00)無効です。/$: '!'はフィルターの先頭にのみ使用できます。/$$(p)$(bold)注:/$ プログラミングウィジェットを使用した$(l:tools/drone)ドローン/$のエンティティフィルターでは、'!'はサポートされていません。通常どおり左側のテキストウィジェットを接続します。"
+    },
+    {
+      "type": "relations",
+      "entries": [
+        "pneumaticcraft:tools/micromissiles",
+        "pneumaticcraft:tubes/air_grate_module",
+        "pneumaticcraft:armor/pneumatic_helmet",
+        "pneumaticcraft:machines/sentry_turret",
+        "pneumaticcraft:machines/universal_sensor",
+        "pneumaticcraft:programming/text"
+      ],
+      "text": "$(italic)エンティティフィルタリングを使用する機械とツール/$"
+    }
+  ]
+}

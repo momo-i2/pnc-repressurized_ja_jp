@@ -1,0 +1,27 @@
+{
+  "name": "右クリックウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/block_right_click_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "ドローンは接続された$(l:programming/area)エリア/$ウィジェット内のすべてのブロック位置に対して、最初のインベントリスロットにあるアイテムで$(thing)右クリック/$します。これを使用して地面を耕したり、種を蒔いたり、骨粉を適用したり、ポーションを投げたり、ドローンを展開したり、レンチでブロックを回転させたりすることができます...可能性は無限です。"
+    },
+    {
+      "type": "text",
+      "text": "このウィジェットはプログラマーのウィジェットGUIから選択可能な2つのモードのいずれかで動作します:$(li)アイテムモード - $(thing)保持アイテムの/$右クリックロジック(例: ブロックで$(item)火打石と打ち金/$を使用する)を使用します。$(li)ブロックモード - $(thing)ブロックの/$右クリックロジックをアクティブ(例: $(item)レバー/$を反転する)にします。$(p)$(thing)アイテムモード/$では添付されているフィルターは使用されている$(italic)アイテム/$に適用されます。$(thing)ブロックモード/$ではアクティブ化されている$(italic)ブロック/$にフィルターが適用されます。"
+    },
+    {
+      "type": "text",
+      "text": "このウィジェットを使用して通常のブロックを配置することができます。ただしこれは推奨$(italic)されません/$。ドローンがブロックがすでに存在する位置を右クリックすると、ブロックを右クリックしてブロック自体ではなくこのブロックの$(italic)隣/$にブロックを配置することになるからです。$(p)これらの理由から$(l:programming/place)配置/$ウィジェットの使用が推奨されます。ただし、$(thing)ブロックを右クリック/$ウィジェットが必要な状況(例: $(item)種/$を植える場合)もあります。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/block_right_click_piece.png"
+      ],
+      "text": "$(italic)右クリックウィジェット/$"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "ラベルウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/label_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このウィジェットは$(l:programming/flow_control)プログラムフロー/$にのみ焦点を当てています。ラベルは$(l:programming/jump)ジャンプ/$および$(l:programming/conditions)条件/$ウィジェットがジャンプできるプログラム内のポイントを定義します。このウィジェットに名前を付けるには$(l:programming/text)テキスト/$ウィジェットを取り付ける必要があります。その名前の$(thing)テキスト/$ウィジェットを使用するすべてのジャンプ/条件はこのラベルにジャンプします。"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)ラベル/$ウィジェットはプログラムフローに$(italic)ブランチ/$を作成するために使用($(l:programming/conditions)条件/$を使用する場合)できます。また、プログラムのセクションを並べてわかりやすく整理するためにも使用できます。便利なヒントとして$(l:programming/programmer)プログラマー/$GUIの左下にある$(bold)フローを表示/$のチェックボックスをオンにします。これにより同じ名前の$(thing)ジャンプ/条件/ラベル/$ウィジェットをリンクする線が表示されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/label_piece.png"
+      ],
+      "text": "$(italic)ラベルウィジェット/$"
+    }
+  ]
+}

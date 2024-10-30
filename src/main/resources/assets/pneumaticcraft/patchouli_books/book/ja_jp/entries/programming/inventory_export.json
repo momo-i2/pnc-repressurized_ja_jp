@@ -1,0 +1,23 @@
+{
+  "name": "インベントリエクスポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/inventory_export_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:programming/inventory_import)インベントリインポート/$ウィジェットの反対: $(l:tools/drone)ドローン/$は指定された$(l:programming/area)エリア/$内の最も近いインベントリに移動し、$(item)ドローンの/$インベントリからアイテムをドロップします。$(p)$(thing)ウィジェットを右クリック/$すると、ドローンがアイテムをエクスポートするインベントリの側面を指定できるセットアップGUIが表示されます。エクスポートするアイテムの最大数も指定できます。"
+    },
+    {
+      "type": "text",
+      "text": "また、任意の数(0を含む)の$(l:programming/item_filter)アイテムフィルター/$ウィジェットを接続してエクスポートできるアイテムを制限することもできます。$(italic)右/$のフィルターはホワイトリストとして機能し、$(italic)左/$のフィルターはブラックリストとして機能することに注意してください。$(p)このウィジェットは$(item)ドローンの/$インベントリが空の場合、またはエクスポートするアイテムを受け入れることができるインベントリがエリア内にない場合に実行されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/inventory_export_piece.png"
+      ],
+      "text": "$(italic)どういたしまして/$"
+    }
+  ]
+}

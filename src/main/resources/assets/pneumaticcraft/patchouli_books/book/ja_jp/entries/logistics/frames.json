@@ -1,0 +1,55 @@
+{
+  "name": "物流フレーム",
+  "icon": "pneumaticcraft:logistics_frame_passive_provider",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)物流フレーム/$はインベントリやタンクに取り付けて$(thing)物流システム/$の一部としてマークできる取り付け可能なガジェットです。$(p)配置されたフレームは$(l:tools/logistics_configurator)物流コンフィギュレーター/$を使用して$(thing)右クリック/$することで設定でき、コンフィギュレーターを使用して$(thing)スニーク+右クリック/$することで削除できます。フレームはアイテムフォームを右クリックすることで手持ちで設定することもできます。"
+    },
+    {
+      "type": "text",
+      "text": "以下のフレームプロパティを設定できます:$(li)すべてのフレームは提供または受け入れるアイテム/流体を制御するために$(thing)フィルタリング/$をサポートしています。$(l:tools/tag_filter)タグフィルター/$も参照してください。$(li)$(thing)フィルター/$側のタブではフィルターが$(thing)アイテムのNBT/$または$(thing)MOD ID/$で一致するかどうか、またフィルターをホワイトリスト(デフォルト)またはブラックリストとして適用するかどうかを設定できます。"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l:logistics/frames#requester)リクエスターフレーム/$の場合、$(thing)最小注文サイズ/$タブを使用すると一度に移動するアイテムまたは流体の最小量を設定できます。これはドローンが小さな積載量で頻繁に移動することを防ぐのに役立ちます。$(li)最後に、物流アイテム(フレームまたはコンフィギュレーター)を保持していない限り、すべてのフレームをプレイヤーに対して$(thing)非表示/$にするように設定できます。注: 非表示のフレームはプレイヤーの左クリックをその下のブロックに渡します。"
+    },
+    {
+      "type": "crafting",
+      "anchor": "active_provider",
+      "title": "アクティブプロバイダーフレーム",
+      "recipe": "pneumaticcraft:logistics_frame_active_provider",
+      "text": "$(item)アクティブプロバイダーフレーム/$は$(l:logistics/frames#requester)リクエスターフレーム/$、$(l:logistics/frames#storage)ストレージフレーム/$、および$(l:logistics/frames#default_storage)デフォルトストレージフレーム/$にアイテム/流体を提供します。"
+    },
+    {
+      "type": "crafting",
+      "anchor": "passive_provider",
+      "title": "パッシブプロバイダーフレーム",
+      "recipe": "pneumaticcraft:logistics_frame_passive_provider",
+      "text": "$(item)パッシブプロバイダーフレーム/$はアイテム/流体を$(l:logistics/frames#requester)リクエスターフレーム/$にのみ提供します。"
+    },
+    {
+      "type": "crafting",
+      "anchor": "storage",
+      "title": "ストレージフレーム",
+      "recipe": "pneumaticcraft:logistics_frame_storage",
+      "text": "$(item)ストレージフレーム/$ は、$(l:logistics/frames#active_provider)アクティブプロバイダーフレーム/$からアイテム/流体を受け取り、$(l:logistics/frames#requester)リクエスターフレーム/$にアイテムを供給できます。"
+    },
+    {
+      "type": "crafting",
+      "anchor": "default_storage",
+      "title": "デフォルトストレージフレーム",
+      "recipe": "pneumaticcraft:logistics_frame_default_storage",
+      "text": "$(item)デフォルトストレージフレーム/$は$(l:logistics/frames#active_provider)アクティブプロバイダーフレーム/$からアイテム/流体を受け取り、$(l:logistics/frames#requester)リクエスターフレーム/$および$(l:logistics/frames#storage)ストレージフレーム/$にリソースを供給できます。これらは可能な場合、常に最初に使用されるストレージフレームよりも優先順位が低くなります。"
+    },
+    {
+      "type": "crafting",
+      "anchor": "requester",
+      "title": "リクエスターフレーム",
+      "recipe": "pneumaticcraft:logistics_frame_requester",
+      "text": "$(item)リクエスターフレーム/$は他のフレームのインベントリからアイテム/流体を要求できます。これらのフレームではコンフィグGUIを使用して、フレームに各アイテムまたは流体をどのくらいの量保持して$(thing)ストック/$を維持するかを伝えます。"
+    }
+  ]
+}

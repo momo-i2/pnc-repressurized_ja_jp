@@ -1,0 +1,33 @@
+{
+  "name": "全方向ホッパー",
+  "icon": "pneumaticcraft:omnidirectional_hopper",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)全方向ホッパー/$はバニラの$(item)ホッパー/$と似た動作をします。ただし、このホッパーは上だけでなく$(italic)どのような/$方向にでも向けることができます。さらに$(l:base_concepts/upgrades)アップグレード/$を受け入れるため、これを使用してホッパーの速度を大幅に上げることができます。$(l:base_concepts/pressure)空気/$を使用しないため、ゲーム序盤で非常に便利なデバイスです。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:omnidirectional_hopper",
+      "text": "ホッパーを配置するとその$(9)入力/$は自分の方を向き、その$(6)出力/$は配置されたブロックの方に向きます。$(p)$(thing)ホッパーを$(l:tools/pneumatic_wrench)空気圧レンチ/$(他のレンチも機能する場合があります)で右クリック/$すると入力の向きを変更できます。$(thing)ホッパーをスニーク+右クリック/$すると出力の向きを変更できます。"
+    },
+    {
+      "type": "text",
+      "title": "ディスペンサーアップグレード",
+      "flag": "pneumaticcraft:omniHopperDispenser",
+      "text": "$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$がインストールされている場合、ホッパーはアイテムを$(6)出力/$側から自動的にワールドに排出(そこにインベントリがない場合)します。$(p)これは大幅に改良された$(item)ドロッパー/$として使用できます。より高速で、より正確で、より優れた$(#f00)レッドストーンコントロール/$です。"
+    },
+    {
+      "type": "text",
+      "title": "エンティティトラッカーアップグレード",
+      "text": "$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカーアップグレード/$がインストールされている場合、ホッパーは$(9)入力/$側の前にあるエンティティからアイテムを抽出できるようになります。エンティティは$(thing)pneumaticcraft:omnihopper_blacklisted/$エンティティタイプタグに追加することで、このような抽出からブラックリストに登録できます。村人はアイテムの無限の元になる可能性があるため、デフォルトでブラックリストに登録されています。"
+    },
+    {
+      "type": "crafting",
+      "text": "全方向ホッパーのクラフト",
+      "recipe": "pneumaticcraft:omnidirectional_hopper"
+    }
+  ]
+}

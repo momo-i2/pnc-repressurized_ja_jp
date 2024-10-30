@@ -1,0 +1,16 @@
+{
+  "name": "コンデンサ",
+  "icon": "pneumaticcraft:capacitor",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:plastic",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは他のデバイスを作成するためのコンポーネントです。それ自体では役に立ちません。"
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "recipe": "pneumaticcraft:pressure_chamber/capacitor"
+    }
+  ]
+}

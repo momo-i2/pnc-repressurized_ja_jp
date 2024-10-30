@@ -1,0 +1,53 @@
+
+{
+  "name": "製油所",
+  "icon": "pneumaticcraft:refinery",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:oil_bucket",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)製油所/$は$(l:base_concepts/heat)熱/$を使用して$(l:base_concepts/oil)原油/$をさまざまな燃料に精製するマルチブロックの機械です。100℃で動作を開始します。適用される温度が高いほど精製が速くなります。生成できる燃料は軽いものから重いものの順に並べると、$(li)$(thing)LPG(液化石油ガス)/$$(li)$(thing)ガソリン/$$(li)$(thing)灯油/$$(li)$(thing)ディーゼル/$"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)製油所/$はマルチブロック構造です。$(item)製油所コントローラー/$を配置し、2～4個の$(item)製油所出力装置/$をコントローラーの上または横に積み重ねます。$(p)マルチブロックのサイズが異なると収量が異なります。入力として10mBの原油を想定:$(p)$(bold)2つの出力装置/$$(li)$(thing)LPG (液化天然ガス)/$ (2mB)$(li)$(thing)ディーゼル/$ (4mB)$(br)$(bold)3つの出力出力装置/$$(li)$(thing)LPG (液化天然ガス)/$ (2mB)$(li)$(thing)灯油/$ (3mB)$(li)$(thing)ディーゼル/$ (2mB)"
+    },
+    {
+      "type": "text",
+      "text": "$(bold)4つの出力装置/$$(li)$(thing)LPG (液化天然ガス)/$ (2mB)$(li)$(thing)ガソリン/$ (3mB)$(li)$(thing)灯油/$ (3mB)$(li)$(thing)ディーゼル/$ (2mB)$(p)最も軽い燃料は常に上部の$(item)製油所出力装置/$に配置され、最も重い燃料は下部に配置されます。既存の積み重ねにさらに$(item)製油所出力装置/$を追加すると、マルチブロックはシステムの実行を維持するために、既存の出力流体を適切なブロックに自動的に再配置するように最善を尽くします。"
+    },
+    {
+      "type": "text",
+      "text": "生成された流体はすべて$(l:compressors/liquid_compressor)流体コンプレッサー/$の燃料として使用(軽い燃料の方が品質が良い)できます。$(p)ただし、他に非常に重要な用途が2つあります。$(li)$(thing)LPG/$は溶融$(l:components/plastic)プラスチック/$の製造に使用されます。$(li)$(thing)ディーゼル/$は$(l:base_concepts/upgrades#speed)スピードアップグレード/$用の$(l:components/lubricant)潤滑油/$の製造に使用されます。$(p)これらの両方のプロセスには$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$が使用されます。"
+    },
+    {
+      "type": "text",
+      "title": "コンパレーターのサポート",
+      "text": "$(item)製油所/$は$(item)コンパレーター/$と連携して動作します。接続されたコンパレーターは$(item)製油所/$に作業がある場合に信号強度15を出力し、作業がない場合には0を出力します。精製する$(thing)原油/$が$(italic)あり/$、精製された製品用の出力タンクにスペースがある場合に作業されます。$(p)これを使用して、たとえば空気を節約するために$(l:machines/vortex_tube)ボルテックスチューブ/$への空気供給の切り替えを自動化できます。"
+    },
+    {
+      "type": "text",
+      "title": "セットアップのヒント",
+      "text": "$(item)製油所/$は多くの面が空気にさらされているマルチブロックであるため、断熱が不十分だと$(l:base_concepts/heat)熱/$が急速に失われる可能性があります。したがって、効率を最大化するためにマルチブロックの未使用の面をすべて覆うことを強くお勧めします。$(item)ハーフブロック/$や$(item)トラップドア/$などの半固体ブロックを含む熱を伝導しないブロックであればどれでも使用できますが、$(l:machines/thermal_lagging)断熱材/$が特に推奨されます。"
+    },
+    {
+      "type": "text",
+      "text": "$(l:machines/vortex_tube)ボルテックスチューブ/$を使用して$(item)製油所/$を加熱したり、熱い流体(溶岩等)やブロック(マグマブロック等)を任意の$(item)製油所/$ブロックの隣に配置したりできます。このような流体やブロックは使い果たされる(熱が放出される)ため、これらのリソースの生成と配置を自動化する方法を見つけることをお勧めします。"
+    },
+    {
+      "type": "link",
+      "flag": "mod:crafttweaker",
+      "title": "CraftTweaker",
+      "text": "$(item)製油所/$は$(l:https://minecraft.curseforge.com/projects/crafttweaker)CraftTweaker/$をサポートしています。レシピを追加したり削除したりできます。詳細については、以下のリンクを参照してください。",
+      "url": "https://docs.blamejared.com/1.16/en/mods/PneumaticCraft-Repressurized/Refinery",
+      "link_text": "CraftTweaker Docs"
+    },
+    {
+      "type": "crafting",
+      "text": "製油所のクラフト",
+      "recipe": "pneumaticcraft:refinery",
+      "recipe2": "pneumaticcraft:refinery_output"
+    }
+  ]
+}

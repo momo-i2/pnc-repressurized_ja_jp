@@ -1,0 +1,32 @@
+{
+  "name": "ユニバーサルセンサー",
+  "icon": "pneumaticcraft:universal_sensor",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:plastic",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)ユニバーサルセンサー/$はその名前が示すように、多くのアプリケーションで使用できるセンサーです。これはワールド内の状態を測定し、それらの状態に基づいて$(#f00)レッドストーン信号/$を出力します。$(p)ユニバーサルであることは無料ではありません。センサーは$(ttcolor)$(t:定常的なレッドストーン出力は使用するのに無料です)ほとんどすべて/$のケースで実行するために$(l:base_concepts/pressure)空気/$(1 mL/tick)を必要とし、センサーを実行するには特定の$(l:base_concepts/upgrades)アップグレード/$が必要です。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:universal_sensor",
+      "text": "現在、センサーが測定できる条件は15種類以上あり、特定の座標にブロックがあるかどうかや、Twitcherのストリーミングがあるかどうかを確認できます。$(thing)ユニバーサルセンサー/$のGUIを開いて利用可能な機能と説明を確認してください。"
+    },
+    {
+      "type": "text",
+      "title": "アップグレード",
+      "text": "対応するセンサーのカテゴリを選択できるようにするには$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカー/$、$(l:base_concepts/upgrades#dispenser)ディスペンサー/$、または$(l:base_concepts/upgrades#block_tracker)ブロックトラッカー/$と$(l:tools/gps_tool)GPSツール/$を挿入する必要があります。たとえば、範囲内のエンティティの数をカウントするには$(item)エンティティトラッカーアップグレード/$をインストールする必要があります。"
+    },
+    {
+      "type": "text",
+      "title": "例: エンティティ数のカウント",
+      "text": "動物がたくさんいる囲いがあり、十分な数だけ殺したいとします。$(p)$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカーアップグレード/$と、囲いのサイズをカバーするのに十分な$(l:base_concepts/upgrades#range)レンジアップグレード/$を追加します。$(p)次に、GUIで$(thing)エンティティ/$ボタンを選択し、次に$(thing)範囲内/$を選択し、最後に動物の種類(例: 'cow')に一致する$(l:base_concepts/entity_filter)エンティティフィルター/$を入力します。"
+    },
+    {
+      "type": "crafting",
+      "text": "ユニバーサルセンサーのクラフト",
+      "recipe": "pneumaticcraft:universal_sensor"
+    }
+  ]
+}

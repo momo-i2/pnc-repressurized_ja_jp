@@ -1,0 +1,19 @@
+{
+  "name": "ジャンプサブルーチンウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/jump_sub_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このウィジェットは $(thing)ジャンプ/$のように動作しますが、サブルーチンが完了した場合$(thing)ジャンプサブルーチン/$ウィジェットの下部に接続されたウィジェットで実行が継続されます。$(thing)ジャンプサブルーチン/$ウィジェットは共通コードを再利用し、サブルーチンにジャンプする前に変数を割り当てることで任意の引数でサブルーチンを呼び出すのに役立ちます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/jump_sub_piece.png"
+      ],
+      "text": "$(italic)ジャンプサブルーチンウィジェット/$"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "看板編集ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/edit_sign_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これにより接続された$(l:programming/area)エリア/$内のすべての$(item)看板/$および/または$(l:machines/aphorism_tile)格言タイル/$が接続された$(l:programming/text)テキスト/$ウィジェットで指定されたテキストに編集されます。$(p)接続された各$(thing)テキスト/$ウィジェットは1行を表します。複数の$(thing)テキスト/$ウィジェットを接続すると複数行のメッセージを設定できます。"
+    },
+    {
+      "type": "text",
+      "title": "変数",
+      "text": "テキストに$(thing)${<var_name>}/$を含めることで$(l:programming/variables)変数/$の値を挿入することもできます。たとえば、$(thing)カウンター/$変数が$(thing)x=1,y=2,z=3/$に設定されている場合、$(p)$(formula)カウンター: ${counter}/$$(p)は$(thing)カウンター: 1, 2, 3/$に展開されます。$(l:programming/variables#special)スペシャル/$および$(l:programming/variables#global)グローバル変数/$もここで使用できます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/edit_sign_piece.png"
+      ],
+      "text": "$(italic)看板編集ウィジェット/$"
+    }
+  ]
+}

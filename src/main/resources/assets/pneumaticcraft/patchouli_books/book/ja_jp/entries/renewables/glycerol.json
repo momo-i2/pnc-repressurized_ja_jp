@@ -1,0 +1,28 @@
+{
+  "name": "グリセロール",
+  "icon": "pneumaticcraft:glycerol",
+  "category": "pneumaticcraft:renewables",
+  "advancement": "pneumaticcraft:ethanol",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)グリセロール/$は$(l:renewables/biodiesel)バイオディーゼル/$を製造する際の副産物ですが、それ自体がかなり有用な物質であることがわかります。その用途については次のページで詳しく説明します。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:bandage",
+      "text": "$(thing)絆創膏/$を使用すると体力を3ハート分素早く回復できます。ただし瞬時に回復するわけではありません。絆創膏を使用するには右クリックして2秒間押し続ける必要があり、使用の間には8秒間のクールダウンがあります。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:speed_upgrade_from_glycerol",
+      "text": "$(thing)砂糖/$を使用すると出力が2倍になりますが気に入らない点はありますか？これにより貴重な$(l:components/lubricant)潤滑油/$を節約できます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:furnace",
+      "title": "燃料として",
+      "text": "$(thing)グリセロール/$も4つの$(thing)板材/$または$(thing)石炭/$の半個分に相当するまともな燃料アイテムになります。"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "name": "タンク",
+  "icon": "pneumaticcraft:small_tank",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "流体貯蔵タンクは4つあり、想像力豊かに$(item)小型流体タンク/$、$(item)中型流体タンク/$、$(item)大型流体タンク/$、$(item)巨大流体タンク/$と名付けられています。$(l:machines/liquid_hopper)流体ホッパー/$も流体貯蔵に適していますが、これらのタンクはより高密度の貯蔵と便利な積み重ね機能を提供し、流体を自動的に転送しません(ただし、$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$が追加されている場合は流体を押し出すことができます)。"
+    },
+    {
+      "type": "text",
+      "title": "積み重ね",
+      "text": "4種類のタンクはすべてを互いに垂直に積み重ねて、一種のマルチブロックにすることができます。これを行うにはタンクを$(l:tools/pneumatic_wrench)空気圧レンチ/$で右クリックします。上半分を空気圧レンチで右クリックするとタンクを上のタンクに結合しようとし、下のタンクの場合はその逆になります。$(p)タンクを積み重ねると、スペースがあれば$(ttcolor)$(t:流体の密度が0未満の場合は、下ではなく上に移動します)上のタンク/$にある流体は自動的に下のタンクに流れます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/small_tanks.png"
+      ],
+      "border": "true",
+      "text": "3つの積み重ねられた小型流体タンク"
+    },
+    {
+      "type": "text",
+      "text": "これにはいくつかの制限があります:$(li)2つのタンクを組み合わせるには両方に同じ流体(または流体なし)が入っているか、タンクの1つが空である必要があります$(li)流体は上方向に移動しません。したがって、最良の結果を得るには流体をスタックの上部のタンクに送り込み、下部のタンクから排出する必要があります$(li)タンクのGUIには右クリックされたタンクの液体の量のみが表示されます。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:small_tank",
+      "recipe2": "pneumaticcraft:medium_tank"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:large_tank",
+      "recipe2": "pneumaticcraft:huge_tank"
+    }
+  ]
+}

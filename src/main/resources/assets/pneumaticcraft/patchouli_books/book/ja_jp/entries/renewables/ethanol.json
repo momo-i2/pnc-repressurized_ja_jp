@@ -1,0 +1,40 @@
+{
+  "name": "エタノール",
+  "icon": "pneumaticcraft:ethanol_bucket",
+  "category": "pneumaticcraft:renewables",
+  "advancement": "pneumaticcraft:yeast_culture",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)エタノール/$は$(l:renewables/yeast_culture)酵母培養/$と$(thing)砂糖/$を使用して$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で生成できます。これは$(l:renewables/biodiesel)バイオディーゼル/$の構成要素の1つです。"
+    },
+    {
+      "type": "text",
+      "text": "このプロセスは温度に敏感です。熱空気処理プラントの温度を30℃から60℃の間に保つ必要があります。$(p)これは暖かいバイオームでは非常に簡単ですが、寒い地域では少し手間がかかるかもしれません。注意すべき点の1つは、深く掘るにつれて周囲の温度が上昇する傾向があるため、より低いYレベルで処理を実行する場合は温帯バイオームが適している可能性があることです。"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/ethanol_from_sugar"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/ethanol_from_melon"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/ethanol_from_potato"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/ethanol_from_poisonous_potato"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/ethanol_from_apple"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/ethanol_from_sweet_berries"
+    }
+  ]
+}

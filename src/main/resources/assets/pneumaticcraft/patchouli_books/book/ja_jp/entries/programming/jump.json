@@ -1,0 +1,23 @@
+{
+  "name": "ジャンプウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/jump_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このウィジェットは$(l:programming/flow_control)プログラムフロー/$にのみ焦点を当てています。プログラムが$(thing)ジャンプ/$ウィジェットに到達すると接続されている$(l:programming/text)テキスト/$ウィジェットを調べ、一致する名前を持つ$(l:programming/label)ラベル/$ウィジェットにジャンプしようとします。何らかの理由で失敗した場合、実行は$(l:programming/start)開始/$ウィジェットに戻ります。(このフォールバック動作は通常は発生しません。)"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)ジャンプ/$ウィジェットはプログラムフロー内の複数の$(italic)ブランチ/$をマージするために使用できます(すべて同じ$(l:programming/label)ラベル/$にジャンプする2つ以上のジャンプを使用するか、セクションを独自の「サブルーチン」に分割してプログラムを整理します)。便利なヒントとして$(l:programming/programmer)プログラマー/$GUIの左下にある$(bold)フローを表示/$のチェックボックスをオンにすると、同じ名前の$(thing)ジャンプ/条件/ラベル/$ウィジェットをリンクする線が表示されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/jump_piece.png"
+      ],
+      "text": "$(italic)おそらく/$"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "核ウイルス",
+  "icon": "pneumaticcraft:nuke_virus",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは特別なコンポーネントで$(l:machines/security_station)セキュリティステーション/$をハッキングしようとするときにのみ使用されます。これは作成できず、ダンジョンの戦利品か(まれに)村人との取引でのみ見つかります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:nuke_virus",
+      "text": "ハッキング中にノードに$(thing)核ウィルス/$を適用するとノードが核攻撃され、即座にハッキングされます。核ウィルスは繰り返し使用する場合、3秒間のクールダウン期間があることに注意してください。"
+    }
+  ]
+}

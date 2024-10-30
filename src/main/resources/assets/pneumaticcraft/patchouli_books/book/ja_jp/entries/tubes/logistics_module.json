@@ -1,0 +1,37 @@
+{
+  "name": "物流モジュール",
+  "icon": "pneumaticcraft:logistics_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "この強力なモジュールはインベントリを$(l:logistics/overview)物流システム/$に接続するために使用され、圧力チューブを介して制御されたアイテムと流体の転送を効果的に許可します。$(p)モジュールが指すインベントリまたは流体タンクには$(l:logistics/frames)物流フレーム/$が取り付けられている必要があります。$(p)物流モジュールは$(l:tubes/module_expansion_card)モジュール拡張カード/$を受け入れません。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/logistics_module.png"
+      ],
+      "border": "true",
+      "text": "チェストを$(l:logistics/frames#passive_provider)パッシブプロバイダー/$および$(l:logistics/frames#requester)リクエスター/$フレームに接続する2つの物流モジュール。"
+    },
+    {
+      "type": "text",
+      "text": "物流モジュールのネットワークは$(l:tubes/pressure_tubes)圧力チューブ/$によって相互に接続されたすべてのモジュールによって定義されます。空気を使用する機械はネットワークの一部を形成しないことに注意してください。$(p)モジュールのGUIまたは任意の$(item)染料/$で右クリックしてチャンネルを選択できます。同じ色の物流モジュールのみが相互に通信するため、各ネットワークに16個の$(thing)チャンネル/$が実質的に提供されます。"
+    },
+    {
+      "type": "text",
+      "text": "物流モジュールには$(l:base_concepts/pressure)圧力/$が必要です。モジュールを動作させるには3バールが必要です。使用される空気は、距離、輸送量、定数の積です。つまり、アイテムを満載して輸送するにはより多くの空気が必要であり、長距離輸送にもより多くの空気が必要です。空気はそのモジュールに向かって流れているため、$(italic)受信側/$の物流モジュールで使用されます。"
+    },
+    {
+      "type": "text",
+      "text": "条件を示すためにインジケーターライトが取り付けられています:$(p)$(li)$(#f00)赤/$: 圧力が不十分です。少なくとも3バールを適用してください。$(li)$(#f80)オレンジ/$: 3バール以上ですが、アイテム/流体をこの距離に輸送するには圧力が不十分です。$(li)$(#0f0)緑/$: 圧力が十分でスタンバイ状態です。$(li)$(#00f)青 (パルス)/$: アイテム/流体を輸送中です。"
+    },
+    {
+      "type": "crafting",
+      "text": "物流モジュールのクラフト",
+      "recipe": "pneumaticcraft:logistics_module"
+    }
+  ]
+}

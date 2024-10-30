@@ -1,0 +1,17 @@
+{
+  "name": "タービンローター",
+  "icon": "pneumaticcraft:turbine_rotor",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは他のデバイスを作成するためのコンポーネントです。それ自体では役に立ちません。"
+    },
+    {
+      "type": "crafting",
+      "text": "タービンローターのクラフト",
+      "recipe": "pneumaticcraft:turbine_rotor"
+    }
+  ]
+}

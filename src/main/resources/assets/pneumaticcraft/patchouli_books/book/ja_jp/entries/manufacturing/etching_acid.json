@@ -1,0 +1,16 @@
+{
+  "name": "エッチング酸",
+  "icon": "pneumaticcraft:etching_acid_bucket",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "エッチング酸は$(l:components/pcb)PCB/$を化学的に現像するために使用されます。エッチング酸は$(l:manufacturing/pressure_chamber)圧力室/$で作成され、$(l:manufacturing/etching_tank)エッチングタンク/$で使用されます。$(p)PCB製造の詳細については$(l:components/pcb)PCB/$のエントリを参照してください。"
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "recipe": "pneumaticcraft:pressure_chamber/etching_acid"
+    }
+  ]
+}

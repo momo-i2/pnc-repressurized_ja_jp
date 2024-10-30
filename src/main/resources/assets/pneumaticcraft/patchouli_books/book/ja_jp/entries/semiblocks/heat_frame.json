@@ -1,0 +1,25 @@
+{
+  "name": "ヒートフレーム",
+  "icon": "pneumaticcraft:heat_frame",
+  "category": "pneumaticcraft:semiblocks",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このアイテムは任意の$(thing)インベントリ/$に配置できます。隣接する$(l:base_concepts/heat)熱源/$によって加熱されるとインベントリ内の任意のアイテムを精錬(または冷却されると凍結)しようとします。出来上がったアイテムのためのスペースがインベントリにある場合にのみ成功します。適用される熱が多ければ多いほど精錬プロセスは高速になり、最大で1秒あたり1アイテムになります。同様に、冷却が進むほどオブジェクトを凍結する速度が速くなります。"
+    },
+    {
+      "type": "link",
+      "flag": "mod:crafttweaker",
+      "title": "CraftTweaker",
+      "text": "$(thing)ヒートフレーム/$は冷却用の$(l:https://minecraft.curseforge.com/projects/crafttweaker)CraftTweaker/$サポートを備えています(製錬には通常の$(item)かまど/$レシピのみが使用されます)。レシピは追加および削除できます。詳細については以下のリンクを参照してください。",
+      "url": "https://crafttweaker.readthedocs.io/en/latest/#Mods/PneumaticCraft_Repressurized/Heat_Frame_Cooling/",
+      "link_text": "CraftTweaker Docs"
+    },
+    {
+      "type": "crafting",
+      "text": "ヒートフレームのクラフト",
+      "recipe": "pneumaticcraft:heat_frame"
+    }
+  ]
+}

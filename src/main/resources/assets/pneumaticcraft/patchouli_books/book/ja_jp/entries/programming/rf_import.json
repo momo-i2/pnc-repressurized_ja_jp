@@ -1,0 +1,19 @@
+{
+  "name": "RFインポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/rf_import_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)ドローン/$には100,000FE(Forgeエネルギー)の内部バッファがあります。このウィジェットを使用するとエネルギーを提供するブロック(例: $(item)Thermal ExpansionのEnergy Cell/$または$(item)Immersive Engineeringのキャパシタ/$)からドローンの内部ストレージにエネルギーをインポートできます。$(p)$(italic)こんな名前にもかかわらず、このウィジェットはRF(Redstone Flux)ではなくFE(Forgeエネルギー)をインポートします。名前は歴史的なものです。/$"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/rf_import_piece.png"
+      ],
+      "text": "$(italic)私には力がある/$"
+    }
+  ]
+}
