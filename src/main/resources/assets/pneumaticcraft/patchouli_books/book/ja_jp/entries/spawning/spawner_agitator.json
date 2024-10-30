@@ -1,0 +1,23 @@
+{
+  "name": "スポナー攪拌機",
+  "icon": "pneumaticcraft:spawner_agitator",
+  "category": "pneumaticcraft:spawning",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "バニラの$(item)スポナー/$に配置するとこのアイテムはスポナーを$(thing)攪拌/$します:$(li)スポナーは近くにプレイヤーがいない間もスポーンし続けます$(li)プレイヤーがそのエリアを離れたときにスポーンしたエンティティが消滅するのを防ぎます$(p)Mobファームはいかがですか？$(p)$(l:logistics/logistics_configurator)物流コンフィギュレーター/$で$(thing)スニーク+右クリック/$するか別の攪拌器を使用して削除します。"
+    },
+    {
+      "type": "text",
+      "flag": "mod:apotheosis",
+      "title": "Apotheosis",
+      "text": "$(thing)Apotheosis/$はバニラのスポナーに強力なカスタマイズを追加する(他の機能も含む)MODです。スポナー内部が変更されてスポナー攪拌機が完全に相互作用できなくなります。Apotheosisがインストールされているためスポナー攪拌機の機能はプレイヤーが遠くにいるときにMobが消滅するのを防ぐことだけに制限されています。プレイヤーが近くにいないときにMobが出現できるようにするには神格化機能を使用してください。"
+    },
+    {
+      "type": "crafting",
+      "text": "スポナー撹拌機のクラフト",
+      "recipe": "pneumaticcraft:spawner_agitator"
+    }
+  ]
+}

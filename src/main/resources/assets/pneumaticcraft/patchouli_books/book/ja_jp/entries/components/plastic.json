@@ -1,0 +1,69 @@
+{
+  "name": "プラスチック",
+  "icon": "pneumaticcraft:plastic_bucket",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:tp_plant",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)プラスチック/$は$(pncr)の重要な製造コンポーネントです。$(p)$(item)溶融プラスチック/$は$(l:manufacturing/refinery)LPG/$と$(item)石炭/$、または$(l:renewables/biodiesel)バイオディーゼル/$と$(item)木炭/$から$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で製造されます。"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/plastic_from_lpg"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/plastic_from_biodiesel"
+    },
+    {
+      "type": "spotlight",
+      "title": "プラスチックシート",
+      "item": "pneumaticcraft:plastic",
+      "flag": "pneumaticcraft:inWorldPlasticSolidification",
+      "text": "$(item)溶融プラスチック/$はワールドに注ぐだけで凝固します。約0.5秒以内に$(item)プラスチックシート/$に変わります。これは$(l:machines/liquid_hopper)流体ホッパー/$と$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$および$(l:machines/omnidirectional_hopper)全方向ホッパー/$を使用すると非常に簡単に自動化できます。"
+    },
+    {
+      "type": "spotlight",
+      "title": "プラスチックシート",
+      "item": "pneumaticcraft:plastic",
+      "flag": "!pneumaticcraft:inWorldPlasticSolidification",
+      "text": "$(item)プラスチックシート/$は$(l:semiblocks/heat_frame)ヒートフレーム/$が取り付けられたインベントリに$(item)溶融プラスチック/$入りバケツまたは$(l:machines/tanks)タンク/$を配置し、ヒートフレームを理想的には-80℃以下に冷却することで生成されます(冷たいほど良い)。$(item)溶融プラスチック/$はバケツまたはタンクから消費され、消費された溶融プラスチック1,000mBごとに2枚目の$(item)プラスチックシート/$を獲得するチャンスがあります。"
+    },
+    {
+      "type": "text",
+      "title": "収穫量の向上",
+      "flag": "pneumaticcraft:inWorldPlasticSolidification",
+      "text": "$(item)プラスチックシート/$を固める別の方法としては、$(l:semiblocks/heat_frame)ヒートフレーム/$が取り付けられたインベントリに$(item)溶融プラスチック/$入りバケツまたは$(l:machines/tanks)タンク/$を配置し、ヒートフレームを理想的には-80℃以下に冷却します(冷たいほど良い)。$(item)溶融プラスチック/$はバケツまたはタンクから消費され、消費された溶融プラスチック1,000mBごとに2枚目の$(item)プラスチックシート/$を獲得するチャンスがあります。"
+    },
+    {
+      "type": "text",
+      "title": "タンクに関するメモ",
+      "text": "$(pncr)の流体タンクにはインベントリスロットがあり、$(thing)ヒートフレーム/$を配置できますが、単にヒートフレームを溶融プラスチックで満たされたタンクに接続するだけでは機能しません。流体タンクはヒートフレームが接続された状態で、インベントリ(チェストなど)内のアイテム形式になっている必要があります。"
+    },
+    {
+      "type": "spotlight",
+      "title": "プラスチック製レンガ™",
+      "item": "pneumaticcraft:plastic_brick_red",
+      "text": "これらのレンガは$(item)プラスチックシート/$と任意の染料で形成されており、建築に適しています。$(p)裸足で歩かないでください。非常に痛いです！$(p)$(italic)他の主要ブランドの建築用レンガと互換性があります。/$"
+    },
+    {
+      "type": "spotlight",
+      "title": "滑らかなプラスチック製レンガ™",
+      "item": "pneumaticcraft:smooth_plastic_brick_red",
+      "text": "$(item)プラスチック製レンガ/$の滑らかなバージョンも建築に適しています。$(p)これらのレンガは歩行速度が向上するため、優れた床材になるという利点もあります！"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:plastic_brick_red",
+      "recipe2": "pneumaticcraft:smooth_plastic_brick_red",
+      "text": "他の色のレシピは推測できます"
+    },
+    {
+      "type": "smelting",
+      "recipe": "pneumaticcraft:plastic_sheet_from_brick",
+      "recipe2": "pneumaticcraft:plastic_sheet_from_smooth_brick",
+      "text": "レンガを溶かしてプラスチックシートに戻すことができます"
+    }
+  ]
+}

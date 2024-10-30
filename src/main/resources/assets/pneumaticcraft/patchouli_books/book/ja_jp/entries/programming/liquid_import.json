@@ -1,0 +1,23 @@
+{
+  "name": "流体インポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/liquid_import_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)流体インポートウィジェット/$は$(l:tools/drone)ドローン/$を指定された$(l:programming/area)エリア/$内の最も近いタンクに移動させ、そのタンクから流体を抽出して自身のタンクに入れます。$(p)また、ワールド内の流体ブロックから流体を汲み上げることもできるため、$(item)ドローン/$はポータブルポンプとして機能します。"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)ウィジェットを右クリックするとセットアップGUIが開き、ドローンがどの側から流体を抽出するか、および操作ごとにインポートされる流体の最大量(mB単位)を指定できます。$(p)$(l:programming/liquid_filter)流体フィルター/$を$(ttcolor)$(t:右側に接続するとホワイトリスト、左側に接続するとブラックリスト)接続/$してドローンがインポートできるものを制限できます。$(p)このウィジェットは$(item)ドローンの/$タンクがいっぱいになったとき、またはタンク内に(該当する)流体がなくなったときに実行されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/liquid_import_piece.png"
+      ],
+      "text": "$(italic)ズルズル/$"
+    }
+  ]
+}

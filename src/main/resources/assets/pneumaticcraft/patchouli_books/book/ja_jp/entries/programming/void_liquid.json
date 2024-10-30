@@ -1,0 +1,19 @@
+{
+  "name": "流体無効ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/void_fluid_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:programming/void_item)アイテム無効ウィジェット/$と同様にこれはドローンのタンク内の流体を即座に永久に破壊しますので注意してください。これを$(l:programming/liquid_filter)流体フィルター/$と組み合わせて使用することを強くお勧めします。フィルターを使用するとフィルターによって許可された流体のみが無効化されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/void_fluid_piece.png"
+      ],
+      "text": "$(italic)すべて干上がった/$"
+    }
+  ]
+}

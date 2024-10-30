@@ -1,0 +1,28 @@
+{
+  "name": "流体ホッパー",
+  "icon": "pneumaticcraft:liquid_hopper",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)流体ホッパー/$は流体を転送するために使用できるデバイスです。$(l:machines/omnidirectional_hopper)全方向ホッパー/$と同様に入力と出力は任意の方向に向けることができ、同じ配置および回転ルールを使用します。転送速度を上げるために$(l:base_concepts/upgrades#speed)スピードアップグレード/$を追加できます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:liquid_hopper",
+      "text": "$(item)流体ホッパー/$は$(9)入力/$側の前の地面にあるアイテムから流体を排出し、$(6)出力/$側の前のアイテム(水入りバケツ、溶岩入りバケツ、他MODの流体コンテナなど)に液体を挿入しようとします。"
+    },
+    {
+      "type": "text",
+      "title": "ディスペンサーアップグレード",
+      "flag": "pneumaticcraft:liquidHopperDispenser",
+      "text": "$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$が$(item)流体ホッパー/$に挿入されると、$(9)入力/$側で流体ブロック(1,000mB)を汲み上げ、$(6)出力/$側で貯蔵されている流体の1,000mBを分配します。これはたとえば水ポンプとして使用できます。"
+    },
+    {
+      "type": "crafting",
+      "text": "流体ホッパーのクラフト",
+      "recipe": "pneumaticcraft:liquid_hopper"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "流体エクスポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/liquid_export_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:programming/liquid_import)流体インポート/$の反対: $(l:tools/drone)ドローン/$は指定された$(l:programming/area)エリア/$内の最も近いタンクに移動して自身のタンクから流体を降ろします。$(p)さらに$(item)ドローン/$はワールドに流体を配置できます。これを行うにはウィジェットGUIで$(thing)ワールドに配置/$オプションをオンにします。注意: この操作中に$(item)ドローン/$は簡単に自分自身を閉じ込めてしまう可能性があります！"
+    },
+    {
+      "type": "text",
+      "text": "ウィジェットGUIでドローンがタンクのどの側にアイテムを出力するかを指定できます。また、エクスポートされる流体の最大量(mB単位)を指定することもできます。$(p)$(l:programming/liquid_filter)流体フィルター/$を$(ttcolor)$(t:右側のホワイトリストに接続、左側のブラックリストに接続)接続/$してドローンがエクスポートできるものを制限できます。$(p)このウィジェットは$(item)ドローンの/$タンクが空(該当する流体がない)の場合、または流体を受け入れるタンクがエリア内にない場合に実行されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/liquid_export_piece.png"
+      ],
+      "text": "$(italic)流体エクスポートウィジェット/$"
+    }
+  ]
+}

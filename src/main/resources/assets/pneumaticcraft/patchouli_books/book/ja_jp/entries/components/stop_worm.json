@@ -1,0 +1,17 @@
+{
+  "name": "STOP! Worm",
+  "icon": "pneumaticcraft:stop_worm",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは特別なコンポーネントで$(l:machines/security_station)セキュリティステーション/$をハッキングしようとするときにのみ使用されます。これは作成できず、ダンジョンの戦利品か(まれに)村人との取引でのみ見つかります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:stop_worm",
+      "text": "ハッキング中に$(thing)STOP! Worm/$を適用すると、ステーションの$(l:components/network_components#diagnostic)診断サブルーチン/$が一時的にフリーズし、追跡できなくなります。"
+    }
+  ]
+}

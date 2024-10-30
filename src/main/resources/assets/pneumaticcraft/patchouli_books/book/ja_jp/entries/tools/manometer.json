@@ -1,0 +1,23 @@
+{
+  "name": "圧力計",
+  "icon": "pneumaticcraft:manometer[pneumaticcraft:air=30000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "圧力計を使用すると空気圧ネットワーク上の$(l:base_concepts/pressure)圧力/$を測定できます。さらに一部の空気圧機械/チューブには特別な情報があります。たとえば、$(l:tubes/safety_module)セーフティチューブモジュール/$はその安全閾値を表示します。したがって、レッドストーンの数学に慣れていない場合はこのツールが役立つ場合があります。"
+    },
+    {
+      "type": "crafting",
+      "text": "圧力計のクラフト",
+      "recipe": "pneumaticcraft:manometer"
+    },
+    {
+      "type": "text",
+      "title": "その他MOD",
+      "flag": "|mod:theoneprobe,mod:hwyla",
+      "text": "$(thing)The One Probe/$や$(thing)WAILA/HWYLA/$などのMODがインストールされている場合、$(item)圧力計/$の使用は制限される可能性があります。"
+    }
+  ]
+}

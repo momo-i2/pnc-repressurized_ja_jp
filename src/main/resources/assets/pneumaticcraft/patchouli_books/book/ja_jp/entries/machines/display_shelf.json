@@ -1,0 +1,17 @@
+{
+  "name": "ディスプレイ棚",
+  "icon": "pneumaticcraft:display_shelf",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)ディスプレイ棚/$は上位の$(l:machines/display_table)ディスプレイテーブル/$とまったく同じように機能しますが高さが半分です。さらにその下のブロックの上面が固体でない場合、脚はレンダリングされません。"
+    },
+    {
+      "type": "crafting",
+      "text": "ディスプレイ棚のクラフト",
+      "recipe": "pneumaticcraft:display_shelf"
+    }
+  ]
+}

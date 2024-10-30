@@ -1,0 +1,30 @@
+{
+  "name": "圧力ゲージモジュール",
+  "icon": "pneumaticcraft:pressure_gauge_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このチューブモジュールは接続されているチューブ内の現在の$(l:base_concepts/pressure)圧力/$を表示します。また強度が次の値に等しい(方向性のある)$(#f00)レッドストーン信号/$も出力します:$(p)$(formula) 強度 = 2 x 圧力/$$(p)たとえば、圧力が3.5バールの場合、レッドストーン信号のレベルは7になります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "$(l:tubes/module_expansion_card)モジュール拡張カード/$を圧力ゲージモジュールに適用するとGUI(右クリック)がロック解除され、$(#f00)レッドストーン信号/$の放出をより細かく制御できるようになります。デフォルトでは閾値レベルを指定できます。信号はそのレベル以下ではオフになり、そのレベル以上では完全にオン(またはその逆)になります。GUIで$(bold)詳細設定/$切替を選択するとさらに詳細な制御が可能(上記を参照)になります。"
+    },
+    {
+      "type": "image",
+      "images": [
+          "pneumaticcraft:textures/patchouli/pressure_gauge_gui.png"
+      ],
+      "text": "$(italic)<10バール = レッドストーン信号0、 >20バール = レッドストーン信号15, 10-20バール = 補完 (例 12バール = レッドストーン信号3)/$",
+      "anchor": "img"
+    },
+    {
+      "type": "crafting",
+      "text": "圧力ゲージモジュールのクラフト",
+      "recipe": "pneumaticcraft:pressure_gauge_module"
+    }
+  ]
+}

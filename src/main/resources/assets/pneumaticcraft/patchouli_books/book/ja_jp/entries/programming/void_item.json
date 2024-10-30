@@ -1,0 +1,19 @@
+{
+  "name": "アイテム無効ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/void_item_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これによりドローンのインベントリ内のアイテムが即座に永久に破壊されますので注意してください。これを$(l:programming/item_filter)アイテムフィルター/$と組み合わせて使用することを強くお勧めします。フィルターを使用するとフィルターによって許可されたアイテムのみが無効になります。$(p)該当するアイテムが$(item)ドローンの/$インベントリに残っていない場合ウィジェットの実行は終了します。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/void_item_piece.png"
+      ],
+      "text": "$(italic)いずれにせよ、欲しくはなかった/$"
+    }
+  ]
+}

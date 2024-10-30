@@ -1,0 +1,27 @@
+{
+  "name": "エッチングタンク",
+  "icon": "pneumaticcraft:etching_tank",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:etchacid_bucket",
+  "pages": [
+    {
+    "type": "text",
+    "text": "まず、$(thing)エッチングタンク/$に$(l:manufacturing/etching_acid)エッチング酸/$を入れます。次に、$(l:manufacturing/uv_light_box)UVライトボックス/$で部分的または完全に露出した最大25個の$(thing)空のPCB/$を挿入します。$(p)エッチング酸をワールドに注いでPCBをそこに投げ込むこともできますが、エッチングタンクを使用する方がはるかに安全で高速です。"
+    },
+    {
+      "type": "text",
+      "title": "自動化",
+      "text": "$(thing)空のPCB/$はどの側でも運ぶことができます。エッチングに成功した$(thing)未組立のPCB/$は右上の出力スロットに移動され、$(thing)不良PCB/$は右下のスロットに移動します。自動抽出の場合、未組立のPCBを機械の側面から抽出して不良PCBを上部または下部から抽出します。不良PCBを$(thing)溶鉱炉/$に運んで露出していない空のPCBを戻してプロセスを再開することで、これを自動化できます。"
+    },
+    {
+      "type": "text",
+      "title": "加熱",
+      "text": "$(l:base_concepts/heat)熱/$がない場合、エッチングタンクはPCBを完全にエッチングするのに150秒(もちろん最大25個まで同時にエッチングできます)かかります。タンクに熱を加えると、処理時間をさらに短縮して最短30秒にすることができます。タンクが熱くなるほど処理時間は速くなります。ただし、加熱するとPCBのエッチング中に少量のエッチング酸が消費されることに注意してください。"
+    },
+    {
+      "type": "crafting",
+      "text": "エッチングタンクのクラフト",
+      "recipe": "pneumaticcraft:etching_tank"
+    }
+  ]
+}

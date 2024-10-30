@@ -1,0 +1,29 @@
+{
+  "name": "ソーラーコンプレッサー",
+  "icon": "pneumaticcraft:solar_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)ソーラーコンプレッサー/$は$(thing)太陽光/$から$(l:base_concepts/pressure)圧縮空気/$と$(l:base_concepts/heat)熱/$を生成します。機能するには直射日光が当たる場所が必要です。つまり屋内、夜間、または嵐のときには機能しません。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)ソーラーコンプレッサー/$のクラフト",
+      "recipe": "pneumaticcraft:solar_compressor"
+    },
+    {
+      "type": "text",
+      "text": "$(item)ソーラーコンプレッサー/$は圧縮空気を生成しますが、生成される圧縮空気の量に比例して熱も生成します。$(item)ソーラーコンプレッサー/$の能力を最大限に引き出すには適切な熱管理が必要です。熱が少なすぎるとコンプレッサーは圧縮空気をほとんど生成できず、熱が多すぎるとコンプレッサーが過熱して故障し、$(l:components/solar_cell)太陽電池/$を使用した手動修理が必要になります。"
+    },
+    {
+      "type": "text",
+      "text": "$(l:machines/heat_sink)ヒートシンク/$、$(l:machines/heat_pipe)ヒートパイプ/$、および$(l:tubes/air_grate_module)エアグレートモジュール/$は$(item)ソーラーコンプレッサー/$によって生成された熱を管理および除去するための最適なツールです。$(l:machines/vortex_tube)ボルテックスチューブ/$も追加の熱を生成して最大効率を達成するために使用できるため、熱管理に役立ちます。適切な設定により$(l:base_concepts/upgrades#speed)最大速度/$の$(item)ソーラーコンプレッサー/$でも最大効率で熱平衡に達することができます。"
+    },
+    {
+      "type": "text",
+      "text": "コンプレッサーには圧縮空気を生成できないときに作動する熱パッドが組み込まれており、非作動時に熱が増減するのを防ぎます。$(br2)コンプレッサーは$(thing)350℃/$で最大効率に達し、$(thing)425℃/$で過熱します。"
+    }
+  ]
+}

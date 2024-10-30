@@ -1,0 +1,22 @@
+{
+  "name": "ミニガン",
+  "icon": "pneumaticcraft:minigun[pneumaticcraft:air=30000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)ミニガン/$は$(l:base_concepts/pressure)圧縮空気/$と$(l:tools/minigun_ammo)弾薬/$で動作する手持ち武器です。弾薬は$(l:tools/minigun_ammo#magazine)ミニガンのマガジン/$に挿入する必要があります。プレイヤーのインベントリから消費されることはありません。$(p)ミニガンを発射するには単に$(thing)右クリック/$を押し続けます。銃身が回転し始めて速度が上がるとすぐに発射されます。"
+    },
+    {
+      "type": "text",
+      "title": "アップグレード",
+      "text": "$(item)ミニガン/$の多くの機能(スピンアップ速度、範囲、ポーション発動確率など)は$(l:machines/charging_station)充填ステーション/$でアップグレードできます。$(p)各アップグレードとその効果に関する完全なドキュメントは充填ステーションのアップグレードGUIで参照できます。"
+    },
+    {
+      "type": "crafting",
+      "text": "ミニガンのクラフト",
+      "recipe": "pneumaticcraft:minigun"
+    }
+  ]
+}

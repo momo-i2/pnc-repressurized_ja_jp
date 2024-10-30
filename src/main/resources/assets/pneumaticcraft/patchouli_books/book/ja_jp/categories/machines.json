@@ -1,0 +1,6 @@
+{
+  "name": "機械",
+  "description": "便利な機能を提供する機械やその他のデバイスです。その多くは機能を提供するために$(l:base_concepts/pressure)圧力/$を必要とします。",
+  "icon": "pneumaticcraft:vortex_tube",
+  "sortnum": 5
+}

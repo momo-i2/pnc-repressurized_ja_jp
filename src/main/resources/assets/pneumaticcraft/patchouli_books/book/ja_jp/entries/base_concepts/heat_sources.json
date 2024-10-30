@@ -1,0 +1,56 @@
+{
+  "name": "熱源",
+  "icon": "pneumaticcraft:vortex_tube",
+  "category": "pneumaticcraft:base_concepts",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)静的熱源/$は隣接する機械に熱を加えたり機械から熱を除去したりするブロックと流体です。熱が過剰に追加されたり除去されたりすると、他のブロックや流体に変化することがあります。熱の抽出/追加は問題のブロックの外部で追跡されるため、抽出された熱をリセットするためにブロックを破壊/交換することは実行可能な戦略ではないことに注意してください。"
+    },
+    {
+      "type": "text",
+      "title": "バニラの熱源",
+      "text": "以下のバニラブロックと流体は静的熱源として機能します: $(li)空気$(li)氷/氷塊/青氷$(li)雪$(li)松明$(li)火(消えます)$(li)マグマ(ネザーラックまで冷えます)$(li)水(凍結または蒸発する場合があります)$(li)溶岩(黒曜石まで冷えます)$(li)焚き火(消えます)"
+    },
+    {
+      "type": "text",
+      "title": "MODの熱源",
+      "text": "MOD のいくつかのブロックは、異なる特性を持つ静的熱源としても機能します。これには以下が含まれます:$(li)IC2の蒸気と過熱蒸気$(li)IC2の冷却剤と高温冷却剤$(li)IC2とImmersive Engineeringのウランブロック$(li)Quarkのブレイズランタン$(li)Quarkの硫黄岩と永久凍土$(li)Natura Heat Sand$(li)すべてのMODの流体には熱特性があります(温度はMODによって定義されます)"
+    },
+    {
+      "type": "text",
+      "title": "カスタム熱源の追加",
+      "text": "(modpack作者向け)すべてのブロック熱特性はデータパックで定義されています。$(thing)data/<mod-id>/pneumaticcraft/block_heat_properties/$にJSONファイルを追加することで独自の定義を追加したりデフォルトの定義を上書き/削除したりできます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:vortex_tube",
+      "text": "$(l:machines/vortex_tube)ボルテックスチューブ/$は$(l:base_concepts/pressure)圧力/$を熱と冷気に直接変換する$(thing)動的熱源/$です。効率を上げるためにボルテックスチューブの未使用側に$(l:machines/heat_sink)ヒートシンク/$を配置することを強くお勧めします。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:heat_frame",
+      "text": "$(l:semiblocks/heat_frame)ヒートフレーム/$は任意のインベントリ内のアイテムを加熱(または凍結)するために使用できるガジェットです。ヒートフレームは$(thing)静的熱源/$から直接熱を吸収しませんが、その横に$(l:machines/heat_pipe)ヒートパイプ/$を配置して熱を伝達することができます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:heat_sink",
+      "text": "$(l:machines/heat_sink)ヒートシンク/$は取り付けられたブロックから熱(または冷気！)を効率的に大気中に放出するために使用できるブロックです。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:heat_pipe",
+      "text": "$(l:machines/heat_pipe)ヒートパイプ/$は隣接する空気または流体ブロックとの熱接続なしにブロック間で熱を伝達できる圧縮鉄の絶縁コアです。これは熱を伝達するために $(item)圧縮鉄ブロック/$を使用するよりもコンパクト(かつ安価)な代替手段です。また、$(item)ヒートシンク/$をヒートパイプに直接接続することもできます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:furnace",
+      "text": "バニラの$(item)かまど/$を動的熱源($(l:machines/vortex_tube)ボルテックスチューブ/$や熱を生成する$(l:compressors/advanced_air_compressor)高性能エアコンプレッサー/$などのブロック)に接続すると熱はかまどによって消費されて\"燃料\"となり、固体燃料を必要とせずに純粋に熱だけでかまどを稼働させることができます。これは便利で効率的です。"
+    },
+    {
+      "type": "text",
+      "title": "かまど(続き)",
+      "text": "このかまどの「燃料供給」は100℃で作動し始め、温度が高くなるにつれて作動速度が速くなります。かまどの周囲に複数の熱源を配置すると、加熱効果が高まります。$(p)この加熱効果はバニラの$(item)溶鉱炉/$および$(item)燻製器/$でも機能します。"
+    }
+  ]
+}

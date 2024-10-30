@@ -1,0 +1,21 @@
+{
+  "name": "地震センサー",
+  "icon": "pneumaticcraft:seismic_sensor",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "地震センサーは$(l:base_concepts/oil)原油/$を追跡するために使用されるゲーム初期のアイテムです。ほとんどのツールとは異なり、センサーは動作するために$(l:base_concepts/pressure)圧力/$を必要としません。$(thing)右クリック/$するとセンサーがクリックされたブロックの真下のどこかに原油が見つかったかどうかが表示されます。"
+    },
+    {
+      "type": "text",
+      "text": "地震センサーには2つの結果があります:$(p)$(#008) 原油は見つかりません。/$$(p)このブロックの真下では原油は見つかりません。探し続けてください。$(p)$(#008) <距離>m下に原油が見つかりました。約 <量> バケツ分の原油が含まれています。/$$(p)石油が見つかりました！クリックしたブロックは原油を汲み出すための$(l:machines/gas_lift)ガスリフト/$を設置するのに適した場所です。"
+    },
+    {
+      "type": "crafting",
+      "text": "地震センサーのクラフト",
+      "recipe": "pneumaticcraft:seismic_sensor"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "タービンの羽",
+  "icon": "pneumaticcraft:turbine_blade",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは他のデバイスを作成するためのコンポーネントです。それ自体では役に立ちません。"
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "recipe": "pneumaticcraft:pressure_chamber/turbine_blade"
+    }
+  ]
+}

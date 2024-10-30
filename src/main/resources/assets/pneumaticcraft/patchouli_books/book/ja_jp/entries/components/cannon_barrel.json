@@ -1,0 +1,17 @@
+{
+  "name": "大砲の筒",
+  "icon": "pneumaticcraft:cannon_barrel",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは他のデバイスを作成するためのコンポーネントです。それ自体では役に立ちません。"
+    },
+    {
+      "type": "crafting",
+      "text": "大砲の筒のクラフト",
+      "recipe": "pneumaticcraft:cannon_barrel"
+    }
+  ]
+}

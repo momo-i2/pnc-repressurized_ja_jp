@@ -1,0 +1,6 @@
+{
+  "name": "ものづくり",
+  "description": "他の$(pncr)機械やツールを構築するためのコンポーネントを製造するために使用される機械とシステムです。",
+  "icon": "pneumaticcraft:assembly_controller",
+  "sortnum": 3
+}

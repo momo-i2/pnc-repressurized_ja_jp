@@ -1,0 +1,47 @@
+{
+  "name": "ドローン",
+  "icon": "pneumaticcraft:drone[pneumaticcraft:air=120000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "ドローンはあらゆる種類の自動化に使用できる強力なプログラム可能な飛行ロボットです。ドローンが何かを行う前にプログラミングが必要です。このためには$(l:programming/programmer)プログラマー/$といくつかの$(l:programming/puzzle_pieces)パズルピース/$も必要です。$(p)プログラムされ、$(l:base_concepts/pressure)加圧された/$ドローンを配置するとプログラムされたタスクを実行します。"
+    },
+    {
+      "type": "entity",
+      "entity": "pneumaticcraft:drone",
+      "offset": -0.3
+    },
+    {
+      "type": "text",
+      "anchor": "charging",
+      "title": "自動充填",
+      "text": "ドローンは賢いです。空気が少なくなるとメインプログラムを停止し、$(l:base_concepts/upgrades#dispenser)ディスペンサーアップグレード/$があり、圧力が1バール以上で$(ttcolor)$(t:MOD設定の'max_drone_charging_station_search_range'を参照)80ブロック/$以内にある$(l:machines/charging_station)充填ステーション/$を検索します。$(p)見つかったら、$(item)ドローン/$はこの$(item)充填ステーション/$に移動し、ステーションが空気を供給できなくなるまで充填を続けます。その後、$(item)ドローン/$はメインプログラムを再開します。"
+    },
+    {
+      "type": "text",
+      "title": "自動充填(続き)",
+      "text": "マルチプレイヤーサーバーではドローンが充填ステーションでのみ充填できるようにしたい場合があります。$(item)充填ステーション/$を$(l:machines/security_station)セキュリティステーション/$で覆うことで、$(item)充填ステーション/$を非公開にすることができます。$(p)これで$(item)セキュリティステーション/$でホワイトリストに登録されているプレイヤーが配置した$(item)ドローン/$のみが充填できるようになります。"
+    },
+    {
+      "type": "text",
+      "text": "$(item)ドローン/$の空気がなくなるとプロペラが停止しまっすぐに地面に落下します。注意: ドローンは落下ダメージを受ける可能性があります。破壊された$(item)ドローン/$はアイテムの形でドロップされます。$(p)$(item)ドローン/$は$(item)染料/$で作成して染色できます。また、$(item)ドローン/$を$(item)染料/$で$(thing)右クリック/$することでワールド内で染色することもできます。この色付けは単なる装飾ですが一目でドローンを区別するのに役立ちます。"
+    },
+    {
+      "type": "text",
+      "title": "デバッグ",
+      "text": "うーん、どうして$(item)ドローン/$はこのように動作するのでしょうか？まったく何もしないのはなぜでしょうか？$(l:base_concepts/upgrades#dispenser)ディスペンサー/$と$(l:base_concepts/upgrades#entity_tracker)エンティティトラッカー/$アップグレードがインストールされた$(l:armor/pneumatic_helmet)空気圧ヘルメット/$を使用してプログラムをデバッグできます。 $(item)ドローン/$をターゲットにし$(thing)エンティティトラッカー/$をアクティブにした状態で$(thing)$(k:pneumaticcraft.helmet.debugging.drone)/$キーを押します。次に、空気圧の防具のGUIで$(thing)ドローンデバッガー/$ページを開くと現在のウィジェットとエラーを含むドローンのプログラムが表示されます。"
+    },
+    {
+      "type": "text",
+      "title": "デバッグ(続き)",
+      "text": "他にも注意すべき小さなトリックがいくつかあります:$(li)$(l:tools/gps_tool)GPSツール/$でドローンを右クリックするとドローンはGPSツールの保存されたブロック位置に移動します。ドローンの経路をテストするのに便利です。$(li)ドローンをハッキング(空気圧ヘルメットの$(l:base_concepts/upgrades#security)セキュリティアップグレード/$を使用)すると、ドローンはプログラムを一時停止して自分のところにやって来ます。プログラムによってドローンが届きにくい場所に残された場合に便利です。もう一度ハッキングするとプログラムが再開されます。"
+    },
+    {
+      "type": "crafting",
+      "text": "ドローンのクラフト",
+      "recipe": "pneumaticcraft:drone"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "セミブロック/ガジェット",
+  "description": "$(thing)セミブロック/$はブロックではないもののブロックのように配置でき、実際のブロックと同じ空間に存在できる興味深いアイテムです。$(p)技術的にはセミブロックでもある$(l:logistics/frames)物流フレーム/$も参照してください。",
+  "icon": "pneumaticcraft:transfer_gadget",
+  "sortnum": 7
+}

@@ -1,0 +1,31 @@
+{
+  "name": "真空トラップ",
+  "icon": "pneumaticcraft:vacuum_trap",
+  "category": "pneumaticcraft:spawning",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)真空トラップ/$はMobを捕らえてそのエッセンスを$(l:spawning/spawner_core)スポナーコア/$に吸収し、後で$(l:spawning/pressurized_spawner)加圧スポナー/$で使用するための機械です。$(p)$(thing)真空トラップ/$を使用するには次の手順を実行する必要があります:"
+    },
+    {
+      "type": "text",
+      "text": "$(li)1. 真空トラップの圧力が-0.5バール以下であることを確認します。ここでは$(l:base_concepts/upgrades#volume)ボリュームアップグレード/$が推奨されます。また、真空トラップを移動する場合は蓄積された真空を維持するためにツルハシで壊すのではなく必ずレンチを使用してください。$(li)2. 捕獲したMobを受け入れるために、いっぱいでない$(l:spawning/spawner_core)スポナーコア/$を挿入します。$(li)3. $(thing)スニークして右クリック/$するか、レッドストーン信号を適用して真空トラップのドアを開きます。"
+    },
+    {
+      "type": "text",
+      "title": "制限",
+      "text": "真空トラップは以下を捕獲しません:$(li)プレイヤー$(li)ドローン$(li)ボスMob(ウィザー、エンダードラゴンなど)$(li)飼いならされた動物$(li)バニラのスポナーによって生成されたMob$(p)さらに、MobのエンティティID(例: $(thing)minecraft:zombie/$)を$(thing)pneumaticcraft:vacuum_trap_blacklisted/$エンティティタイプタグに)追加することでMobをブラックリストに登録できます。"
+    },
+    {
+      "type": "text",
+      "title": "メモリーエッセンス",
+      "text": "真空トラップのタンクに少なくとも100mBの$(l:base_concepts/memory_essence)メモリーエッセンス/$が含まれている場合、Mobの吸収効率が大幅に向上します。設置された$(thing)スポナーコア/$のエッセンスに1%貢献する代わりに、捕獲されたMobは2～4%貢献します。つまり、コアを満たすために100体のMobを捕獲する代わりに25～50体のMobを捕獲するだけで済みます。Mobを捕獲するたびに100mBのメモリーエッセンスが使用されます。"
+    },
+    {
+      "type": "crafting",
+      "text": "真空トラップのクラフト",
+      "recipe": "pneumaticcraft:vacuum_trap"
+    }
+  ]
+}

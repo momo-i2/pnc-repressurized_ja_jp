@@ -1,0 +1,22 @@
+{
+  "name": "断熱材",
+  "icon": "pneumaticcraft:thermal_lagging",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "ご存知のとおり$(l:base_concepts/heat)熱/$を使用する$(pncr)の機械は、露出したままにしておくと空気に熱を奪われます。これらの機械は空気や熱を伝導しないブロックであればどれでもカバーできますが、$(thing)断熱材/$は機械の断熱に特に適しています。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:thermal_lagging",
+      "text": "$(thing)断熱材/$には被覆が存在しないかのように、背後のブロックに$(italic)クリックを通過/$できるという便利な特性があります。$(p)これは何らかの種類の$(item)ツルハシ/$や$(item)レンチ/$を持っている場合、または$(thing)スニーク/$している場合を除き、適用されます。スニークしている場合には被覆自体をターゲットにして削除したり、その他の操作を行ったりすることができます。"
+    },
+    {
+      "type": "crafting",
+      "text": "断熱材のクラフト",
+      "recipe": "pneumaticcraft:thermal_lagging"
+    }
+  ]
+}

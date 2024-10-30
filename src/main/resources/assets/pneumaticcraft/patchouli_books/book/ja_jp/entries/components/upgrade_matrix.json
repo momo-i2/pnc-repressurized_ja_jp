@@ -1,0 +1,16 @@
+{
+  "name": "アップグレード基盤",
+  "icon": "pneumaticcraft:upgrade_matrix",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:tp_plant",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)アップグレード基盤/$は$(l:base_concepts/upgrades)アップグレード/$の作成時に$(item)ラピスラズリ/$の代わりに使用できます。アップグレード基盤を使用する利点はラピスラズリの使用量が大幅に減少することです。これはラピスラズリが限られていて、作成するアップグレードが多数ある場合に恩恵となる可能性があります。"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/upgrade_matrix"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "レッドストーンモジュール",
+  "icon": "pneumaticcraft:redstone_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このモジュールは接続されたチューブ上の他のレッドストーンモジュールと$(#f00)レッドストーン信号/$を交換し、チューブをレッドストーンの導管として効果的に使用します。$(p)モジュールのGUIまたは任意の$(item)染料/$でモジュールを右クリックすることで最大16個の独立したチャンネルを選択できます。$(p)モジュールを$(item)レンチ/$で右クリックすると入力モードと出力モードが切り替わります。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/redstone_module.png"
+      ],
+      "border": "true"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "モジュールに$(l:tubes/module_expansion_card)モジュール拡張カード/$を適用すると追加の信号処理が可能になります。モジュールが$(thing)出力モード/$の場合、モジュールを右クリックしてGUIを開き、出力信号に適用するモード(信号の反転、別のチャンネルとのAND/OR/XORなど)を選択できます。$(p)各モードの効果については、モジュールのGUIで詳しく説明されています。"
+    },
+    {
+      "type": "crafting",
+      "text": "レッドストーンモジュールのクラフト",
+      "recipe": "pneumaticcraft:redstone_module"
+    }
+  ]
+}

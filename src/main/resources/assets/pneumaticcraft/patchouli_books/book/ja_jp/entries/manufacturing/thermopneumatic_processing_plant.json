@@ -1,0 +1,29 @@
+{
+  "name": "熱空気圧処理プラント",
+  "icon": "pneumaticcraft:thermopneumatic_processing_plant",
+  "category": "pneumaticcraft:manufacturing",
+  "advancement": "pneumaticcraft:refinery",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)熱空気圧処理プラント/$は材料を処理するために$(l:base_concepts/pressure)圧力/$および/または$(l:base_concepts/heat)熱/$を使用します。これにはいくつかの用途があります:$(li)100mBの$(thing)LPG/$と1個の$(item)石炭/$から1,000mBの$(l:components/plastic)溶融プラスチック/$が作成されます。これには熱が必要ですが圧力は必要ありません。$(li)1,000mBの$(thing)ディーゼル/$と1個の$(item)レッドストーンダスト/$から1,000mBの$(l:components/lubricant)潤滑油/$が作成されます。これも熱が必要ですが圧力は必要ありません。"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(item)熱空気圧処理プラント/$を使用すると$(l:製造/製油所)製油所/$で生産された重い燃料を80%の回収率で軽い燃料に分解できます。$(li)ディーゼル -> 灯油$(li)灯油 -> ガソリン$(li)ガソリン -> LPG$(p)これには熱と圧力の両方が必要です。"
+    },
+    {
+      "type": "link",
+      "flag": "mod:crafttweaker",
+      "title": "CraftTweaker",
+      "text": "$(thing)熱空気圧処理プラント/$ は $(l:https://minecraft.curseforge.com/projects/crafttweaker)CraftTweaker/$ をサポートしています。レシピを追加したり削除したりできます。詳細については、以下のリンクを参照してください。",
+      "url": "https://docs.blamejared.com/1.16/en/mods/PneumaticCraft-Repressurized/ThermoPlant",
+      "link_text": "CraftTweaker Docs"
+    },
+    {
+      "type": "crafting",
+      "text": "熱空気圧処理プラントのクラフト",
+      "recipe": "pneumaticcraft:thermopneumatic_processing_plant"
+    }
+  ]
+}

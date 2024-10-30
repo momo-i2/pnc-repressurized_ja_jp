@@ -1,0 +1,23 @@
+{
+  "name": "アイテム取得ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/item_pick_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)ドローン/$はワールド内のアイテムエンティティを取得してインベントリに入れます。このウィジェットに接続されている$(l:programming/area)エリア/$ウィジェットのエリアタイプは$(thing)ボックス/$である必要があることに注意してください。これはサポートされている唯一の形状です。ただし、複数のエリアのホワイトリスト/ブラックリストを使用してより複雑な形状を作成することもできます。"
+    },
+    {
+      "type": "text",
+      "text": "$(l:programming/item_filter)アイテムフィルター/$ウィジェットを追加して拾えるアイテムを制限(ブラックリストフィルターは$(thing)左/$に配置されていることに注意)できます。$(p)このウィジェットは地面に落ちているアイテム(アイテムフィルターを通過するもの)がドローンのインベントリに収まらない場合、または拾えるアイテムが残っていない場合に実行されます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/item_pick_piece.png"
+      ],
+      "text": "$(italic)私のもの。私のもの。私のもの。/$"
+    }
+  ]
+}

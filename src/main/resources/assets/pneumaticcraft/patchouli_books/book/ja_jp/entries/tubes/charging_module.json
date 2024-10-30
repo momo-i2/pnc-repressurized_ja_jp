@@ -1,0 +1,22 @@
+{
+  "name": "充填モジュール",
+  "icon": "pneumaticcraft:charging_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このチューブモジュールを使用すると圧力をかけられるアイテムをそれが向いているインベントリ(たとえば、空気圧ツールの入ったチェスト)や、長距離空気転送用の$(l:components/air_canister)エアキャニスター/$(おそらく何らかのエンダーインベントリシステム経由など)に充填(または放出)できます。$(p)このモジュールを$(l:machines/aerial_interface)空中インターフェース/$に向けて自分のプレイヤーインベントリ内のアイテムを充填することもできます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:module_expansion_card",
+      "text": "充填モジュールに$(l:tubes/module_expansion_card)モジュール拡張カード/$を適用するとモジュールの充填速度が10mL/tick(アイテムあたり)から100mL/tick(アイテムあたり)に増加します。"
+    },
+    {
+      "type": "crafting",
+      "text": "充填モジュールのクラフト",
+      "recipe": "pneumaticcraft:charging_module"
+    }
+  ]
+}

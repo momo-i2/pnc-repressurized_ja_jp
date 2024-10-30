@@ -1,0 +1,29 @@
+{
+  "name": "収穫ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/harvest_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "ドローンは指定された$(l:programming/area)エリア/$内で完全に成長した作物や木を収穫します。作物ブロックからドロップされたアイテムは$(italic)取得されません/$。別の$(l:programming/pickup_item)アイテム取得/$ウィジェットを追加するか、別の$(item)ドローン/$などのアイテムを収集する別の手段を使用してください。$(p)オプションの$(l:programming/item_filter)アイテムフィルター/$を接続して収穫する作物を制限(作物の種子を使用してフィルタリング)できます。"
+    },
+    {
+      "type": "text",
+      "title": "ツール",
+      "text": "$(item)ドローン/$の$(l:programming/inventory_import)インポート/$を$(item)クワ/$にすることができます。クワを装備すると作物は自動的に植え直され(これはクワの耐久を消費)ます。$(p)ウィジェット設定GUIの$(item)クワが必要/$のチェックボックスをオンにすると、$(item)ドローン/$がクワを持っているときにのみ収穫するように強制できます。その後クワが壊れた場合、ドローンは収穫を続ける前に別のクワを入手できます。"
+    },
+    {
+      "type": "text",
+      "title": "収穫ブロックの制限",
+      "text": "$(thing)収穫/$ウィジェットを$(thing)右クリック/$することで収穫アクションの量を指定の量に制限できます。$(p)たとえば1に設定すると$(item)ドローン/$はウィジェットが実行されるたびに1つのブロックのみを収穫してそのブロックを収穫した後、次のウィジェットに移動します。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/harvest_piece.png"
+      ],
+      "text": "$(italic)私の土地から出て行け/$"
+    }
+  ]
+}

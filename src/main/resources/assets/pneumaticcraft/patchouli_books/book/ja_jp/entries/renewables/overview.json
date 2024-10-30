@@ -1,0 +1,38 @@
+{
+  "name": "バイオディーゼル概要",
+  "icon": "minecraft:book",
+  "category": "pneumaticcraft:renewables",
+  "priority": "true",
+  "advancement": "pneumaticcraft:tp_plant",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは再生可能なバイオディーゼルを生産するための非常に簡単なガイドです。ここでの手順に従い、特定のトピックの詳細についてはこのセクションの他のページを参照(他のページは進捗がロックされている可能性がありますが、前提条件の手順を完了するとロックが解除されます)してください。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:yeast_culture_bucket",
+      "text": "手順1a: $(thing)酵母培養/$を作成します。キノコと水を用意して$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で混ぜます。TPPの温度が30℃から60℃の間になるようにする必要がありますが、これはバイオームと高度によって簡単な場合もあれば難しい場合もあります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:sugar",
+      "text": "手順1b (オプション): 酵母培養入りバケツが少なくとも1つできたらそれをワールド内のプールに注ぎ、プールに砂糖を落として培養に隣接するブロックスペースにバケツの水を注ぐことで、より速くより多くの酵母培養を生産できます。注ぎ出した水の中に培養物が複製されます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:ethanol_bucket",
+      "text": "手順2: $(thing)酵母培養/$と$(thing)砂糖/$を$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$に追加して$(thing)エタノール/$を作成します。これは手順1aと非常によく似た方法で温度に依存します。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:vegetable_oil_bucket",
+      "text": "手順3: $(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で$(thing)種/$または$(thing)作物/$を少し圧力をかけて絞り、$(thing)植物油/$を作ります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:biodiesel_bucket",
+      "text": "手順4: $(thing)エタノール/$と$(thing)植物油/$を$(l:manufacturing/fluid_mixer)流体ミキサー/$で混ぜます。おめでとうございます、再生可能燃料ができました！"
+    }
+  ]
+}

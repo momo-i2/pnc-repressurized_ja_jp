@@ -1,0 +1,298 @@
+{
+  "name": "ドローンインターフェース",
+  "icon": "pneumaticcraft:drone_interface",
+  "category": "pneumaticcraft:machines",
+  "flag": "|mod:computercraft,mod:opencomputers",
+  "advancement": "pneumaticcraft:printed_circuit_board",
+  "pages": [
+    {
+      "type": "text",
+      "text": "ドローンインターフェースは$(l:tools/drone)ドローン/$と通信するために使用される$(thing)ComputerCraft/OpenComputersの周辺機器/$です。通信を行うには$(l:programming/computer_control)コンピュータコントロールパズルピース/$を使用して$(item)ドローン/$をプログラムします。$(p)ドローンがコンピュータコントロールピースを実行するとパズルピースの領域内にある$(ttcolor)$(t:ドローンインターフェースは一度に 1つのドローンにしか接続できません)使用可能な/$$(item)ドローンインターフェース/$に接続しようとします。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:drone_interface",
+      "text": "接続されるとドローンはインターフェースによって完全に制御されます。具体的には制御中のコンピューターによってインターフェース上で呼び出されるLuaメソッドによって制御されます。$(p)ドローンインターフェースはLuaメソッドの長いリストを公開します。これらはすべて次のページで説明されています。"
+    },
+    {
+      "type": "text",
+      "title": "例",
+      "text": "Lua プログラムの例:$(br)$(#008)m = surroundings.wrap(\"right\")$(br)m.addArea(100, 64, 100, 120, 4, 120, \"Filled\")$(br)m.setAction(\"dig\")$(br)while not m.isActionDone()$(br)do$(br) sleep(1)$(br)end$(br)m.clearArea()$(br)m.addArea(80, 65, 80)$(br)m.setAction(\"goto\")$(br)-- 上記のように完了するまで待機$(br)m.setAction(\"standby\")$(p)/$はドローンに広い領域((100,64,100)->(120,4,120)の範囲にあるすべてのブロック)を掘り出し、その後(80, 65、80)に戻ってスタンバイ状態になります。"
+    },
+    {
+      "type": "text",
+      "title": "例(続き)",
+      "text": "$(l:programming/programmer)プログラマー/$経由でドローンプログラムを記述する場合とは異なり、反対のプログラムは続行する前に掘削(および場所移動)アクションが完了するまで明示的にスタンバイする必要があることに気付くかもしれません。これはLuaコンピュータープログラムが別のスレッドで実行されており、ワールドと直接対話できないためです。このプログラムはドローンに次に何をすべきかを指示するだけで、ドローンに完了したかどうかを尋ねる必要があります。"
+    },
+    {
+      "type": "text",
+      "title": "abortAction()",
+      "text": "$(#800)abortAction()/$$(p)現在実行中のアクションを停止します。"
+    },
+    {
+      "type": "text",
+      "title": "addArea()",
+      "text": "$(#800)addArea(<x1>,<y1>,<z1>)/$$(p)$(#800)addArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>)/$$(p)ドローンの現在の保存エリアにエリアを追加します。後者の方法を使用する場合、x1/y1/z1は最初のポイント($(l:tools/gps_area_tool)GPSエリアツール/$のP1)を表し、x2/y2/z2は2番目のポイント、つまりGPSエリアツールのP2を表します。$(p)getAreaTypes()を使用して有効なエリアタイプを一覧表示できます。"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)addBlacklistItemFilter(<item/block name>, <useNBT>, <useModSimilarity>)/$$(p)addWhitelistItemFilter(...) と似ていますが、アイテムをブラックリストに登録します。",
+      "title": "addBlacklistItemFilter()"
+    },
+    {
+      "type": "text",
+      "title": "addBlacklistLiquidFilter()",
+      "text": "$(#800)addBlacklistLiquidFilter(<流体名>)/$$(p)addWhitelistLiquidFilter(...) と似ていますが、流体をブラックリストに登録します。"
+    },
+    {
+      "type": "text",
+      "title": "addBlacklistText()",
+      "text": "$(#800)addBlacklistText(<text>)/$$(p)ブラックリストのテキストにテキストを追加します。たとえば、「entity_attack」アクションのフィルターを指定するために使用されます。"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)addWhitelistItemFilter(<item/block name>, <useNBT>, <useModSimilarity>)/$$(p)別のウィジェットの右側にある$(l:programming/item_filter)アイテムフィルター/$ウィジェットとして機能します。アイテム/ブロック名はレジストリ名です(例: $(thing)pneumaticcraft:pressure_tube/$)。'useXXX'はすべて使用されるフィルターを決定するブール値です(アイテムフィルターウィジェットGUIと同様)。",
+      "title": "addWhitelistItemFilter()"
+    },
+    {
+      "title": "addWhitelistLiquidFilter()",
+      "text": "$(#800)addWhitelistLiquidFilter(<流体名>)/$$(p)ピースの右側に$l(:programming/liquid_filter)流体フィルター/$ピースを配置したのと同じように動作します。流体のレジストリ名を指定する必要があります(例: $(thing)minecraft:water/$)。",
+      "type": "text"
+    },
+    {
+      "text": "$(#800)addWhitelistText(<text>)/$$(p)ホワイトリストのテキストリストにテキストを追加します。これはたとえば、「entity_attack」アクションのエンティティフィルターを指定するために使用されます。",
+      "type": "text",
+      "title": "addWhitelistText()"
+    },
+    {
+      "title": "clearArea()",
+      "type": "text",
+      "text": "$(#800)clearArea()/$$(p)現在保存されている領域をクリアします。"
+    },
+    {
+      "title": "clearBlacklistItemFilter()",
+      "type": "text",
+      "text": "$(#800)clearBlacklistItemFilter()/$$(p)保存されているブラックリストに登録されたアイテムフィルターをすべてクリアします。"
+    },
+    {
+      "title": "clearBlacklistLiquidFilter()",
+      "text": "$(#800)clearBlacklistLiquidFilter()/$$(p)保存されているブラックリストに登録された流体フィルターをすべてクリアします。",
+      "type": "text"
+    },
+    {
+      "text": "$(#800)clearBlacklistText()/$$(p)保存されているブラックリストのテキストをすべてクリアします。",
+      "type": "text",
+      "title": "clearBlacklistText()"
+    },
+    {
+      "title": "clearWhitelistItemFilter()",
+      "text": "$(#800)clearWhitelistItemFilter()/$$(p)保存されているホワイトリストに登録されたアイテムフィルターをすべてクリアします。",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)clearWhitelistLiquidFilter()/$$(p)保存されているホワイトリストに登録された流体フィルターをすべてクリアします。",
+      "title": "clearWhitelistLiquidFilter()"
+    },
+    {
+      "title": "clearWhitelistText()",
+      "text": "$(#800)clearWhitelistText()/$$(p)保存されているホワイトリストに登録されたテキストをすべてクリアします。",
+      "type": "text"
+    },
+    {
+      "title": "evaluateCondition()",
+      "text": "$(#800)evaluateCondition()/$$(p)true/falseを返します。$(l:programming/conditions)条件/$でのみ使用されます。条件が満たされているかどうかに応じてtrue/falseを返します。ドローン条件は$(#800)setAction()/$を設定した直後に確認できますが、非ドローン条件では$(#800)evaluateCondition()/$の結果が有効になる前に、$(#800)isActionDone()/$がtrueを返すまで待つ必要があります。",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)exitPiece()/$$(p)ドローン内の$(thing)コンピューターコントロール/$ピースを停止し、ドローンのプログラムがプログラム内の次のパズルピースに進むことができるようにします。",
+      "title": "exitPiece()"
+    },
+    {
+      "type": "text",
+      "title": "forgetTarget()",
+      "text": "$(#800)forgetTarget()/$$(p)ドローンが(「entity_attack」アクションを使用して)任意のエンティティをターゲットにしている場合、これによりそのターゲットへの攻撃が停止します。"
+    },
+    {
+      "text": "$(#800)getAction()/$$(p)$(#800)setAction()/$によって設定された最後のアクションを表す文字列を返します。アクションが設定されていない場合は$(thing)nil/$を返します。このメソッドがnilを返さない場合にのみ$(#800)isActionDone()/$を呼び出すようにするために使用できます。",
+      "type": "text",
+      "title": "getAction()"
+    },
+    {
+      "title": "getAllActions()",
+      "type": "text",
+      "text": "$(#800)getAllActions()/$$(p)現在選択可能なすべてのアクション($(thing)pneumaticcraft:dig/$や$(thing)pneumaticcraft:place'/$など)のテーブルを返します。これらの各アクションは$(l:programming/programmer#ids)プログラマー/$GUIで使用可能なプログラミングウィジェットに直接対応しています。$(p)注: $(thing)pneumaticcraft:/$で始まるアクション(すべてデフォルトのアクション)の場合、$(thing)pneumaticcraft:/$プレフィックスはオプションです。"
+    },
+    {
+      "title": "getAreaTypes()",
+      "text": "$(#800)getAreaTypes()/$$(p)すべての可能な領域タイプ(塗りつぶし、フレーム、球体など)のテーブルを返します。",
+      "type": "text"
+    },
+    {
+      "title": "getDronePosition()",
+      "text": "$(#800)getDronePosition()/$$(p)ドローンのx/y/z位置を返します。このメソッドは従来の互換性のために用意されており、代わりに新しい$(#800)getDronePositionVec()/$メソッドを使用することをお勧めします。",
+      "type": "text"
+    },
+    {
+      "title": "getDronePositionVec()",
+      "text": "$(#800)getDronePosition()/$$(p)ドローンのx/y/z座標のテーブルを返します。個々の値は.x、.y、.zフィールドを使用して簡単に抽出できます。例: $(#800)xpos = getDronePosition().x/$",
+      "type": "text"
+    },
+    {
+      "title": "getUpgrades()",
+      "type": "text",
+      "text": "$(#800)getUpgrades(<upgrade>)/$$(p)指定されたタイプの挿入されたアップグレードの数を取得します。$(p)アップグレード名は詳細情報が有効(F3+H)になっているPneumaticCraftのアップグレードアイテムにマウスを移動し、アイテム名から'_upgrade'の部分を取り除いたものを取得することで確認できます。$(p)たとえば、$(thing)pneumaticcraft:speed_upgrade/$の場合、名前は\"speed\"です。"
+    },
+    {
+      "type": "text",
+      "title": "getVariable()",
+      "text": "$(#800)getVariable(<variable name>)/$$(p)このドローンから変数の値(x、y、z)を返します。$(l:programming/variables#global)グローバル/$(先頭に#)と$(l:programming/variables#special)スペシャル/$変数(先頭に$)を取得することもできます。"
+    },
+    {
+      "type": "text",
+      "title": "hideArea()",
+      "text": "$(#800)hideArea()/$$(p)$(#800)showArea()/$で表示されるドローンに保存されているエリアのワールド内ハイライトを停止します。"
+    },
+    {
+      "type": "text",
+      "title": "isActionDone()",
+      "text": "$(#800)isActionDone()/$$(p)現在のアクションが完了した場合はtrueを返します (例: 「goto」がターゲットの場所に到着した、「inventory import」がこれ以上インポートできない、「dig」が可能なすべてのブロックを掘ったなど)。"
+    },
+    {
+      "type": "text",
+      "title": "isConnectedToDrone()",
+      "text": "$(#800)isConnectedToDrone()/$$(p)ドローンがこのドローンインターフェースに接続した場合(ドローンのプログラムがComputerCraftのピースに到達し、接続を確立した場合)、trueを返します。"
+    },
+    {
+      "type": "text",
+      "title": "removeArea()",
+      "text": "$(#800)removeArea(<x1>,<y1>,<z1>,<x2>,<y2>,<z2>,<areaType>)/$$(p)現在保存されている領域から領域を削除します(領域をブラックリストに登録するのと同じです)。"
+    },
+    {
+      "type": "text",
+      "title": "setAction()",
+      "text": "$(#800)setAction(<action>)/$$(p)ドローンが実行するアクションを設定します。これは$(#800)getAllActions()/$によって返されるアクションの1つである必要があります。これらはF3+Hが切り替えられるとウィジェットのツールチップにアクション名が表示される$(l:programming/programmer)プログラマー/$GUIのプログラミングウィジェットに直接対応します。$(p)プレフィックスが$(thing)pneumaticcraft:/$の場合、そのプレフィックスはオプションであることに注意してください。"
+    },
+    {
+      "type": "text",
+      "title": "setBlockOrder()",
+      "text": "$(#800)setBlockOrder(<\"closest\"/\"highToLow\"/\"lowToHigh\">)/$$(p)ドローンの配置/掘削順序を設定します。"
+    },
+    {
+      "type": "text",
+      "title": "setCanSteal()",
+      "text": "$(#800)setCanSteal(<true/false>)/$$(p)「pickup_item」アクションが使用される場合、ドローンが通常は放置するアイテム($(thing)Immersive Engineering/$のコンベアベルト上のアイテムなど)を盗むことを許可するかどうかを制御します。$(p) デフォルトは「false」です。ドローンはアイテムを盗もうとはしません。"
+    },
+    {
+      "type": "text",
+      "title": "setCheckLineOfSight()",
+      "text": "$(#800)setCheckLineOfSight(<true/false>)/$$(p)「entity_attack」アクションが使用される場合、ドローンがそのエリア内のすべてのターゲットを攻撃するか直接視線が通っているターゲットのみを攻撃するかを制御します。$(p)デフォルトは「false」で視線はチェックされません。"
+    },
+    {
+      "type": "text",
+      "title": "setCount()",
+      "text": "$(#800)setCount(<amount>)/$$(p)これはimport/export/dropアクションによって処理されるアイテムの最大数を構成し、条件チェックでチェックされる量にも使用されます"
+    },
+    {
+      "type": "text",
+      "title": "setCraftingGrid()",
+      "text": "$(#800)setCraftingGrid(<item/block name>, <item/block name>, ...(9x))/$$(p)「crafting」アクションが使用されるときにこのレシピが使用されるようにクラフトグリッドを設定します。レシピを構成する9つのアイテムすべてを指定する必要があります。空白部分には$(thing)nil/$を指定します。アイテムの命名形式はアイテムフィルターと同じです。"
+    },
+    {
+      "type": "text",
+      "title": "setDropStraight()",
+      "text": "$(#800)setDropStraight(<true/false>)/$$(p)「drop_item」アクションが現在のアクションの場合、アイテムがランダムな速度でドロップされるか(バニラのドロッパーのように)、真下にドロップされるかを決定します。"
+    },
+    {
+      "type": "text",
+      "title": "setEmittingRedstone()",
+      "text": "$(#800)setEmittingRedstone(<strength>)/$$(p)「emit_redstone」アクションが現在のアクションであるときに放出するレッドストーン信号の強度を設定します。"
+    },
+    {
+      "type": "text",
+      "title": "setIsAndFunction()",
+      "text": "$(#800)setIsAndFunction(<true/false>)/$$(p)条件でのみ使用されます。trueの場合、チェックされたすべてのブロックは条件要件(>=10 など)を満たす必要があります。"
+    },
+    {
+      "type": "text",
+      "title": "setMaxActions()",
+      "text": "$(#800)setMaxActions(<amount>)/$$(p)これはアクションが「done」と見なされる前にブロックに対して実行されるアクションの最大数を設定します。これは「place」、「dig」、「block_right_click」アクションに適用されます。これを使用できるようにするには必ず$(#800)setUseMaxActions(true)/$も呼び出してください。"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)setOperator(<\"=\" / \">=\" / \"<=\">)/$$(p)条件でのみ使用されます。条件が等しい量(=)、等しいかより大きい量(>=)、等しいかより小さい量(<=)のいずれをチェックするかを指定します。量は$(#800)setCount()/$を使用して設定できます。",
+      "title": "setOperator()"
+    },
+    {
+      "title": "setPlaceFluidBlocks()",
+      "type": "text",
+      "text": "$(#800)setPlaceFluidBlocks(<true/false>)/$$(p)「liquid_export」アクションでのみ使用されます。trueに設定するとドローンはワールド内に流体ブロックを配置できるようになります。デフォルトの「false」では流体を流体タンクにエクスポートすることのみが許可されます。"
+    },
+    {
+      "title": "setRenameString()",
+      "text": "$(#800)setRenameString(<name>)/$$(p)「rename」アクションが使用されるときにドローンに付けられる名前を設定します。",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "title": "setRequiresTool()",
+      "text": "$(#800)setRequiresTool(<true/false>)/$$(p)これはドローンが「dig」および「harvest」アクションを実行するときにツールを必要とするかどうかを構成します。ツールがない場合ドローンはこれらのアクションを実行しようとしません。"
+    },
+    {
+      "type": "text",
+      "title": "setRightClickType()",
+      "text": "$(#800)setRightClickType(\"click_item\" / \"click_block\")/$$(p)現在のアクションが「block_right_click」の場合、ドローンが保持しているアイテムのクリックロジックを使用するか(例: $(item)火打石と打ち金/$を使用する)、または対象のブロックをアクティブ化するか(例: $(item)レバー/$を反転する)を制御します。デフォルトは「click_item」です。"
+    },
+    {
+      "type": "text",
+      "title": "setSide()",
+      "text": "$(#800)setSide(<side>, <accessible>)/$$(p)特定の側をアクセス可能にするかどうかを設定します。「inventory_import」および「inventory_export」アクションで使用され、ドローンがインベントリのどの側にアクセスできるかを設定します。また、「place」アクションでブロックの配置方法を決定するのにも使用されます。"
+    },
+    {
+      "title": "setSides()",
+      "text": "$(#800)setSides(<down>, <up>, <north>, <south>, <east>, <west>)/$$(p)上記と同じですが、一度にすべての側面を設定する単一のメソッドです。このメソッドは6つのブールパラメーターを受け取ります。",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "title": "setSignText()",
+      "text": "$(#800)setSignText(<line1>, <line2>, ..., <lineN>)/$$(p)$(thing)edit_sign/$アクションが使用されたときに看板と格言タイルに送信されるテキストを設定します。"
+    },
+    {
+      "title": "setSneaking()",
+      "text": "$(#800)setSneaking(<true/false>)/$$(p)「block_right_click」アクションでのみ使用されます。これにより偽のプレイヤーが右クリック中にスニークしているかどうかが設定されます。",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "text": "$(#800)setUseCount(<true/false>)/$$(p)ドローンがimported/exported/droppedアイテムの最大数を持つかどうかを設定します。 trueの場合は必ず$(#800)setCount()/$も呼び出してください。",
+      "title": "setUseCount()"
+    },
+    {
+      "title": "setUseMaxActions()",
+      "type": "text",
+      "text": "$(#800)setUseMaxActions(<true/false>)/$$(p)コマンドが「done」と見なされる前に、ドローンが一度に1つのブロックで実行できるアクションの最大数を設定するかどうかを設定します。「place」、「dig」、「block_right_click」アクションに適用されます。trueの場合は$(#800)setMaxActions()/$も必ず呼び出してください。"
+    },
+    {
+      "text": "$(#800)setVariable(<variable name>, <x>, <y>, <z>)/$$(p)このドローンの$(l:programming/variables)変数/$を指定されたX/Y/Z座標に設定します。$(l:programming/variables#global)グローバル変数/$を設定することもできます。",
+      "type": "text",
+      "title": "setVariable()"
+    },
+    {
+      "text": "$(#800)setVariable(<variable name>, <boolean>)/$$(p)このドローンの$(l:programming/coordinate_operator)変数/$を設定します。'true'は(1,0,0)を渡すことに相当し、'false'は(0,0,0)を渡すことに相当します。",
+      "type": "text",
+      "title": "setVariable()"
+    },
+    {
+      "type": "text",
+      "title": "showArea()",
+      "text": "$(#800)showArea()/$$(p)プログラミングウィジェットのオプションGUIで$(thing)範囲表示/$をクリックした場合、使用されるのと同じエリアレンダラーを使用して現在保存されているエリアが表示されます。$(#800)hideArea()/$を使用するとこのようなエリアを非表示にすることができます。"
+    },
+    {
+      "type": "crafting",
+      "text": "ドローンインターフェースのクラフト",
+      "recipe": "pneumaticcraft:drone_interface"
+    }
+  ]
+}

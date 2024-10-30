@@ -1,0 +1,103 @@
+{
+  "name": "コンピューター統合",
+  "icon": "pneumaticcraft:textures/patchouli/computer.png",
+  "category": "pneumaticcraft:base_concepts",
+  "flag": "|mod:computercraft,mod:opencomputers",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)ComputerCraft/$または$(thing)Open Computers/$がインストールされている場合、ほぼすべての$(pncr)機械および$(l:machines/drone_interface)ドローン/$と対話できるようになります。$(p)ここにリストされているマシンはすべて、CC/OC周辺機器として対話できます。"
+    },
+    {
+      "type": "text",
+      "title": "ComputerCraft",
+      "text": "Luaでは$(thing)m = peripheral.wrap(<side>)/$を実行できます。ここで$(thing)<side>/$は周辺機器が接続されているコンピュータの側面(上、下、左、右、後ろ、前)です。次に$(thing)m.<functionName>/$で次の関数を使用できます。$(p) 次の関数で引数の1つとして'<side>'が出現する場所では、'up'、'down'、'north'、'south'、'east'、'west' が有効です。",
+      "flag": "mod:computercraft"
+    },
+    {
+      "type": "text",
+      "title": "Open Computers",
+      "text": "コンピュータを$(item)アダプター/$を使用して$(pnc)マシンに接続する必要があります。そうするとOCコンポーネントとして表示されます。OCのLua環境で$(thing)=components.list()/$を実行すると表示されます。次に、次のいずれかの関数を使用できます。たとえば、$(thing)p = components.air_compressor.getPressure()/$は接続されている$(item)エアコンプレッサー/$の現在の圧力を取得します。",
+      "flag": "mod:opencomputers"
+    },
+    {
+      "type": "text",
+      "title": "一般的なメソッド",
+      "text": "以下のメソッドはすべての機械に共通です。$(italic)$$ $(pncr) 機械:$(li)$(#800)getPressure()、getPressure(<side>)/$: 機械の圧力を取得します。<side>はオプションで、サイド固有の圧力を持つ $(l:machines/vacuum_pump)真空ポンプ/$にのみ役立ちます。$(li)$(#800)getDangerPressure()/$: 機械が爆発する危険がある圧力を取得します。$(li)$(#800)getCriticalPressure()/$: 機械が確実に爆発する絶対最大圧力を取得します。"
+    },
+    {
+      "type": "text",
+      "title": "熱関連のメソッド",
+      "text": "以下のメソッドは$(l:base_concepts/heat)熱/$の概念をサポートする$(italic)すべての$(pncr)機械に共通です:$(li)$(#800)getTemperature()、getTemperature(<side>)/$: は機械の温度を取得します。<side>はオプションで、側面によって温度が異なる$(l:machines/vortex_tube)ボルテックスチューブ/$にのみ役立ちます。"
+    },
+    {
+      "type": "spotlight",
+      "anchor": "air_cannon",
+      "item": "pneumaticcraft:air_cannon",
+      "text": "$(li)$(#800)setExternalControl(<true/false>)/$: trueの場合、通常の方法(GPSツールの挿入、レンジアップグレードの変更など)で大砲が回転するのを防ぎます。$(li)$(#800)setTargetLocation(<x>,<y>,<z>)/$: GPSツールに保存されている場所ではなく指定されたターゲット場所に大砲を向けます。"
+    },
+    {
+      "type": "text",
+      "title": "エアキャノン(続き)",
+      "text": "$(li)$(#800)setRotationAngle(<angle>)/$: 大砲のヨーを指定された角度に回転させます。$(li)$(#800)setHeightAngle(<angle>)/$: 大砲のピッチを指定された角度に回転させます。$(li)$(#800)isDoneRotating()/$: 大砲の回転が完了したらtrueを返します。$(li)$(#800)getMinWorkingPressure()/$: 大砲を発射するために必要な最小圧力を返します。(GUIの黄色から緑色のしきい値)"
+    },
+    {
+      "type": "text",
+      "title": "エアキャノン(続き)",
+      "text": "$(li)$(#800)fire()/$: 十分な圧力があり、アイテムが挿入されている場合に大砲を発射します。成功した場合はtrueを返します。"
+    },
+    {
+      "type": "spotlight",
+      "anchor": "elevator",
+      "item": "pneumaticcraft:elevator_base",
+      "title": "エレベーター",
+      "text": "$(li)$(#800)setExternalControl(<true/false>)/$: trueの場合、エレベーターの$(#f00)レッドストーンモード/$を「エレベーター呼出」モードに設定します。これはコンピューター制御にも適用されます。$(#800)setTargetHeight()/$を呼び出す前に設定する必要はありません。このメソッドはエレベーターを外部制御に自動的に変更します。"
+    },
+    {
+      "type": "text",
+      "title": "エレベーター(続き)",
+      "text": "$(li)$(#800)getMinWorkingPressure()/$: エレベーターを伸ばすために必要な最小圧力を取得します。エレベーターを下降させるのは自由です。$(li)$(#800)setTargetHeight(<height>)/$: エレベーターの目標高さを解析された高さに設定します。(メートル/ブロック単位、浮動小数点)$(li)$(#800)getTargetHeight()/$: エレベーターの目標高さを取得します。(メートル/ブロック単位、浮動小数点)$(li)$(#800)getCurrentHeight()/$: エレベーターの現在の高さを取得します。(メートル/ブロック単位、浮動小数点)"
+    },
+    {
+      "type": "text",
+      "title": "エレベーター(続き)",
+      "text": "$(li)$(#800)getVelocity()/$: エレベーターの現在の速度をティックあたりのブロック数で取得します。(1秒は20ティックです)。負の値はエレベーターが下降していることを示します。"
+    },
+    {
+      "type": "spotlight",
+      "anchor": "universal_sensor",
+      "item": "pneumaticcraft:universal_sensor",
+      "text": "$(li)$(#800)getSensorNames()/$: すべての既知のセンサー名のテーブルを返します。$(li)$(#800)getSensor()/$: 現在選択されているセンサーの名前を返します。"
+    },
+    {
+      "type": "text",
+      "title": "ユニバーサルセンサー(続き)",
+      "text": "$(li)$(#800)setSensor(<sensorName>), setSensor(<index>), setSensor()/$: 現在選択されているセンサーを設定します。<sensorName>は$(#800)getSensorNames()/$によって返される名前の1つです。<index>は$(#800)getSensorNames()/$から返されるテーブルのインデックスです。引数なしの$(#800)setSensor()/$を使用するとセンサーは選択されません。(マシンはアイドル状態になり、空気を使用しません)現在挿入されているアップグレードでセンサーが可能な場合はtrueを返します。"
+    },
+    {
+      "type": "text",
+      "title": "ユニバーサルセンサー(続き)",
+      "text": "$(li)$(#800)setTextField(<text>)/$: 一部のセンサーはテキストフィールドを使用して追加オプションを指定します。(たとえば、「範囲内のエンティティ」センサーは$(l:base_concepts/entity_filter)エンティティフィルター文字列/$を受け入れます)ここで必要なテキストを指定できます。$(li)$(#800)getTextField()/$: 現在$(thing)ユニバーサルセンサー/$に格納されているテキストを返します。"
+    },
+    {
+      "type": "text",
+      "title": "ユニバーサルセンサー(続き)",
+      "text": "$(li)$(#800)isSensorEventBased()/$: センサーにはイベントベースとポーリングセンサーの2つのカテゴリがあります。イベントベースのセンサーは何かが起こるのを待ちます。(プレイヤーの攻撃、アイテムのピックアップ)ポーリングセンサーはセンサーの状態を定期的にチェックします。(範囲内のエンティティ、ワールド時間、雨量センサー)この関数は現在選択されているセンサーがイベントベースの場合trueを返します。"
+    },
+    {
+      "type": "text",
+      "title": "ユニバーサルセンサー(続き)",
+      "text": "$(li)$(#800)getSensorValue()/$: 現在のセンサーがポーリングセンサーの場合、出力される(反転されていない)レッドストーン信号を返します。多くのポーリングセンサーはパフォーマンス上の理由から頻繁にポーリングしないため、センサーを設定してすぐに出力を取得することは信頼できないことに注意してください。したがって、このメソッドはプルイベントをトリガーしそれに応じて出力を取得します。ポーリングセンサーが選択されていない場合は例外がスローされます。"
+    },
+    {
+      "type": "text",
+      "title": "ユニバーサルセンサー(続き)",
+      "text": "$(li)$(#800)getMinWorkingPressure()/$: ユニバーサルセンサーを動作させるために必要な最小圧力(GUIの黄色から緑色へのしきい値)を返します。$(li)$(#800)setGPSToolCoordinate(<slotIndex>,<x>,<y>,<z>)/$: 指定されたスロット(1から始まる)にあるGPSツールに保存されている場所を指定された場所に設定します。これは場所を使用するセンサーに便利です。"
+    },
+    {
+      "type": "text",
+      "title": "ユニバーサルセンサー(続き)",
+      "text": "イベントベースのセンサー(プレイヤーの右クリックセンサーなど)の場合、センサー値の取得はイベントベースです。イベントを取得するには$(#800)<arguments> = os.pullEvent(\"universalSensor\")/$を実行します。通常、引数は<eventName, redstoneStrength>で構成されます。プレイヤーの右クリックセンサーは例外で<eventName, redstoneStrength, interactedX, interactedY, interactedZ>が返されます。これにより興味深い使用が可能になります..."
+    }
+  ]
+}

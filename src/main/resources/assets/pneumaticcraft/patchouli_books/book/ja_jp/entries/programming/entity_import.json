@@ -1,0 +1,29 @@
+{
+  "name": "エンティティインポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/entity_import_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)ドローン/$は接続された$(l:programming/text)テキスト/$ウィジェット内の(オプションの)接続された$(l:base_concepts/entity_filter)エンティティフィルター/$に一致する指定された$(l:programming/area)エリア/$内の最も近いエンティティに移動し、それを拾い上げて輸送します。$(p)これにはプレイヤーも含まれますが、プレイヤーは$(thing)スニーク/$して降りることで$(item)ドローン/$から簡単に逃げることができます。そうは言っても制御できる飛行エンティティに運ばれることには良い面もあります..."
+    },
+    {
+      "type": "text",
+      "title": "経験値オーブ",
+      "text": "ドローンはこのウィジェットを使用して$(thing)経験値オーブ/$をインポートすることもできます。$(item)@orb/$エンティティフィルターは経験値オーブと一致します。インポートされたオーブは$(l:base_concepts/memory_essence)メモリーエッセンス/$に変換され、ドローンの内部タンクに保存されます。その後$(l:programming/liquid_export)流体エクスポート/$ウィジェットを使用してそれを流体タンクに転送できます。"
+    },
+    {
+      "type": "text",
+      "title": "エリア制限",
+      "text": "このウィジェットに接続されている$(l:programming/area)エリア/$ウィジェットのエリアタイプは$(thing)ボックス/$である必要があることに注意してください。これはサポートされている唯一の形状です。ただし、エリアのホワイトリスト/ブラックリストを使用して異なる形状を作成することもできます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/entity_import_piece.png"
+      ],
+      "text": "$(italic)エイリアンによる誘拐/$"
+    }
+  ]
+}

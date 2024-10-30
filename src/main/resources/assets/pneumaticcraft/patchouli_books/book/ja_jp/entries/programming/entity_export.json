@@ -1,0 +1,19 @@
+{
+  "name": "エンティティエクスポートウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/entity_export_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)ドローン/$は接続された$(l:programming/text)テキスト/$ウィジェットで指定された(オプションの)$(l:base_concepts/entity_filter)エンティティフィルター/$によって許可されている場合、指定された$(l:programming/area)エリア/$に移動して運んでいるエンティティをドロップします。$(p)$(l:programming/entity_import)エンティティインポート/$ウィジェットも参照してください。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/entity_export_piece.png"
+      ],
+      "text": "$(italic)エンティティエクスポートウィジェット/$"
+    }
+  ]
+}

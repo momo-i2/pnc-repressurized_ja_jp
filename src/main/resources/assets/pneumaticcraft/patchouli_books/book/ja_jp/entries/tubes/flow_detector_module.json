@@ -1,0 +1,21 @@
+{
+  "name": "フロー検出モジュール",
+  "icon": "pneumaticcraft:flow_detector_module",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "フロー検出チューブモジュールはチューブを通る$(thing)エアフロー/$を測定する$(l:tubes/tube_modules#inline)インライン/$モジュールです。この結果、次の式を使用して$(#f00)レッドストーン信号/$を発します:$(p) $(formula)0.2 * flow (mL/tick)/$$(p)たとえば20mL/tickの空気が流れる場合、信号レベルは20*0.2=4になります。"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)フロー/$は$(l:base_concepts/pressure)圧力/$とは異なる物理量であることに注意してください。フローとは1ティックあたりにチューブを通過する空気の量です。したがって、(たとえば)稼働していない$(l:machines/elevator)エレベーター/$がある場合、フローは0になりますが稼働しているときは空気を消費するため、フローは0以外になります。したがって、このモジュールを使用して機械が空気を使用しているかどうかを検出できます。$(p)フロー検出モジュールは$(l:tubes/module_expansion_card)モジュール拡張カード/$を受け入れません。"
+    },
+    {
+      "type": "crafting",
+      "text": "フロー検出モジュールのクラフト",
+      "recipe": "pneumaticcraft:flow_detector_module"
+    }
+  ]
+}

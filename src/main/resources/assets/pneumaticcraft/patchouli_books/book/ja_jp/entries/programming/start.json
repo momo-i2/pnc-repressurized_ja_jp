@@ -1,0 +1,19 @@
+{
+  "name": "開始ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/start_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)開始/$ウィジェットはプログラムの最初のウィジェットであり$(l:programming/flow_control)プログラムの実行/$が開始される場所です。$(p)これは$(italic)必ず存在する必要がありますが存在できるのは1つだけです。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/start_piece.png"
+      ],
+      "text": "$(italic)マクラウドと呼んでくれ/$"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "真空ポンプ",
+  "icon": "pneumaticcraft:vacuum_pump",
+  "category": "pneumaticcraft:machines",
+  "advancement": "pneumaticcraft:pressure_chamber",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)真空ポンプ/$は真空を作成するために使用される機械です。これを行うために、機械は$(l:base_concepts/pressure)加圧空気/$を消費します。$(p)正圧は$(#0c0)'+'側/$に適用する必要があります。最小動作圧力に達すると$(item)真空ポンプ/$が吸引を開始し、$(#c00)'-'側/$の圧力が最低-1.0バールまで低下して真空になります。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/vacuum_pump.png"
+      ]
+    },
+    {
+      "type": "text",
+      "title": "アプリケーション",
+      "text": "負圧(真空)には次のような用途があります:$(li)エンチャント解除: $(item)エンチャントされたアイテム/$または1つ以上エンチャントが設定された$(item)エンチャントの本/$とバニラの$(item)本/$を$(l:manufacturing/pressure_chamber)圧力室/$に配置し、室内に十分な負圧をかけます。ランダムなエンチャントがアイテムから本に転送されます。$(li)負圧が与えられた場合、$(l:tubes/air_grate_module)エアグレートモジュール/$はエンティティを自身に引き寄せます。"
+    },
+    {
+      "type": "text",
+      "title": "アプリケーション(続き)",
+      "text": "$(li)$(l:spawning/vacuum_trap)真空トラップ/$と$(l:spawning/spawner_extractor)スポナー抽出装置/$は$(l:spawning/pressurized_spawner)加圧スポナー/$の作成と使用に必要なデバイスであり、動作には負圧が必要です。"
+    },
+    {
+      "type": "crafting",
+      "text": "真空ポンプのクラフト",
+      "recipe": "pneumaticcraft:vacuum_pump"
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "header": "吸引のエンチャント解除",
+      "recipe": "pneumaticcraft:pressure_chamber/pressure_chamber_disenchanting"
+    }
+  ]
+}

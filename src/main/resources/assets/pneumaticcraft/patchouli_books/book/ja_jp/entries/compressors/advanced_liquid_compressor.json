@@ -1,0 +1,17 @@
+{
+  "name": "高性能流体コンプレッサー",
+  "icon": "pneumaticcraft:advanced_liquid_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)高性能流体コンプレッサー/$は$(l:compressors/liquid_compressor)流体コンプレッサー/$の$(l:base_concepts/pressure_tiers)ティア2/$バージョンで、最大安全圧力は20バールです。これは1ティックあたり50mLの基本空気を生成し、$(l:base_concepts/upgrades#speed)スピードアップグレード/$でアップグレードできます。$(p)ただし、このジェネレーターは$(l:base_concepts/heat)冷却/$する必要があります。温度が上昇すると効率が低下し空気がまったく生成されなくなるからです。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)高性能流体コンプレッサー/$のクラフト",
+      "recipe": "pneumaticcraft:advanced_liquid_compressor"
+    }
+  ]
+}

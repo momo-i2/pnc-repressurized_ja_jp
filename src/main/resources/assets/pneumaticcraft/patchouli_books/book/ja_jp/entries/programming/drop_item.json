@@ -1,0 +1,23 @@
+{
+  "name": "ドロップアイテムウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/item_drop_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これにより$(l:tools/drone)ドローン/$は接続された$(l:programming/area)エリア/$にインベントリからアイテムをドロップします。$(thing)ドロップアイテム/$ウィジェットを$(thing)右クリック/$するとエリア内の位置ごとにドロップできるアイテムの数を指定できます。また、$(thing)ランダム/$モードと$(thing)ストレート/$モードを切り替えることもできます。これはそれぞれ小さなランダムオフセットでアイテムをドロップする(通常の$(item)ドロッパ―)/$のように)、またはアイテムをまっすぐにドロップすることを意味します。"
+    },
+    {
+      "type": "text",
+      "text": "$(l:programming/item_filter)アイテムフィルター/$を接続することもできます。フィルターを使用するとフィルターによって許可されたアイテムのみがドロップされます。$(p)ウィジェットは該当するアイテムが$(item)ドローンの/$インベントリに残っていない場合、または$(item)ドローン/$がエリア内のすべての位置を訪問した場合に実行が終了します。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/item_drop_piece.png"
+      ],
+      "text": "$(italic)ドロップアイテムウィジェット/$"
+    }
+  ]
+}

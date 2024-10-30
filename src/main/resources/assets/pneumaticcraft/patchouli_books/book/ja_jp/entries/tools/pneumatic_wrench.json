@@ -1,0 +1,21 @@
+{
+  "name": "空気圧レンチ",
+  "icon": "pneumaticcraft:pneumatic_wrench[pneumaticcraft:air=30000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "空気圧レンチは$(pncr)の$(thing)レンチ/$アイテムです。以下のさまざまなタスクに使用できます:$(p)$(li)バニラおよび改造ブロックを$(thing)右クリック/$して回転させる$(li)マシンを$(thing)スニーク+右クリック/$して$(pncr)の機械を保存されているアップグレードと空気を保存したままアイテムとしてドロップします。"
+    },
+    {
+      "type": "text",
+      "text": "$(li)$(l:base_concepts/drones)ドローン/$を$(thing)右クリック/$で解体してアイテムとしてドロップします。$(li)$(l:tubes/pressure_tubes)圧力チューブ/$を$(thing)右クリック/$でセクションを閉じたり再度開いたりして、チューブ同士を隔離します。$(p)$(item)空気圧レンチ/$は使用する前に$(l:machines/charging_station)充填ステーション/$で加圧する必要があります。"
+    },
+    {
+      "type": "crafting",
+      "text": "空気圧レンチのクラフト",
+      "recipe": "pneumaticcraft:pneumatic_wrench"
+    }
+  ]
+}

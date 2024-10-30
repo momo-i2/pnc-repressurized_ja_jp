@@ -1,0 +1,16 @@
+{
+  "name": "ソーラーウエーバー",
+  "icon": "pneumaticcraft:solar_wafer",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:assembly_controller",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)ソーラーウエーバー/$は$(l:components/solar_cell)太陽電池/$の中間作成コンポーネントです。"
+    },
+    {
+      "type": "pneumaticcraft:pressure_chamber",
+      "recipe": "pneumaticcraft:pressure_chamber/solar_wafer"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "エンティティ攻撃ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/attack_piece.png",
+  "category": "pneumaticcraft:widget_interact",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)ドローン/$はエリア内のすべての生物を攻撃します。$(p)このウィジェットに接続されているすべての$(l:programming/area)エリア/$ウィジェットのエリアタイプは$(thing)ボックス/$である必要があることに注意してください。これはサポートされている唯一の形状です。ただし、ホワイトリスト(右)側またはブラックリスト(左)側で複数のエリアウィジェットを使用することで異なる形状を作成できます。"
+    },
+    {
+      "type": "text",
+      "title": "エンティティのフィルタリング",
+      "text": "$(l:programming/text)テキスト/$ウィジェットを$(l:base_concepts/entity_filter)エンティティフィルター/$として使用することで攻撃可能なクリーチャーを指定できます。たとえば$(thing)ドローン/$ですべてのプレイヤーを攻撃したい場合は$(thing)テキスト/$ウィジェットを$(#600)@player/$を含む$(thing)エンティティ攻撃/$ウィジェットの$(italic)右/$に接続します。$(p)自分自身が攻撃されたくない場合はプレイヤー名を含む$(thing)テキスト/$ウィジェットを$(italic)左/$に接続します。"
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:diamond_sword",
+      "title": "近接攻撃",
+      "text": "$(l:tools/drone)ドローン/$はインベントリ内の任意の近接武器を装備して攻撃に使用します。$(thing)ドローン/$のインベントリに複数の武器がある場合は最もダメージの大きい武器を装備します。$(p)$(l:programming/inventory_import)インベントリインポート/$ウィジェットを使用してドローンに武器を提供することができます。非武装の近接攻撃は弱いため強くお勧めします。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:minigun_upgrade",
+      "text": "$(l:base_concepts/upgrades#minigun)ミニガンアップグレード/$を$(l:tools/drone)ドローン/$に挿入して$(l:tools/minigun)ミニガン/$を作成します。$(l:tools/minigun_ammo)銃の弾薬/$が提供($(l:programming/inventory_import)インベントリインポート/$ウィジェットを使用)されると$(thing)ドローン/$はこのミニガンを遠距離攻撃に使用します。$(p)デフォルトの範囲は16ブロックですが、最大16個の$(l:base_concepts/upgrades#range_upgrade)レンジアップグレード/$を挿入してアップグレードすると最大範囲は32ブロックになります。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:micromissiles",
+      "text": "ドローンは$(l:tools/micromissiles)マイクロミサイル/$の発射方法も知っています。このウィジェットの実行時に$(thing)ドローン/$が$(item)マイクロミサイル/$を保持している場合、現在のターゲットにミサイルを発射します。接続されている$(l:base_concepts/entity_filter)エンティティフィルター/$はドローンによってマイクロミサイル自身のエンティティフィルターにコピーされます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/attack_piece.png"
+      ],
+      "text": "$(italic)また来るよ/$"
+    }
+  ]
+}

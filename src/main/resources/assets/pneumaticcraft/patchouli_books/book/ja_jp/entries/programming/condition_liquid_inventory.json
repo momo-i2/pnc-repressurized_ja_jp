@@ -1,0 +1,19 @@
+{
+  "name": "条件: 流体ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_liquid_inventory_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは$(l:programming/conditions)条件/$ウィジェットです。$(p)$(thing)条件: 流体/$ウィジェットを使用すると接続された$(l:programming/area)エリア/$ウィジェット内のタンクまたは流体ブロックに一定量の流体があるかどうかを(リモートで)確認できます。接続された$(l:programming/liquid_filter)流体フィルター/$ウィジェットによって許可された流体のみがカウントされます(すべての流体を許可するにはフィルターを省略します)。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_liquid_inventory_piece.png"
+      ],
+      "text": "$(italic)条件: 流体ウィジェット/$"
+    }
+  ]
+}

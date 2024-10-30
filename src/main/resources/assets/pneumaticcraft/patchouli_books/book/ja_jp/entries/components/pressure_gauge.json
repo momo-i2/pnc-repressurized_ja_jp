@@ -1,0 +1,17 @@
+{
+  "name": "圧力計",
+  "icon": "pneumaticcraft:pressure_gauge",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:root",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは他のデバイスを作成するためのコンポーネントです。それ自体では役に立ちません。"
+    },
+    {
+      "type": "crafting",
+      "text": "圧力計のクラフト",
+      "recipe": "pneumaticcraft:pressure_gauge"
+    }
+  ]
+}

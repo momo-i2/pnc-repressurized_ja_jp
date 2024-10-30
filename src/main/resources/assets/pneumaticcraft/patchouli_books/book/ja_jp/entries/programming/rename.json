@@ -1,0 +1,24 @@
+{
+  "name": "リネームウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/rename_piece.png",
+  "category": "pneumaticcraft:widget_other",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "このウィジェットは$(item)名札/$を使用して$(thing)右クリック/$したかのように$(l:tools/drone)ドローン/$の名前を変更します。名前は添付された$(l:programming/text)テキスト/$ウィジェットに入力されます。"
+    },
+    {
+      "type": "text",
+      "title": "変数",
+      "text": "テキストに$(thing)${<var_name>}/$を含めることで$(l:programming/variables)変数/$の値を挿入することもできます。たとえば$(thing)counter/$変数が$(thing)x=1,y=2,z=3/$に設定されている場合$(p)$(formula)カウンター: ${counter}/$$(p)は$(thing)カウンター: 1, 2, 3/$に展開されます。$(l:programming/variables#special)スペシャル/$および$(l:programming/variables#global)グローバル変数/$もここで使用できます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/rename_piece.png"
+      ],
+      "text": "$(italic)あなたは誰でしたっけ？/$"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "物流コア",
+  "icon": "pneumaticcraft:logistics_core",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これはすべての$(l:logistics/overview)物流/$関連のアイテムとデバイスの基本作成コンポーネントです。"
+    },
+    {
+      "type": "relations",
+      "entries": [
+        "pneumaticcraft:logistics/frames",
+        "pneumaticcraft:logistics/logistics_drone",
+        "pneumaticcraft:tubes/logistics_module"
+      ]
+    },
+    {
+      "type": "crafting",
+      "text": "物流コアのクラフト",
+      "recipe": "pneumaticcraft:logistics_core"
+    }
+  ]
+}

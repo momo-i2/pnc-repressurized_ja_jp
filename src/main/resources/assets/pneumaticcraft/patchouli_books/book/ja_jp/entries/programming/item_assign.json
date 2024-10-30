@@ -1,0 +1,23 @@
+{
+  "name": "アイテム割当ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/item_assign_piece.png",
+  "category": "pneumaticcraft:widget_other",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(thing)アイテム割当/$ウィジェットは$(l:programming/variables)変数/$にアイテムを保存できる高度なウィジェットです。変数は座標またはアイテムのいずれかです。ここでは後者について説明します。$(p)座標変数に関する情報と変数の一般的な説明については、$(l:programming/coordinate_operator)座標演算/$ウィジェットを参照してください。"
+    },
+    {
+      "type": "text",
+      "text": "特定の$(thing)変数/$にアイテムを格納するには$(thing)アイテム割当/$ウィジェットの$(italic)右手/$側に目的のアイテムを含む$(thing)アイテムフィルター/$ウィジェットを配置します。このアイテムは$(thing)アイテム割当/$ウィジェットを$(thing)右クリック/$して指定した変数に割り当てられます。フィルターから転送されるのは実際のアイテムのみで、フィルター設定は転送されません。$(p)$(thing)アイテムフィルター/$ウィジェットを省略すると、代わりにドローンが保持しているアイテムが変数に割り当てられます。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/item_assign_piece.png"
+      ],
+      "text": "$(italic)アイテム割当ウィジェット/$"
+    }
+  ]
+}

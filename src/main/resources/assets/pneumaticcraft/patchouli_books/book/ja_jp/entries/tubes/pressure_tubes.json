@@ -1,0 +1,44 @@
+{
+  "name": "圧力チューブ",
+  "icon": "pneumaticcraft:pressure_tube",
+  "category": "pneumaticcraft:tubes",
+  "advancement": "pneumaticcraft:root",
+  "priority": "true",
+  "pages": [
+    {
+      "type": "text",
+      "text": "圧力チューブはコンプレッサーと機械の間で圧縮空気を輸送するための$(pncr)の主要なデバイスです。$(p)接続されていないチューブからは空気が漏れます。ただし、チューブの側面は$(l:tools/pneumatic_wrench)空気圧レンチ/$で右クリックすることで開閉を切り替えることができます。他のMODのレンチも機能する場合があります。"
+    },
+    {
+      "type": "image",
+      "title": "チューブ！",
+      "text": "$(italic)2本の圧力チューブと$(l:tubes/pressure_gauge_module)圧力ゲージ/$を$(italic)$(l:compressors/air_compressor)エアコンプレッサー/$$(italic)と$(l:machines/air_cannon)空気砲/$で接続",
+      "images": [
+        "pneumaticcraft:textures/patchouli/pressure_tubes.png"
+      ],
+      "border": "true"
+    },
+    {
+      "type": "text",
+      "text": "圧力チューブにはチューブにさまざまな機能を追加する取り付け可能なコンポーネントである$(l:tubes/tube_modules)チューブモジュール/$を取り付けることができます。詳細については各モジュールの個別のページを参照してください。$(p)圧力チューブは$(l:tools/camo_applicator)迷彩塗布器/$で偽装することができます。"
+    },
+    {
+      "type": "text",
+      "text": "チューブには3つの$(l:base_concepts/pressure_tiers)ティア/$があります:$(br)$(li)ティア1のチューブは最大5バールの圧力に耐えることができ、1,000mLの空気を収容できます。$(li)ティア1.5の(強化)チューブは最大10バールの圧力に耐えることができ、1,000mLの空気を収容できます。$(li)ティア2の(高機能)チューブは最大20バールの圧力に耐えることができ、4,000mLの空気を収容できます。"
+    },
+    {
+      "type": "crafting",
+      "text": "圧力チューブのクラフト",
+      "recipe": "pneumaticcraft:pressure_tube"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/reinforced_pressure_tube"
+    },
+    {
+      "anchor": "advanced",
+      "type": "pneumaticcraft:assembly_system",
+      "recipe": "pneumaticcraft:assembly/advanced_pressure_tube"
+    }
+  ]
+}

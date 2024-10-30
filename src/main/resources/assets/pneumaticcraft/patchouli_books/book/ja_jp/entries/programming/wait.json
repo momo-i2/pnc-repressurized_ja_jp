@@ -1,0 +1,19 @@
+{
+  "name": "待機ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/wait_piece.png",
+  "category": "pneumaticcraft:widget_flow",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(l:tools/drone)ドローン/$は何もせずに指定された時間待機します。時間は$(l:programming/text)テキスト/$ウィジェットを添付し期間を入力することで指定されます。$(p)次の期間形式が受け入れられます:$(li)$(thing)20/$: 1秒待機 (20ティック)$(li)$(thing)10s/$: 10秒待機$(li)$(thing)5m/$: 5分待機"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/wait_piece.png"
+      ],
+      "text": "$(italic)Godot/$"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "物流",
+  "description": "物流システムはアイテムや流体を移動し、インベントリやタンクを補充するための強力な方法です。",
+  "icon": "pneumaticcraft:logistics_drone[pneumaticcraft:air=120000]",
+  "sortnum": 8
+}

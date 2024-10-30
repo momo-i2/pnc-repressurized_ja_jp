@@ -1,0 +1,49 @@
+{
+  "name": "サーマルコンプレッサー",
+  "icon": "pneumaticcraft:thermal_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)サーマルコンプレッサー/$は反対側(水平)の$(l:base_concepts/heat)温度/$差を利用して$(l:base_concepts/pressure)圧縮空気/$を生成するシンプルなコンプレッサーです。温度勾配が大きいほど生成される空気の量が多くなります。$(p)注: このコンプレッサーを$(l:machines/vortex_tube)ボルテックスチューブ/$だけで動作させることはできません。純圧力損失が発生します。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/thermal_compressor.png"
+      ],
+      "border": "true",
+      "text": "$(italic)溶岩と氷塊を使用して温度勾配を作り出す熱圧縮機/$"
+    },
+    {
+      "type": "text",
+      "text": "$(item)サーマルコンプレッサーの南北面と東西面は互いに熱的に接続されていますが、南北または東西間の相互接続はないため1つのコンプレッサーで2つの独立した温度勾配を持つことができます。$(p)熱は接続全体で均等化されるため、有効な温度差を維持するにはある程度の努力が必要になります。"
+    },
+    {
+      "type": "text",
+      "title": "アプリケーション",
+      "text": "$(item)サーマルコンプレッサー/$が役立つ主な状況は3つあります:$(li)$(item)ボルテックスチューブ/$の$(italic)片側からの廃熱(または冷気！) を利用する。通常はボルテックスチューブの熱い側または冷たい側のみを使用し、反対側は $(l:machines/heat_sink)ヒートシンク/$を介して排気します。ただし、$(item)サーマルコンプレッサー/$を使用するとこの廃熱または冷気の一部を空気圧として再利用できます。"
+    },
+    {
+      "type": "text",
+      "title": "アプリケーション(続き)",
+      "text": "$(li)$(l:compressors/advanced_air_compressor)高性能エアコンプレッサー/$などの高性能コンプレッサーからの廃熱を利用します。通常は1つ以上の$(l:tools/heat_sink)ヒートシンク/$を使用してこの熱を大気中に放出しますが、サーマルコンプレッサーを使用するとこの廃熱の一部を圧力として再利用することもできます。"
+    },
+    {
+      "type": "text",
+      "title": "アプリケーション(続き)",
+      "text": "$(li)大量の自然に熱いまたは冷たい物質、例えば$(l:base_concepts/heat_sources)溶岩や他のMOD/$のブロックを入手する手段があれば、それらを使って圧力を生成できるかもしれません。また、熱源と使用済み熱源の配置と除去を自動化する必要もあるでしょう。$(l:tools/drone)ドローン/$は他の多くのMODソリューションと同様にこれを実現できます。"
+    },
+    {
+      "type": "text",
+      "title": "Redstone Control",
+      "text": "このコンプレッサーは$(#f00)レッドストーン信号/$によって制御できます。無効にすると圧力生成が停止し南北面と東西面の間の熱抵抗が大幅に増加します(熱はわずかに漏れますが、コンプレッサーが動作しているときよりもはるかに少なくなります)。これは、圧力が必要ない場合たとえばチューブネットワークが完全に加圧されているときに熱差としてエネルギーを蓄積するのに役立ちます。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)サーマルコンプレッサー/$のクラフト",
+      "recipe": "pneumaticcraft:thermal_compressor"
+    }
+  ]
+}

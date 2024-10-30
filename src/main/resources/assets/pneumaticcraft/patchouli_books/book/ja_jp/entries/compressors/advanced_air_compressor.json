@@ -1,0 +1,17 @@
+{
+  "name": "高性能エアコンプレッサー",
+  "icon": "pneumaticcraft:advanced_air_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)高性能エアコンプレッサー/$は$(l:compressors/air_compressor)エアコンプレッサー/$の$(l:base_concepts/pressure_tiers)ティア2/$バージョンで、最大安全圧力は20バールです。$(ttcolor)$(t:これはスピードアップグレードをインストールすることで増加できます)基本/$50mLの空気/ティックを生成し、$(l:base_concepts/upgrades#speed)スピードアップグレード/$でアップグレードできます。$(p)ただし、このジェネレーターは$(l:base_concepts/heat)冷却/$する必要があります。温度が上昇すると効率が低下して最終的には空気がまったく生成されなくなるからです。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)高性能エアコンプレッサー/$のクラフト",
+      "recipe": "pneumaticcraft:advanced_air_compressor"
+    }
+  ]
+}

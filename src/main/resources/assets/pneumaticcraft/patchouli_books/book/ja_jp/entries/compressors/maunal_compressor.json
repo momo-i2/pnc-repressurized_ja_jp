@@ -1,0 +1,17 @@
+{
+  "name": "手動コンプレッサー",
+  "icon": "pneumaticcraft:manual_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)手動コンプレッサー/$はゲーム序盤で手作業と満腹度から$(l:base_concepts/pressure)圧縮空気/$を生成するコンプレッサーです。コンプレッサーを右クリックしたままにすると空気を送り込んで圧縮します。コンプレッサーの圧力が高いほど各ポンプにかかる時間が長くなり、それ以上空気を送り込むことができなくなります。"
+    },
+    {
+      "type": "crafting",
+      "text": "$(item)手動コンプレッサー/$のクラフト",
+      "recipe": "pneumaticcraft:manual_compressor"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "クリエイティブコンプレッサー",
+  "icon": "pneumaticcraft:creative_compressor",
+  "category": "pneumaticcraft:compressors",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(item)クリエイティブコンプレッサー/$は作成できない$(l:base_concepts/pressure)エアコンプレッサー/$です。$(p)コンプレッサーのGUIで目的の圧力を選択するだけで、接続されているすべてのパイプと機械でその圧力が維持されます。"
+    },
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:creative_compressor",
+      "text": "$(italic)レシピ？どんなレシピ？/$"
+    }
+  ]
+}

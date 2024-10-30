@@ -1,0 +1,21 @@
+{
+  "name": "強化されたエアキャニスター",
+  "icon": "pneumaticcraft:reinforced_air_canister",
+  "category": "pneumaticcraft:components",
+  "advancement": "pneumaticcraft:advanced_pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "弟分である$(l:components/air_canister)エアキャニスター/$と同様に$(thing)強化されたエアキャニスター/$は空気を保持し、$(l:machines/charging_station)充填ステーション/$で充填および放出できます。ただし、容量が6,000mLに増加し、20バールまで充填できます(爆発しません)。"
+    },
+    {
+      "type": "text",
+      "text": "$(thing)強化されたエアキャニスター/$の興味深い使い方はチェストなどのインベントリや$(l:tubes/pressure_tubes)圧力チューブ/$と$(l:tubes/charging_module)充填モジュール/$と組み合わせて大量の空気を貯蔵するデバイスとして使用することです。これは$(l:machines/aerial_interface)空中インターフェース/$と(バニラの)$(thing)エンダーチェスト/$を使用するとさらに興味深いものになります..."
+    },
+    {
+      "type": "crafting",
+      "text": "強化されたエアキャニスターのクラフト",
+      "recipe": "pneumaticcraft:reinforced_air_canister"
+    }
+  ]
+}

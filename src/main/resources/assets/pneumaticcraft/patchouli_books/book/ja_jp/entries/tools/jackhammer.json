@@ -1,0 +1,62 @@
+{
+  "name": "空気圧式削岩機",
+  "icon": "pneumaticcraft:jackhammer[pneumaticcraft:air=120000]",
+  "category": "pneumaticcraft:tools",
+  "advancement": "pneumaticcraft:plastic",
+  "pages": [
+    {
+      "type": "spotlight",
+      "item": "pneumaticcraft:jackhammer",
+      "text": "$(item)空気圧式削岩機/$は非常に用途の広い採掘ツールで、$(l:base_concepts/pressure)圧力/$を使用してすべての種類のブロックを同じように効果的に破壊できます。採掘速度と空気容量はそれぞれ$(l:machines/charging_station)充填ステーション/$で$(l:base_concepts/upgrades#speed)スピードアップグレード/$と$(l:base_concepts/upgrades#volume)ボリュームアップグレード/$を使用してアップグレードできます。"
+    },
+    {
+      "type": "text",
+      "title": "ドリルビット",
+      "text": "新しく作られた削岩機には$(thing)ドリルビット/$が付属していないためあまり役に立ちません。ドリルビットを挿入する必要があります。削岩機を右クリックして設定GUIを開いて右上のスロットにビットを配置します。$(p)ドリルビットにはパワーとコストの順に4つのタイプがあります。$(li)鉄/$$(li)圧縮鉄/$$(li)ダイヤモンド/$$(li)ネザライト/$"
+    },
+    {
+      "type": "text",
+      "title": "掘削モード",
+      "text": "削岩機はいくつかの$(thing)鉱脈採掘/$機能を含むいくつかの掘削モードをサポートしており、広い領域を素早く簡単に掘削できます。サポートされる掘削モードは使用している$(thing)ドリルビット/$によって異なります。優れたビットはより多くの掘削モードをサポートします(掘削速度も向上します)。$(p)掘削モードを設定するには削岩機のGUIを開き(右クリック)右下のボタンを使用します(反対側を参照)。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/patchouli/jackhammer_gui.png"
+      ],
+      "text": "$(italic)ネザライトのドリルビットを装着し、3x3掘削モードを選択した削岩機のGUI/$"
+    },
+    {
+      "type": "spotlight",
+      "item": "minecraft:enchanted_book",
+      "title": "エンチャント",
+      "text": "削岩機は通常$(thing)エンチャントテーブル/$でエンチャントすることはできませんが、GUIを介して$(thing)シルクタッチ/$または$(thing)幸運/$のエンチャントの本を挿入することは可能です。本スロット(上部中央)に配置された本は削岩機にエンチャントを付与します。"
+    },
+    {
+      "type": "text",
+      "title": "エンチャント(続き)",
+      "text": "これには必要に応じてシルクタッチと幸運の本を簡単に交換できるという利点があります。$(p)必要な本を入手するのが難しい場合(バニラの本のエンチャントは非常にランダムです)は$(l:manufacturing/pressure_chamber)圧縮室/$を使用するとツールからエンチャントを剥がして本に配置できることを覚えておいてください。"
+    },
+    {
+      "type": "crafting",
+      "text": "削岩機のクラフト",
+      "recipe": "pneumaticcraft:jackhammer"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/iron_drill_bit"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/compressed_iron_drill_bit"
+    },
+    {
+      "type": "pneumaticcraft:thermo_plant",
+      "recipe": "pneumaticcraft:thermo_plant/diamond_drill_bit"
+    },
+    {
+      "type": "pneumaticcraft:assembly_system",
+      "recipe": "pneumaticcraft:assembly/netherite_drill_bit"
+    }
+  ]
+}

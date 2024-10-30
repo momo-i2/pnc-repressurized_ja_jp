@@ -1,0 +1,25 @@
+{
+  "name": "物流概要",
+  "icon": "pneumaticcraft:logistics_configurator",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:root",
+  "priority": "true",
+  "pages": [
+    {
+      "type": "text",
+      "text": "$(pncr)の$(thing)物流システム/$はアイテムや流体を輸送し、インベントリやタンクを補充するための興味深い方法を提供します。$(p)インベントリとタンクは、アイテムや流体をブロック内外にどのように移動させるかを制御する取り付け可能なガジェットである$(l:logistics/frames)物流フレーム/$でマークできます。"
+    },
+    {
+      "type": "text",
+      "text": "これらのインベントリは$(l:logistics/logistics_drone)物流ドローン/$または$(l:tubes/pressure_tubes)圧力チューブ/$に接続され、$(l:tubes/logistics_module)物流モジュール/$が接続されます。$(p)$(thing)物流システム/$は$(l:https://wiki.factorio.com/Logistic_network)Factorio/$に大きく影響を受けており、そのゲームをプレイしたことがあればその概念はおなじみでしょう。主な違いは、このMODでは別の物流チェストではなく、既存のインベントリ/タンクに接続するための$(l:logistics/frames)フレーム/$が提供されていることです。"
+    },
+    {
+      "type": "relations",
+      "entries": [
+        "pneumaticcraft:logistics/frames",
+        "pneumaticcraft:logistics/logistics_drone",
+        "pneumaticcraft:tubes/logistics_module"
+      ]
+    }
+  ]
+}

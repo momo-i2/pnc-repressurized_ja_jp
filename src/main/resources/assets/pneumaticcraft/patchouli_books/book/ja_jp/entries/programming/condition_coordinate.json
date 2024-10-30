@@ -1,0 +1,23 @@
+{
+  "name": "条件: 座標ウィジェット",
+  "icon": "pneumaticcraft:textures/progwidgets/condition_coordinate_piece.png",
+  "category": "pneumaticcraft:widget_cond",
+  "advancement": "pneumaticcraft:programmer",
+  "pages": [
+    {
+      "type": "text",
+      "text": "これは$(l:programming/conditions)条件/$ウィジェットです。$(p)$(thing)条件: 座標/$ウィジェットは、2つの$(l:programming/coordinate)座標/$を比較します。これらの座標、より具体的には座標のすべての軸(X/Y/Z)に対してさまざまなテストを実行できます。両方の座標の1つの軸だけが一致するか、2つが一致するか、または3つすべてが一致するかを確認できます。"
+    },
+    {
+      "type": "text",
+      "text": "比較する軸はウィジェットのGUIのチェックボックスで定義されます。同様に、使用する条件('='、'>=')はGUIのラジオボタンで定義されます。$(p)座標の比較は、GUIにテキストでも表示されます(例: $(thing)x1 <= x2 および z1 <= z2/$)。"
+    },
+    {
+      "type": "image",
+      "images": [
+        "pneumaticcraft:textures/progwidgets/condition_coordinate_piece.png"
+      ],
+      "text": "$(italic)条件: 座標ウィジェット/$"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "物流モジュール",
+  "icon": "pneumaticcraft:logistics_module",
+  "category": "pneumaticcraft:logistics",
+  "advancement": "pneumaticcraft:pressure_tube",
+  "pages": [
+    {
+      "type": "text",
+      "text": "完全な詳細についてはマニュアルの$(thing)圧力チューブ/$セクションにある$(l:tubes/logistics_module)物流モジュールエントリー/$をご覧ください。"
+    },
+    {
+      "type": "crafting",
+      "recipe": "pneumaticcraft:logistics_module",
+      "text": "物流モジュールのクラフト"
+    }
+  ]
+}
