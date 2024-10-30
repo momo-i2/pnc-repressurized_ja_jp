@@ -6,6 +6,14 @@ Changes are in reverse chronological order; newest changes at the top.
 
 # Minecraft 1.21.1
 
+## [8.2.3]
+
+### Added
+* Added ja_jp translation, thanks @momo-i2
+
+### Fixed
+* Significantly reworked internals of semiblock tracking, should fix all issues encountered with "not overwriting existing semiblock" log messages
+
 ## [8.2.2]
 
 ### Fixed
