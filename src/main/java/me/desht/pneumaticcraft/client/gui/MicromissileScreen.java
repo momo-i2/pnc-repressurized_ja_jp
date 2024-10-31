@@ -95,7 +95,7 @@ public class MicromissileScreen extends AbstractPneumaticCraftScreen {
     public void init() {
         super.init();
 
-        Component labelStr = xlate("pneumaticcraft.gui.sentryTurret.targetFilter");
+        Component labelStr = xlate("pneumaticcraft.gui.entityFilter");
         filterLabel = new WidgetLabel(guiLeft + 12, guiTop + 130, labelStr);
         addRenderableWidget(filterLabel);
         int textBoxX = filterLabel.getX() + font.width(labelStr) + 2;
