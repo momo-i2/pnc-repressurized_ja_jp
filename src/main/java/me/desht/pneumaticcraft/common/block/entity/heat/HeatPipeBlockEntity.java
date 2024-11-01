@@ -77,7 +77,7 @@ public class HeatPipeBlockEntity extends AbstractTickingBlockEntity implements C
     @Override
     public void setCamouflage(BlockState state) {
         camoState = state;
-        CamouflageableBlockEntity.syncToClient(this);
+        CamouflageableBlockEntity.onCamouflageChanged(this);
     }
 
     @Override

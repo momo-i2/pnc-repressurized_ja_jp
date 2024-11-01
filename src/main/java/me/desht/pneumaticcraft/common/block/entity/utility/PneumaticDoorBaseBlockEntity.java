@@ -307,7 +307,7 @@ public class PneumaticDoorBaseBlockEntity extends AbstractAirHandlingBlockEntity
     @Override
     public void setCamouflage(BlockState state) {
         camoState = state;
-        CamouflageableBlockEntity.syncToClient(this);
+        CamouflageableBlockEntity.onCamouflageChanged(this);
     }
 
     @Override

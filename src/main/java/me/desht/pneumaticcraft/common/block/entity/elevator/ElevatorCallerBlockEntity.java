@@ -138,7 +138,7 @@ public class ElevatorCallerBlockEntity extends AbstractTickingBlockEntity implem
     @Override
     public void setCamouflage(BlockState state) {
         camoState = state;
-        CamouflageableBlockEntity.syncToClient(this);
+        CamouflageableBlockEntity.onCamouflageChanged(this);
     }
 
     @Override

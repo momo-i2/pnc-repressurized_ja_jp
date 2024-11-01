@@ -199,7 +199,7 @@ public abstract class AbstractPneumaticCraftBlockEntity extends BlockEntity
         if (level == null || level.isClientSide) return;
 
         PacketDescription descPacket = PacketDescription.create(this, forceFullSync, level.registryAccess());
-        if (descPacket.hasData()) {
+        if (descPacket.hasData() || forceFullSync) {
             NetworkHandler.sendToAllTracking(descPacket, this);
         }
         fieldsToSync.clear();

@@ -406,7 +406,7 @@ public class PressureTubeBlockEntity extends AbstractAirHandlingBlockEntity impl
     @Override
     public void setCamouflage(BlockState state) {
         camoState = state;
-        CamouflageableBlockEntity.syncToClient(this);
+        CamouflageableBlockEntity.onCamouflageChanged(this);
     }
 
     @Override

@@ -39,8 +39,9 @@ public interface CamouflageableBlockEntity {
     BlockState getCamouflage();
 
     /**
-     * Set the camouflage for the block entity.  The block entity should sync this state to the client, and do
-     * any necessary re-rendering of the block when the synced state changes.
+     * Set the camouflage for the block entity.  The block entity should call
+     * {@link #onCamouflageChanged(AbstractPneumaticCraftBlockEntity)} to sync this state to the client, and the client
+     * should do any necessary re-rendering of the block when the synced state changes.
      *
      * @param state the camo block state
      */
@@ -57,19 +58,21 @@ public interface CamouflageableBlockEntity {
     }
 
     /**
-     * Convenience method: sync camo state to client
+     * Call this from your {@link #setCamouflage(BlockState)} implementation to ensure block entity is synced/saved.
      *
      * @param te the block entity
      */
-    static void syncToClient(AbstractPneumaticCraftBlockEntity te) {
+    static void onCamouflageChanged(AbstractPneumaticCraftBlockEntity te) {
         if (te.getLevel() != null && !te.getLevel().isClientSide) {
-            te.sendDescriptionPacket();
+            te.scheduleDescriptionPacket();
             te.setChanged();
         }
     }
 
     static BlockState readCamo(CompoundTag tag) {
-        BlockState state = tag.contains("camoState", Tag.TAG_COMPOUND) ? NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), tag.getCompound("camoState")) : null;
+        BlockState state = tag.contains("camoState", Tag.TAG_COMPOUND) ?
+                NbtUtils.readBlockState(BuiltInRegistries.BLOCK.asLookup(), tag.getCompound("camoState")) :
+                null;
         return state != null && state.getBlock() == Blocks.AIR ? null : state;
     }
 
