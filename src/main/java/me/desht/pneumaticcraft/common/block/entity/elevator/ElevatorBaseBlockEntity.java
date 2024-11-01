@@ -153,7 +153,7 @@ public class ElevatorBaseBlockEntity extends AbstractAirHandlingBlockEntity impl
             speedMultiplier = (float) (syncedSpeedMult * PacketServerTickTime.getTickTimeMultiplier());
             if (prevCamoState != camoState) {
                 fakeFloorTextureUV = ClientUtils.getTextureUV(camoState, Direction.UP);
-                fakeFloorTextureTint = camoState.getBlock() instanceof ColorHandlers.ITintableBlock t ?
+                fakeFloorTextureTint = camoState != null && camoState.getBlock() instanceof ColorHandlers.ITintableBlock t ?
                         0xFF000000 | t.getTintColor(camoState, level, getBlockPos(), 0) :
                         0xFFFFFFFF;
                 prevCamoState = camoState;
