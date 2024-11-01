@@ -269,6 +269,12 @@ public abstract class SyncedField<T> {
         }
 
         @Override
+        protected boolean equals(ItemStack oldValue, ItemStack newValue) {
+            // Note: ItemStack doesn't override equals()
+            return ItemStack.matches(oldValue, newValue);
+        }
+
+        @Override
         protected ItemStack copyWhenNecessary(ItemStack oldValue) {
             return oldValue.copy();
         }
