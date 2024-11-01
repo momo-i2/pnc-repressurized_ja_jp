@@ -5,15 +5,15 @@
   "pages": [
     {
       "type": "text",
-      "text": "$(pncr)では、ワールドで生成されるのは$(thing)原油/$のみです。これは水の湖と同様に生成されますが、違いは石油の湖は地表よりも地下深くに生成される可能性がはるかに高いことです。このため、$(l:tools/seismic_sensor)地震センサー/$などのツールの支援を強くお勧めします。"
+      "text": "$(pncr)では、ワールドで生成されるのは$(thing)原油/$のみです。これは水の湖と同様に生成されますが、違いは原油の湖は地表よりも地下深くに生成される可能性がはるかに高いことです。このため$(l:tools/seismic_sensor)地震センサー/$などのツールの支援を強くお勧めします。"
     },
     {
       "type": "text",
-      "text": "原油には2つの目的があります。1つは$(l:manufacturing/refinery)精製/$して$(l:compressors/liquid_compressor)流体コンプレッサー/$で使用できる高品質の燃料にすること、もう1つは$(l:components/plastic)プラスチック/$と$(l:components/lubricant)潤滑剤/$ を作ることです。$(p)$(item)プラスチック/$は$(pncr)の多くのレシピで使用され、$(item)潤滑油/$は$(l:base_concepts/upgrades#speed)スピードアップグレード/$を作るために必要です。"
+      "text": "原油には2つの目的があります。1つは$(l:manufacturing/refinery)精製/$して$(l:compressors/liquid_compressor)流体コンプレッサー/$で使用できる高品質の燃料にすること、もう1つは$(l:components/plastic)プラスチック/$と$(l:components/lubricant)潤滑油/$を作ることです。$(p)$(item)プラスチック/$は$(pncr)の多くのレシピで使用され、$(item)潤滑油/$は$(l:base_concepts/upgrades#speed)スピードアップグレード/$を作るために必要です。"
     },
     {
       "type": "text",
-      "text": "原油を見つけたらそれを抽出して輸送する必要があります。石油を抽出するための推奨される$(pncr)の方法は$(l:machines/gas_lift)ガスリフト/$を使用することですが、他のMODの流体ポンプも使用できます。基地から遠く離れた場所でポンプで汲み上げる場合、輸送のための初期の解決策の1つは最大32,000mBの流体を保持でき、壊れても内容物を保持できるシンプルな$(l:machines/tanks)小型タンク/$です。(ガスリフトも流体内容物を保持するためこの目的に使用できます)。"
+      "text": "原油を見つけたらそれを抽出して輸送する必要があります。原油を抽出するための推奨される$(pncr)の方法は$(l:machines/gas_lift)ガスリフト/$を使用することですが、他のMODの流体ポンプも使用できます。基地から遠く離れた場所でポンプで汲み上げる場合、輸送のための初期の解決策の1つは最大32,000mBの流体を保持でき、壊れても内容物を保持できるシンプルな$(l:machines/tanks)小型タンク/$です。(ガスリフトも流体内容物を保持するためこの目的に使用できます)。"
     },
     {
       "type": "image",
@@ -25,7 +25,7 @@
     {
       "type": "text",
       "title": "MOD統合",
-      "text": "もちろん$(pncr)は$(thing)原油/$を追加する唯一のMODではありません。他のいくつかのMODも同様に追加します($(thing)BuildCraft/$や$(thing)Immersive Petroleum/$ など)。$(p)ワールド生成設定によっては$(pncr)の原油が利用できない場合があります。ただし、$(l:manufacturing/refinery)製油所/$は他のMODの\"原油\"の流体を処理できます。"
+      "text": "もちろん$(pncr)は$(thing)原油/$を追加する唯一のMODではありません。他のいくつかのMODも同様に追加します($(thing)BuildCraft/$や$(thing)Immersive Petroleum/$ など)。$(p)ワールド生成設定によっては$(pncr)の原油が利用できない場合があります。ただし、$(l:manufacturing/refinery)製油所/$は他のMODの「原油」の流体を処理できます。"
     }
   ]
 }

@@ -9,7 +9,7 @@
     },
     {
       "type": "text",
-      "text": "$(li)温度差が大きいほど熱の拡散は速くなります。$(li)物体によって、$(thing)熱抵抗/$は異なります。$(item)松明/$と$(item)空気/$は高い抵抗を持ちますが$(l:base_concepts/basic_materials#compressed_iron_block)圧縮鉄ブロック/$は非常に低い抵抗を持ちます。$(thing)熱抵抗/$はある物体から別の物体に熱が広がる速さを決定します。"
+      "text": "$(li)温度差が大きいほど熱の拡散は速くなります。$(li)物体によって$(thing)熱抵抗/$は異なります。$(item)松明/$と$(item)空気/$は高い抵抗を持ちますが$(l:base_concepts/basic_materials#compressed_iron_block)圧縮鉄ブロック/$は非常に低い抵抗を持ちます。$(thing)熱抵抗/$はある物体から別の物体に熱が広がる速さを決定します。"
     },
     {
       "type": "text",
@@ -19,7 +19,7 @@
       "type": "text",
       "title": "断熱",
       "anchor": "insulation",
-      "text": "機械は露出したままにしておくと空気中に熱を失います。これは露出面が多い$(l:manufacturing/refinery)製油所/$で特に顕著ですが、$(l:base_concepts/basic_materials#compressed_iron_block)圧縮鉄のブロック/$などの熱伝導性ブロックにも当てはまります。$(p)この熱損失を避けるにはどの面も空気ブロックに露出していないことを確認してください。非伝導性ブロックであれば何でもかまいません。完全なブロックである必要はなく、$(item)トラップドア/$や$(item)ハーフブロック/$でも問題ありません。"
+      "text": "機械は露出したままにしておくと空気中に熱を放出します。これは露出面が多い$(l:manufacturing/refinery)製油所/$で特に顕著ですが、$(l:base_concepts/basic_materials#compressed_iron_block)圧縮鉄のブロック/$などの熱伝導性ブロックにも当てはまります。$(p)この熱損失を避けるにはどの面も空気ブロックに露出していないことを確認してください。非伝導性ブロックであれば何でもかまいません。完全なブロックである必要はなく、$(item)トラップドア/$や$(item)ハーフブロック/$でも問題ありません。"
     },
     {
       "type": "text",

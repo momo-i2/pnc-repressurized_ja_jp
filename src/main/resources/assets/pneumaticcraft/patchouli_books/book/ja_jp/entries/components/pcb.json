@@ -27,7 +27,7 @@
       "type": "spotlight",
       "title": "方法その2",
       "item": "pneumaticcraft:assembly_controller",
-      "text": "$(l:manufacturing/assembly_system)組立システム/$ を作成できたら、それを使用して$(item)組立プログラム: レーザー/$で$(item)空のPCB/$を$(item)未組立のPCB/$に直接変換できます。この場合$(item)UVライトボックス/$で露光したり、$(item)エッチングタンク/$を使用する必要はありません。"
+      "text": "$(l:manufacturing/assembly_system)組立システム/$を作成できたら、それを使用して$(item)組立プログラム: レーザー/$で$(item)空のPCB/$を$(item)未組立のPCB/$に直接変換できます。この場合$(item)UVライトボックス/$で露出したり、$(item)エッチングタンク/$を使用する必要はありません。"
     },
     {
       "type": "text",

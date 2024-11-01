@@ -1,18 +1,18 @@
 {
-  "name": "酵母培養",
+  "name": "酵母培養液",
   "icon": "pneumaticcraft:yeast_culture_bucket",
   "category": "pneumaticcraft:renewables",
   "advancement": "pneumaticcraft:tp_plant",
   "pages": [
     {
       "type": "text",
-      "text": "$(thing)酵母培養/$は$(l:renewables/ethanol)エタノール/$と$(l:renewables/sourdough)サワードゥ/$の生産に必要でありいくつかの方法で生産できます:"
+      "text": "$(thing)酵母培養液/$は$(l:renewables/ethanol)エタノール/$と$(l:renewables/sourdough)サワードゥ/$の生産に必要でありいくつかの方法で生産できます:"
     },
     {
       "type": "spotlight",
       "item": "minecraft:red_mushroom",
       "title": "方法その1",
-      "text": "これは最初に利用できる唯一の方法です。$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$に$(thing)水/$を入れ、キノコをいくつか追加します。この方法は少し時間(キノコの供給が十分に必要)がかかりますが酵母培養の初期在庫を簡単に生成できます。"
+      "text": "これは最初に利用できる唯一の方法です。$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$に$(thing)水/$を入れ、キノコをいくつか追加します。この方法は少し時間(キノコの供給が十分に必要)がかかりますが酵母培養液の初期在庫を簡単に生成できます。"
     },
     {
       "type": "text",
@@ -32,7 +32,7 @@
     {
       "type": "text",
       "title": "方法その2",
-      "text": "$(thing)酵母培養/$は生物なので自己複製が可能です。これを行うには酵母培養入りバケツをインワールドのプールに注ぎ、$(thing)砂糖/$をプールに投入します。$(p)次に、酵母培養に隣接するブロックスペースに$(thing)水/$入りバケツを注ぎます。1～2秒後に水が酵母培養に変換されるのがわかります。"
+      "text": "$(thing)酵母培養液/$は生物なので自己複製が可能です。これを行うには酵母培養液入りバケツをインワールドのプールに注ぎ、$(thing)砂糖/$をプールに投入します。$(p)次に、酵母培養液に隣接するブロックスペースに$(thing)水/$入りバケツを注ぎます。1～2秒後に水が酵母培養液に変換されるのがわかります。"
     },
     {
       "type": "text",

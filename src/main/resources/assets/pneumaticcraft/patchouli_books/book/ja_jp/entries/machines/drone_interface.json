@@ -56,7 +56,7 @@
     },
     {
       "title": "addWhitelistLiquidFilter()",
-      "text": "$(#800)addWhitelistLiquidFilter(<流体名>)/$$(p)ピースの右側に$l(:programming/liquid_filter)流体フィルター/$ピースを配置したのと同じように動作します。流体のレジストリ名を指定する必要があります(例: $(thing)minecraft:water/$)。",
+      "text": "$(#800)addWhitelistLiquidFilter(<流体名>)/$$(p)ピースの右側に$(l:programming/liquid_filter)流体フィルター/$ピースを配置したのと同じように動作します。流体のレジストリ名を指定する必要があります(例: $(thing)minecraft:water/$)。",
       "type": "text"
     },
     {
@@ -207,7 +207,7 @@
     {
       "type": "text",
       "title": "setEmittingRedstone()",
-      "text": "$(#800)setEmittingRedstone(<strength>)/$$(p)「emit_redstone」アクションが現在のアクションであるときに放出するレッドストーン信号の強度を設定します。"
+      "text": "$(#800)setEmittingRedstone(<strength>)/$$(p)「emit_redstone」アクションが現在のアクションであるときに送信するレッドストーン信号の強度を設定します。"
     },
     {
       "type": "text",

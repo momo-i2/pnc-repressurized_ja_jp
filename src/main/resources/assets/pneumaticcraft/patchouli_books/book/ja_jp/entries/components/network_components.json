@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "text",
-      "text": "これらのコンポーネントは主に$(l:programming/security_station)セキュリティステーション/$をセットアップするために使用されますが、一部はクラフトコンポーネントとしても使用され、$(l:components/network_components#network_storage)ネットワークストレージ/$と$(l:components/network_components#network_api)ネットワークAPI/$は$(l:tools/drone)ドローン/$のプログラムを保存するために使用できます。"
+      "text": "これらのコンポーネントは主に$(l:machines/security_station)セキュリティステーション/$をセットアップするために使用されますが、一部はクラフトコンポーネントとしても使用され、$(l:components/network_components#network_storage)ネットワークストレージ/$と$(l:components/network_components#network_api)ネットワークAPI/$は$(l:tools/drone)ドローン/$のプログラムを保存するために使用できます。"
     },
     {
       "type": "crafting",

@@ -14,7 +14,7 @@
         "pneumaticcraft:textures/patchouli/heat_sinks.png"
       ],
       "border": "true",
-      "text": "$(italic)TODO: ヒートパイプ画像/$"
+      "text": "$(italic)TODO: ヒートパイプ画像に差し替える/$"
     },
     {
       "type": "crafting",

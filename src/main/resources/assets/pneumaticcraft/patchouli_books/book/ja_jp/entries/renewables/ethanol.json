@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "text",
-      "text": "$(thing)エタノール/$は$(l:renewables/yeast_culture)酵母培養/$と$(thing)砂糖/$を使用して$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で生成できます。これは$(l:renewables/biodiesel)バイオディーゼル/$の構成要素の1つです。"
+      "text": "$(thing)エタノール/$は$(l:renewables/yeast_culture)酵母培養液/$と$(thing)砂糖/$を使用して$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で生成できます。これは$(l:renewables/biodiesel)バイオディーゼル/$の構成要素の1つです。"
     },
     {
       "type": "text",

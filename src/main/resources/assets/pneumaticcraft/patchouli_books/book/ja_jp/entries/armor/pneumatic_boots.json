@@ -21,7 +21,7 @@
     {
       "type": "text",
       "title": "ジェットブーツ(続き)",
-      "text": "アップグレードがアクティブなときは$(k:pneumaticcraft.boots.jet_boots)キーを押し続けるだけで見ている方向に推進できます。$(p)$(thing)ジェットブーツ/$は空気を大量に使用します。複数の$(l:base_concepts/upgrades#volume)ボリュームアップグレード/$をブーツ(および$(l:armor/pneumatic_chestplate)チェストプレート/$、$(l:base_concepts/upgrades#charging)充電アップグレード/$)に追加することを強くお勧めします。$(p)可能であればベースに適切な充電インフラストラクチャを設置するとともに、$(l:machines/aerial_interface)空中インターフェース/$を使用することも推奨されます。"
+      "text": "アップグレードがアクティブなときは$(k:pneumaticcraft.boots.jet_boots)キーを押し続けるだけで見ている方向に推進できます。$(p)$(thing)ジェットブーツ/$は空気を大量に使用します。複数の$(l:base_concepts/upgrades#volume)ボリュームアップグレード/$をブーツ(および$(l:armor/pneumatic_chestplate)チェストプレート/$、$(l:base_concepts/upgrades#charging)充填アップグレード/$)に追加することを強くお勧めします。$(p)可能であればベースに適切な充填インフラストラクチャを設置するとともに、$(l:machines/aerial_interface)空中インターフェース/$を使用することも推奨されます。"
     },
     {
       "type": "text",

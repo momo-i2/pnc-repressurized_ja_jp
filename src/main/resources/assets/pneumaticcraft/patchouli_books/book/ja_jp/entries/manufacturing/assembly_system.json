@@ -48,7 +48,7 @@
       "type": "link",
       "flag": "mod:crafttweaker",
       "title": "CraftTweaker",
-      "text": "$(thing)Assembly System/$ には $(l:https://minecraft.curseforge.com/projects/crafttweaker)CraftTweaker/$のサポートがあり、レシピを追加したり削除したりできます。詳細については、以下のリンクを参照してください。",
+      "text": "$(thing)組立システム/$ には $(l:https://minecraft.curseforge.com/projects/crafttweaker)CraftTweaker/$のサポートがあり、レシピを追加したり削除したりできます。詳細については、以下のリンクを参照してください。",
       "url": "https://docs.blamejared.com/1.16/en/mods/PneumaticCraft-Repressurized/AssemblySystem",
       "link_text": "CraftTweaker Docs"
     },

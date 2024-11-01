@@ -12,17 +12,17 @@
     {
       "type": "spotlight",
       "item": "pneumaticcraft:yeast_culture_bucket",
-      "text": "手順1a: $(thing)酵母培養/$を作成します。キノコと水を用意して$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で混ぜます。TPPの温度が30℃から60℃の間になるようにする必要がありますが、これはバイオームと高度によって簡単な場合もあれば難しい場合もあります。"
+      "text": "手順1a: $(thing)酵母培養液/$を作成します。キノコと水を用意して$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$で混ぜます。TPPの温度が30℃から60℃の間になるようにする必要がありますが、これはバイオームと高度によって簡単な場合もあれば難しい場合もあります。"
     },
     {
       "type": "spotlight",
       "item": "minecraft:sugar",
-      "text": "手順1b (オプション): 酵母培養入りバケツが少なくとも1つできたらそれをワールド内のプールに注ぎ、プールに砂糖を落として培養に隣接するブロックスペースにバケツの水を注ぐことで、より速くより多くの酵母培養を生産できます。注ぎ出した水の中に培養物が複製されます。"
+      "text": "手順1b (オプション): 酵母培養液入りバケツが少なくとも1つできたらそれをワールド内のプールに注ぎ、プールに砂糖を落として培養に隣接するブロックスペースにバケツの水を注ぐことで、より速くより多くの酵母培養液を生産できます。注ぎ出した水の中に培養物が複製されます。"
     },
     {
       "type": "spotlight",
       "item": "pneumaticcraft:ethanol_bucket",
-      "text": "手順2: $(thing)酵母培養/$と$(thing)砂糖/$を$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$に追加して$(thing)エタノール/$を作成します。これは手順1aと非常によく似た方法で温度に依存します。"
+      "text": "手順2: $(thing)酵母培養液/$と$(thing)砂糖/$を$(l:manufacturing/thermopneumatic_processing_plant)熱空気圧処理プラント/$に追加して$(thing)エタノール/$を作成します。これは手順1aと非常によく似た方法で温度に依存します。"
     },
     {
       "type": "spotlight",
