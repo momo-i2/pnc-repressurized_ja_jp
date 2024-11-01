@@ -30,6 +30,8 @@ import net.minecraft.world.entity.player.Inventory;
 
 import java.util.List;
 
+import static me.desht.pneumaticcraft.common.util.PneumaticCraftUtils.xlate;
+
 public class SpawnerExtractorScreen extends AbstractPneumaticCraftContainerScreen<SpawnerExtractorMenu, SpawnerExtractorBlockEntity> {
     public SpawnerExtractorScreen(SpawnerExtractorMenu container, Inventory inv, Component displayString) {
         super(container, inv, displayString);
@@ -52,7 +54,7 @@ public class SpawnerExtractorScreen extends AbstractPneumaticCraftContainerScree
         super.renderLabels(graphics, x, y);
 
         int progress = Mth.clamp((int)(te.getProgress() * 100f), 0, 100);
-        graphics.drawString(font, "Progress:", 65, 35, 0x404040, false);
+        graphics.drawString(font, xlate("pneumaticcraft.gui.misc.progress"), 65, 35, 0x404040, false);
         graphics.drawString(font, progress + "%", 80, 47, 0x404040, false);
     }
 

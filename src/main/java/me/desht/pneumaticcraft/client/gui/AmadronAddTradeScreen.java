@@ -100,7 +100,8 @@ public class AmadronAddTradeScreen extends AbstractPneumaticCraftContainerScreen
         initSide(INPUT_SLOT);
         initSide(OUTPUT_SLOT);
         setFocused(amountFields[INPUT_SLOT]);
-        addRenderableWidget(addButton = new WidgetButtonExtended(leftPos + 50, topPos + 171, 85, 20, "Add Trade", b -> addTrade()));
+        addRenderableWidget(addButton = new WidgetButtonExtended(leftPos + 50, topPos + 171, 85, 20,
+                xlate("pneumaticcraft.gui.amadron.addTrade"), b -> addTrade()));
 
         addJeiFilterInfoTab();
     }

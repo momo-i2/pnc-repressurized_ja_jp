@@ -89,7 +89,7 @@ public class UniversalSensorScreen extends AbstractPneumaticCraftContainerScreen
         int xStart = (width - imageWidth) / 2;
         int yStart = (height - imageHeight) / 2;
 
-        sensorInfoStat = addAnimatedStat(Component.literal("Sensor Info"), new ItemStack(ModBlocks.UNIVERSAL_SENSOR.get()), 0xFFFFAA00, false);
+        sensorInfoStat = addAnimatedStat(xlate("pneumaticcraft.gui.universalSensor.sensorInfo"), new ItemStack(ModBlocks.UNIVERSAL_SENSOR.get()), 0xFFFFAA00, false);
         sensorInfoStat.setForegroundColor(0xFF000000);
 
         textField = new WidgetTextField(font, xStart + 70, yStart + 58, 98);

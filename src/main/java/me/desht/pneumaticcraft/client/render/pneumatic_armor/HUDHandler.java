@@ -223,12 +223,12 @@ public enum HUDHandler implements IKeyListener {
                 // any other tick during startup: display found/not found message for each possible upgrade
                 for (int i = 0; i < upgradeHandlers.size(); i++) {
                     if (ticksSinceEquipped == startupTime / (upgradeHandlers.size() + 2) * (i + 1)) {
-                        boolean upgradeEnabled = commonArmorHandler.isUpgradeInserted(slot, i);
-                        if (initWhen == ComponentInit.ALL || upgradeEnabled) {
+                        boolean upgradeInstalled = commonArmorHandler.isUpgradeInserted(slot, i);
+                        if (initWhen == ComponentInit.ALL || upgradeInstalled) {
                             playArmorInitSound(player, 0.5F + (float) (i + 1) / (upgradeHandlers.size() + 2) * 0.5F);
-                            Component message = xlate(upgradeHandlers.get(i).getTranslationKey())
-                                    .append(upgradeEnabled ? " installed" : " not installed");
-                            addMessage(new ArmorMessage(message, 80, upgradeEnabled ? DEFAULT_MESSAGE_BGCOLOR : 0x70FF8000));
+                            String key = "pneumaticcraft.armor.message.upgrade" + (upgradeInstalled ? "Installed" : "notInstalled");
+                            Component message = xlate(key, xlate(upgradeHandlers.get(i).getTranslationKey()));
+                            addMessage(new ArmorMessage(message, 80, upgradeInstalled ? DEFAULT_MESSAGE_BGCOLOR : 0x70FF8000));
                         }
                     }
                 }
