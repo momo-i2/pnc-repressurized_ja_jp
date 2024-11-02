@@ -10,7 +10,7 @@
     },
     {
       "type": "text",
-      "text": "$(li)$(l:base_concepts/drones)ドローン/$を$(thing)右クリック/$で解体してアイテムとしてドロップします。$(li)$(l:tubes/pressure_tubes)圧力チューブ/$を$(thing)右クリック/$でセクションを閉じたり再度開いたりして、チューブ同士を隔離します。$(p)$(item)空気圧レンチ/$は使用する前に$(l:machines/charging_station)充填ステーション/$で加圧する必要があります。"
+      "text": "$(li)$(l:tools/drone)ドローン/$を$(thing)右クリック/$で解体してアイテムとしてドロップします。$(li)$(l:tubes/pressure_tubes)圧力チューブ/$を$(thing)右クリック/$でセクションを閉じたり再度開いたりして、チューブ同士を隔離します。$(p)$(item)空気圧レンチ/$は使用する前に$(l:machines/charging_station)充填ステーション/$で加圧する必要があります。"
     },
     {
       "type": "crafting",

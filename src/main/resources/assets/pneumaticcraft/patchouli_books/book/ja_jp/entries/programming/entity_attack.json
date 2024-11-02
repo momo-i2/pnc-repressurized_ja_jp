@@ -22,7 +22,7 @@
     {
       "type": "spotlight",
       "item": "pneumaticcraft:minigun_upgrade",
-      "text": "$(l:base_concepts/upgrades#minigun)ミニガンアップグレード/$を$(l:tools/drone)ドローン/$に挿入して$(l:tools/minigun)ミニガン/$を作成します。$(l:tools/minigun_ammo)銃の弾薬/$が提供($(l:programming/inventory_import)インベントリインポート/$ウィジェットを使用)されると$(thing)ドローン/$はこのミニガンを遠距離攻撃に使用します。$(p)デフォルトの範囲は16ブロックですが、最大16個の$(l:base_concepts/upgrades#range_upgrade)レンジアップグレード/$を挿入してアップグレードすると最大範囲は32ブロックになります。"
+      "text": "$(l:base_concepts/upgrades#minigun)ミニガンアップグレード/$を$(l:tools/drone)ドローン/$に挿入して$(l:tools/minigun)ミニガン/$を作成します。$(l:tools/minigun_ammo)銃の弾薬/$が提供($(l:programming/inventory_import)インベントリインポート/$ウィジェットを使用)されると$(thing)ドローン/$はこのミニガンを遠距離攻撃に使用します。$(p)デフォルトの範囲は16ブロックですが、最大16個の$(l:base_concepts/upgrades#range)レンジアップグレード/$を挿入してアップグレードすると最大範囲は32ブロックになります。"
     },
     {
       "type": "spotlight",

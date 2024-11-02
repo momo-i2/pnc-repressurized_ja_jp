@@ -5,13 +5,13 @@
   "pages": [
     {
       "type": "text",
-      "text": "興味深い$(pncr)コンポーネントをストックしている$(thing)村人/$についての報告を耳にしたことがあります。 どうやら彼は$(l:manufacturing/pressure_chamber)圧力室/$の事故に巻き込まれたようです。いずれにせよ彼は最近、村にある自分の家で過ごすことを好んでいます。それができなければ$(l:machines/charging_station)充填ステーション/$は失業中の村人にとって魅力的かもしれません..."
+      "text": "いくつかの興味深い$(pncr)コンポーネントをストックしている$(thing)村人/$についての報告を耳にしたことがあります。どうやら彼は$(l:manufacturing/pressure_chamber)圧力室/$の事故に巻き込まれたようです。いずれにせよ彼は最近、村にある自分の家で過ごすことを好んでいます。それができなければ$(l:machines/charging_station)充填ステーション/$は失業中の村人にとって魅力的かもしれません..."
     },
     {
       "type": "entity",
       "name": "メカニック",
       "entity": "minecraft:villager{VillagerData:{profession:'pneumaticcraft:mechanic'}}",
-      "text": "$(italic)$(l:tools/amadron_tablet)アマドローンのファンではない/$."
+      "text": "$(italic)$(l:tools/amadron_tablet)アマドローンのファンではない。/$"
     }
   ]
 }

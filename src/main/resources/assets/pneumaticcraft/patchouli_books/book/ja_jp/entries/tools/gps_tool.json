@@ -12,7 +12,7 @@
       "type": "text",
       "anchor": "variables",
       "title": "グローバル変数のリンク",
-      "text": "$(l:programming/variables#global)グローバル変数/$は$(l:base_concepts/drone)ドローン/$の高度な機能で$(l:programming/coordinate_operator)座標演算/$を介してアクセスします。$(p)空中で$(item)GPSツール/$を$(thing)右クリック/$すると変数名を入力できます。$(p)これでその$(thing)グローバル変数/$は$(item)GPSツール/$の選択された座標の値を追跡します。これを使用して動的領域を使用する$(thing)ドローンプログラム/$を作成できます。"
+      "text": "$(l:programming/variables#global)グローバル変数/$は$(l:tools/drone)ドローン/$の高度な機能で$(l:programming/coordinate_operator)座標演算/$を介してアクセスします。$(p)空中で$(item)GPSツール/$を$(thing)右クリック/$すると変数名を入力できます。$(p)これでその$(thing)グローバル変数/$は$(item)GPSツール/$の選択された座標の値を追跡します。これを使用して動的領域を使用する$(thing)ドローンプログラム/$を作成できます。"
     },
     {
       "type": "relations",
