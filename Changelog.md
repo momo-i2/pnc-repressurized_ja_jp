@@ -12,7 +12,11 @@ Changes are in reverse chronological order; newest changes at the top.
 * Added ja_jp translation, thanks @momo-i2
 
 ### Fixed
-* Significantly reworked internals of semiblock tracking, should fix all issues encountered with "not overwriting existing semiblock" log messages
+* Significantly reworked internals of semiblock tracking; should fix all issues encountered with "not overwriting existing semiblock" log messages
+* Fixed a couple of missing translations, and a couple of missing images/text in the manual
+* Fixed a crash when removing camouflage from an Elevator Base
+* Fixed removing camouflage from Heat Pipes not syncing to client immediately
+* Fixed some excessive network syncing for block entities displaying items (Charging Station/Programmer/Display Table...)
 
 ## [8.2.2]
 
