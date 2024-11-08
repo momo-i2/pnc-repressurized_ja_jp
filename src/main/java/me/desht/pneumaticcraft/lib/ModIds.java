@@ -45,4 +45,5 @@ public class ModIds {
     public static final String THE_ONE_PROBE = "theoneprobe";
     public static final String FFS = "ftbfiltersystem";
     public static final String CTM = "ctm";
+    public static final String FUSION = "fusion";
 }

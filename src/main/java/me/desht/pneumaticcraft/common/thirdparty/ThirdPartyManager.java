@@ -74,6 +74,7 @@ public enum ThirdPartyManager {
             thirdPartyClasses.put(ModIds.CRAFTTWEAKER, () -> IMPLICIT_INIT);
             thirdPartyClasses.put(ModIds.GAMESTAGES, Gamestages::new);
             thirdPartyClasses.put(ModIds.CREATE, Create::new);
+            thirdPartyClasses.put(ModIds.FUSION, Fusion::new);
             thirdPartyClasses.put(ModIds.FFS, FTBFilterSystem::new);
 
             // these were supported in 1.12.2 and may or may not come back...
