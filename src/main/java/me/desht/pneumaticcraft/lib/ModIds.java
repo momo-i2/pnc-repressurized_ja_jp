@@ -46,4 +46,5 @@ public class ModIds {
     public static final String FFS = "ftbfiltersystem";
     public static final String FTB_TEAMS = "ftbteams";
     public static final String CTM = "ctm";
+    public static final String FUSION = "fusion";
 }

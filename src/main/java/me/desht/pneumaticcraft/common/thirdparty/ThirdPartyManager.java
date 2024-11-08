@@ -75,6 +75,7 @@ public enum ThirdPartyManager {
             thirdPartyClasses.put(ModIds.CRAFTTWEAKER, () -> IMPLICIT_INIT);
             thirdPartyClasses.put(ModIds.GAMESTAGES, Gamestages::new);
             thirdPartyClasses.put(ModIds.CREATE, Create::new);
+            thirdPartyClasses.put(ModIds.FUSION, Fusion::new);
             thirdPartyClasses.put(ModIds.FFS, FTBFilterSystem::new);
             thirdPartyClasses.put(ModIds.FTB_TEAMS, FTBTeams::new);
 

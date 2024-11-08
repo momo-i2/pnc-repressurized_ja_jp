@@ -74,7 +74,7 @@ public class PressureChamberGlassBlock extends AbstractPressureWallBlock {
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> curInfo, TooltipFlag flag) {
         super.appendHoverText(stack, context, curInfo, flag);
 
-        if (!ModList.get().isLoaded(ModIds.CTM)) {
+        if (!ModList.get().isLoaded(ModIds.CTM) && !ModList.get().isLoaded(ModIds.FUSION)) {
             curInfo.add(xlate("gui.tooltip.block.pneumaticcraft.pressure_chamber_glass.ctm").withStyle(ChatFormatting.GRAY));
         }
     }
