@@ -29,6 +29,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.BlockAndTintGetter;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FluidState;
@@ -40,7 +41,7 @@ import static me.desht.pneumaticcraft.common.util.PneumaticCraftUtils.xlate;
 
 public class PressureChamberGlassBlock extends AbstractPressureWallBlock {
     public PressureChamberGlassBlock() {
-        super(IBlockPressureChamber.pressureChamberBlockProps().noOcclusion());
+        super(IBlockPressureChamber.pressureChamberBlockProps().noOcclusion().sound(SoundType.GLASS));
         registerDefaultState(defaultBlockState().setValue(PNCBlockStateProperties.FORMED, false));
     }
 
