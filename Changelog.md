@@ -11,6 +11,7 @@ Changes are in reverse chronological order; newest changes at the top.
 ### Added
 * Added integration for Fusion mod (as an alternative to CTM), thanks @Reabstraction
   * Pressure Chamber glass has connected textures if Fusion is present
+  * Note: you need to activate "Fusion for PneumaticCraft" built-in resource pack (Options -> Resource Pack)
 * There is now a dense black fog effect rendered when player's head is in a Crude Oil fluid block
 
 ## [8.2.3]
