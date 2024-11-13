@@ -6,6 +6,13 @@ Changes are in reverse chronological order; newest changes at the top.
 
 # Minecraft 1.21.1
 
+## [8.2.4]
+
+### Added
+* Added integration for Fusion mod (as an alternative to CTM), thanks @Reabstraction
+  * Pressure Chamber glass has connected textures if Fusion is present
+* There is now a dense black fog effect rendered when player's head is in a Crude Oil fluid block
+
 ## [8.2.3]
 
 ### Added
