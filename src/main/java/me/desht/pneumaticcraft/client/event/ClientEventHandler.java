@@ -31,6 +31,7 @@ import me.desht.pneumaticcraft.client.util.ClientUtils;
 import me.desht.pneumaticcraft.common.config.ConfigHelper;
 import me.desht.pneumaticcraft.common.config.subconfig.AuxConfigHandler;
 import me.desht.pneumaticcraft.common.config.subconfig.IAuxConfig;
+import me.desht.pneumaticcraft.common.core.ModBlocks;
 import me.desht.pneumaticcraft.common.item.IShiftScrollable;
 import me.desht.pneumaticcraft.common.item.PneumaticArmorItem;
 import me.desht.pneumaticcraft.common.network.NetworkHandler;
@@ -39,7 +40,9 @@ import me.desht.pneumaticcraft.common.pneumatic_armor.CommonArmorHandler;
 import me.desht.pneumaticcraft.common.pneumatic_armor.CommonUpgradeHandlers;
 import me.desht.pneumaticcraft.common.pneumatic_armor.JetBootsStateTracker;
 import me.desht.pneumaticcraft.common.pneumatic_armor.JetBootsStateTracker.JetBootsState;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
@@ -119,10 +122,29 @@ public class ClientEventHandler {
 //                event.setDensity(350f);
                 event.setCanceled(true);
             }
+        } else if (isPlayerHeadInOil()) {
+            event.setNearPlaneDistance(0.25F);
+            event.setFarPlaneDistance(2.0F);
+            event.setFogShape(FogShape.SPHERE);
+            event.setCanceled(true);
         }
     }
 
     private static final int Z_LEVEL = 233;  // should be just above the drawn itemstack
+
+    @SubscribeEvent
+    public static void fogColorEvent(ViewportEvent.ComputeFogColor event) {
+        if (isPlayerHeadInOil()) {
+            event.setRed(0.1f);
+            event.setGreen(0.1f);
+            event.setBlue(0.1f);
+        }
+    }
+
+    private static boolean isPlayerHeadInOil() {
+        Player player = Minecraft.getInstance().player;
+        return player != null && !player.isSpectator() && player.level().getBlockState(BlockPos.containing(player.getEyePosition())).getBlock() == ModBlocks.OIL.get();
+    }
 
     @SubscribeEvent
     public static void guiContainerForeground(ContainerScreenEvent.Render.Foreground event) {
