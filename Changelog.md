@@ -8,6 +8,9 @@ Changes are in reverse chronological order; newest changes at the top.
 
 ## [6.0.18]
 
+### Added
+* There is now a dense black fog effect rendered when player's head is in a Crude Oil fluid block
+
 ### Fixed
 * Stopped the Pneumatic Armor Magnet upgrade working in spectator mode
 * Drones no longer drop items with Vanishing Curse when they die
