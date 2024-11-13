@@ -12,7 +12,7 @@ credits=""
     version="${mod_version}"
     displayName="PneumaticCraft: Repressurized"
     displayURL="https://www.curseforge.com/minecraft/mc-mods/pneumaticcraft-repressurized"
-    updateJSONURL="https://raw.githubusercontent.com/TeamPneumatic/pnc-repressurized/${minecraft_version}/release_info.json" #optional
+    updateJSONURL="https://raw.githubusercontent.com/TeamPneumatic/pnc-repressurized/1.21/release_info.json" #optional
     description="Doing cool stuff with compressed air."
 
 [[dependencies.pneumaticcraft]]
