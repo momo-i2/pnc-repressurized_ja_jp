@@ -14,6 +14,9 @@ Changes are in reverse chronological order; newest changes at the top.
   * Note: you need to activate "Fusion for PneumaticCraft" built-in resource pack (Options -> Resource Pack)
 * There is now a dense black fog effect rendered when player's head is in a Crude Oil fluid block
 
+### Fixed
+* Fixed a cross-mod compat issue which can lead to NPE's being thrown by the Spawner Agitator
+
 ## [8.2.3]
 
 ### Added
