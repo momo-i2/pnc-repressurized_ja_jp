@@ -6,6 +6,11 @@ Changes are in reverse chronological order; newest changes at the top.
 
 # Minecraft 1.21.1
 
+## [8.2.5]
+
+### Changed
+* New API interface: `SemiblockAccess` allows semiblocks to be retrieved by level & blockpos
+
 ## [8.2.4]
 
 ### Added
