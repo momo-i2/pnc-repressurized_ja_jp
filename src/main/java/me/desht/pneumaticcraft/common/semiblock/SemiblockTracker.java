@@ -20,6 +20,7 @@ package me.desht.pneumaticcraft.common.semiblock;
 import me.desht.pneumaticcraft.api.lib.Names;
 import me.desht.pneumaticcraft.api.semiblock.IDirectionalSemiblock;
 import me.desht.pneumaticcraft.api.semiblock.ISemiBlock;
+import me.desht.pneumaticcraft.api.semiblock.SemiblockAccess;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.resources.ResourceLocation;
@@ -37,7 +38,7 @@ import java.util.stream.Stream;
  * Server side tracker to find the semiblock entities at a given world and blockpos
  * (Note that one blockpos could have up to 7 semiblocks - one non-sided plus six sided semiblocks)
  */
-public enum SemiblockTracker {
+public enum SemiblockTracker implements SemiblockAccess {
     INSTANCE;
 
     private final Map<ResourceLocation, Map<BlockPos, SemiblockCollection>> semiblockMap = new HashMap<>();
@@ -46,23 +47,12 @@ public enum SemiblockTracker {
         return INSTANCE;
     }
 
-    /**
-     * Retrieve the semiblock entity at the given world/pos
-     * @param level the world
-     * @param pos the block
-     * @return the entity at the given pos
-     */
+    @Override
     public ISemiBlock getSemiblock(Level level, BlockPos pos) {
         return getSemiblock(level, pos, null);
     }
 
-    /**
-     * Retrieve the semiblock at the given world/pos/face
-     * @param level the world
-     * @param pos the blockpos
-     * @param direction face of the blockpos, or null for the block itself
-     * @return the entity, or null if none was found, or the blockpos in question isn't loaded
-     */
+    @Override
     public ISemiBlock getSemiblock(Level level, BlockPos pos, Direction direction) {
         if (!level.isLoaded(pos)) return null;
 
@@ -72,24 +62,12 @@ public enum SemiblockTracker {
         return sc == null ? null : sc.get(level, direction);
     }
 
-    /**
-     * Retrieve all the semiblocks at the given position.
-     * @param world the world
-     * @param pos the blockpos
-     * @return a stream of all the semiblocks at the given position
-     */
+    @Override
     public Stream<ISemiBlock> getAllSemiblocks(Level world, BlockPos pos) {
         return getAllSemiblocks(world, pos, null);
     }
 
-    /**
-     * Retrieve all the semiblocks at the given position. If there's nothing at the given position, try the position
-     * offset by one block in the given the direction.
-     * @param level the world
-     * @param pos the blockpos
-     * @param offsetDir a direction to offset if needed
-     * @return a stream of all the semiblocks at the given position
-     */
+    @Override
     public Stream<ISemiBlock> getAllSemiblocks(Level level, BlockPos pos, Direction offsetDir) {
         if (!level.isLoaded(pos)) return Stream.empty();
 

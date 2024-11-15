@@ -21,14 +21,27 @@ import net.minecraft.core.Direction;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Represents a semiblock which sits on the side of an actual block, rather than occupying the same space.
+ * Represents an {@link ISemiBlock} which sits on the side of an actual block, rather than occupying the same space.
  * E.g. Transfer Gadgets and Logistics Frames are directional, but Crop Supports and Heat Frames are not.
  */
 public interface IDirectionalSemiblock {
+    /**
+     * {@return the side on which this semiblock sits}
+     */
     Direction getSide();
 
+    /**
+     * Sets the side for this semiblock.
+     * @param direction the side
+     */
     void setSide(Direction direction);
 
+    /**
+     * Convenience method to get the direction for a semiblock which may or may not be directional.
+     *
+     * @param semiBlock the semiblock to check
+     * @return the semiblock's side, or null if it is not a directional semiblock
+     */
     @Nullable
     static Direction getDirection(ISemiBlock semiBlock) {
         return semiBlock instanceof IDirectionalSemiblock d ? d.getSide() : null;

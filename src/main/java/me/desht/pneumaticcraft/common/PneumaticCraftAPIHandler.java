@@ -28,6 +28,7 @@ import me.desht.pneumaticcraft.api.item.IItemRegistry;
 import me.desht.pneumaticcraft.api.misc.DamageSources;
 import me.desht.pneumaticcraft.api.misc.IMiscHelpers;
 import me.desht.pneumaticcraft.api.pneumatic_armor.ICommonArmorRegistry;
+import me.desht.pneumaticcraft.api.semiblock.SemiblockAccess;
 import me.desht.pneumaticcraft.api.tileentity.IAirHandlerMachineFactory;
 import me.desht.pneumaticcraft.api.universal_sensor.ISensorRegistry;
 import me.desht.pneumaticcraft.api.upgrade.IUpgradeRegistry;
@@ -41,6 +42,7 @@ import me.desht.pneumaticcraft.common.item.ItemRegistry;
 import me.desht.pneumaticcraft.common.pneumatic_armor.CommonArmorRegistry;
 import me.desht.pneumaticcraft.common.pressure.AirHandlerMachineFactory;
 import me.desht.pneumaticcraft.common.registry.ModIngredientTypes;
+import me.desht.pneumaticcraft.common.semiblock.SemiblockTracker;
 import me.desht.pneumaticcraft.common.sensor.SensorHandler;
 import me.desht.pneumaticcraft.common.thirdparty.ModdedWrenchUtils;
 import me.desht.pneumaticcraft.common.upgrades.ApplicableUpgradesDB;
@@ -116,6 +118,11 @@ public enum PneumaticCraftAPIHandler implements PneumaticRegistry.IPneumaticCraf
     @Override
     public DamageSources getDamageSources() {
         return PNCDamageSource.DamageSourcesImpl.INSTANCE;
+    }
+
+    @Override
+    public SemiblockAccess getSemiblockAccess() {
+        return SemiblockTracker.getInstance();
     }
 
     @Override

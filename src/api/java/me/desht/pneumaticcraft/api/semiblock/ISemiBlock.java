@@ -32,6 +32,7 @@ import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.neoforged.neoforge.capabilities.EntityCapability;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -73,6 +74,7 @@ public interface ISemiBlock {
      * Get the block entity at the semiblock's position.  This is cached for performance.
      * @return the block entity, or null if there is none
      */
+    @Nullable
     BlockEntity getCachedTileEntity();
 
     /**
