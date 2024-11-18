@@ -69,6 +69,8 @@ public record FluidContainerIngredient(Either<FluidStack,TagWithAmount> either) 
 
     @Override
     public boolean test(ItemStack stack) {
+        if (!stack.hasCraftingRemainingItem()) return false;
+
         IFluidHandlerItem handler = stack.getCapability(Capabilities.FluidHandler.ITEM);
         if (handler == null) return false;
         return either.map(
