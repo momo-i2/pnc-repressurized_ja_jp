@@ -2,6 +2,7 @@ package me.desht.pneumaticcraft.datagen;
 
 import me.desht.pneumaticcraft.api.data.PneumaticCraftTags;
 import me.desht.pneumaticcraft.api.lib.Names;
+import me.desht.pneumaticcraft.common.registry.ModEntityTypes;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.EntityTypeTagsProvider;
@@ -22,5 +23,15 @@ public class ModEntityTypeTagsProvider extends EntityTypeTagsProvider {
         tag(PneumaticCraftTags.EntityTypes.VACUUM_TRAP_BLACKLISTED).addTag(Tags.EntityTypes.CAPTURING_NOT_SUPPORTED);
         tag(PneumaticCraftTags.EntityTypes.VACUUM_TRAP_WHITELISTED);
         tag(PneumaticCraftTags.EntityTypes.OMNIHOPPER_BLACKLISTED).add(EntityType.VILLAGER);
+
+        tag(PneumaticCraftTags.EntityTypes.BASIC_DRONES).add(ModEntityTypes.COLLECTOR_DRONE.get());
+        tag(PneumaticCraftTags.EntityTypes.BASIC_DRONES).add(ModEntityTypes.GUARD_DRONE.get());
+        tag(PneumaticCraftTags.EntityTypes.BASIC_DRONES).add(ModEntityTypes.HARVESTING_DRONE.get());
+        tag(PneumaticCraftTags.EntityTypes.BASIC_DRONES).add(ModEntityTypes.LOGISTICS_DRONE.get());
+
+        // no PNC entities are suitable for picking up with Carry On
+        for (var entityType : ModEntityTypes.ENTITY_TYPES.getEntries()) {
+            tag(PneumaticCraftTags.EntityTypes.CARRYON_BLACKLISTED).add(entityType.get());
+        }
     }
 }

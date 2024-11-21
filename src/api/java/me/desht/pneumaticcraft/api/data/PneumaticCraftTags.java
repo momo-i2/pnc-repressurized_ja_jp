@@ -169,6 +169,9 @@ public class PneumaticCraftTags {
         public static final TagKey<EntityType<?>> VACUUM_TRAP_WHITELISTED = modTag("vacuum_trap_whitelisted");
         public static final TagKey<EntityType<?>> OMNIHOPPER_BLACKLISTED = modTag("omnihopper_blacklisted");
 
+        public static final TagKey<EntityType<?>> BASIC_DRONES = modTag("basic_drones");
+        public static final TagKey<EntityType<?>> CARRYON_BLACKLISTED = tag("carryon", "entity_blacklist");
+
         static TagKey<EntityType<?>> tag(String modid, String name) {
             return TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(modid, name));
         }

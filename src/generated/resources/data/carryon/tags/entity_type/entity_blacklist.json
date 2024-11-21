@@ -1,0 +1,24 @@
+{
+  "values": [
+    "pneumaticcraft:drone",
+    "pneumaticcraft:logistics_drone",
+    "pneumaticcraft:harvesting_drone",
+    "pneumaticcraft:guard_drone",
+    "pneumaticcraft:collector_drone",
+    "pneumaticcraft:amadrone",
+    "pneumaticcraft:programmable_controller",
+    "pneumaticcraft:vortex",
+    "pneumaticcraft:micromissile",
+    "pneumaticcraft:tumbling_block",
+    "pneumaticcraft:ring",
+    "pneumaticcraft:crop_support",
+    "pneumaticcraft:spawner_agitator",
+    "pneumaticcraft:heat_frame",
+    "pneumaticcraft:transfer_gadget",
+    "pneumaticcraft:logistics_frame_active_provider",
+    "pneumaticcraft:logistics_frame_passive_provider",
+    "pneumaticcraft:logistics_frame_storage",
+    "pneumaticcraft:logistics_frame_default_storage",
+    "pneumaticcraft:logistics_frame_requester"
+  ]
+}
