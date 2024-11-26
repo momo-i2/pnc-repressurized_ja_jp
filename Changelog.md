@@ -10,6 +10,12 @@ Changes are in reverse chronological order; newest changes at the top.
 
 ### Changed
 * New API interface: `SemiblockAccess` allows semiblocks to be retrieved by level & blockpos
+* All PneumaticCraft entities (drones, semiblocks and other entities) are now blacklisted by default from being grabbable with the Carry On mod
+
+### Fixed
+* Only fluid container items which have a crafting remaining item can now be used to craft Speed Upgrades
+  * Avoids problems with fluid tanks (e.g. Mekanism tanks) being consumed when crafting
+* Fixed the Creative Compressor adjuster GUI not functioning correctly in some locales
 
 ## [8.2.4]
 
