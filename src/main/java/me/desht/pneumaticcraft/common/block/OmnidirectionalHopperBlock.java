@@ -25,6 +25,7 @@ import me.desht.pneumaticcraft.common.upgrades.ModUpgrades;
 import me.desht.pneumaticcraft.common.upgrades.UpgradableItemUtils;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
+import net.minecraft.Util;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.InteractionHand;
@@ -47,6 +48,8 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 import javax.annotation.Nullable;
+import java.util.EnumMap;
+import java.util.Map;
 
 public class OmnidirectionalHopperBlock extends AbstractPneumaticCraftBlock
         implements ColorHandlers.ITintableBlock, PneumaticCraftEntityBlock, IBlockComparatorSupport
@@ -55,28 +58,37 @@ public class OmnidirectionalHopperBlock extends AbstractPneumaticCraftBlock
     private static final VoxelShape INPUT_SHAPE = Block.box(0.0D, 10.0D, 0.0D, 16.0D, 16.0D, 16.0D);
     private static final VoxelShape INPUT_MIDDLE_SHAPE = Shapes.or(MIDDLE_SHAPE, INPUT_SHAPE);
     private static final VoxelShape BOWL_SHAPE = Block.box(2.0D, 11.0D, 2.0D, 14.0D, 16.0D, 14.0D);
+    private static final VoxelShape OUTPUT_DOWN_SHAPE = Shapes.or(
+            Block.box(6, 3, 6, 10, 4, 10),
+            Block.box(6.5, 0, 6.5, 9.5, 4, 9.5));
 
-    private static final VoxelShape INPUT_UP    = Shapes.join(INPUT_MIDDLE_SHAPE, BOWL_SHAPE, BooleanOp.ONLY_FIRST);
-    private static final VoxelShape INPUT_NORTH = VoxelShapeUtils.rotateX(INPUT_UP, 270);
-    private static final VoxelShape INPUT_DOWN  = VoxelShapeUtils.rotateX(INPUT_NORTH, 270);
-    private static final VoxelShape INPUT_SOUTH = VoxelShapeUtils.rotateX(INPUT_UP, 90);
-    private static final VoxelShape INPUT_WEST  = VoxelShapeUtils.rotateY(INPUT_NORTH, 270);
-    private static final VoxelShape INPUT_EAST  = VoxelShapeUtils.rotateY(INPUT_NORTH, 90);
-    public static final VoxelShape[] INPUT_SHAPES = {
-            INPUT_DOWN, INPUT_UP, INPUT_NORTH, INPUT_SOUTH, INPUT_WEST, INPUT_EAST
-    };
-
-    private static final VoxelShape OUTPUT_DOWN = Shapes.join(Block.box(6, 3, 6, 10, 4, 10), Block.box(6.5, 0, 6.5, 9.5, 4, 9.5), BooleanOp.OR);
-    private static final VoxelShape OUTPUT_UP = Shapes.join(Block.box(6, 12, 6, 10, 13, 10), Block.box(6.5, 12, 6.5, 9.5, 16, 9.5), BooleanOp.OR);
-    private static final VoxelShape OUTPUT_NORTH = VoxelShapeUtils.rotateX(OUTPUT_DOWN, 90);
-    private static final VoxelShape OUTPUT_SOUTH = VoxelShapeUtils.rotateX(OUTPUT_DOWN, 270);
-    private static final VoxelShape OUTPUT_WEST = VoxelShapeUtils.rotateY(OUTPUT_NORTH, 270);
-    private static final VoxelShape OUTPUT_EAST = VoxelShapeUtils.rotateY(OUTPUT_NORTH, 90);
-    private static final VoxelShape[] OUTPUT_SHAPES = {
-            OUTPUT_DOWN, OUTPUT_UP, OUTPUT_NORTH, OUTPUT_SOUTH, OUTPUT_WEST, OUTPUT_EAST
-    };
+    public static final Map<Direction,VoxelShape> INPUT_SHAPES = Util.make(new EnumMap<>(Direction.class), map -> {
+        map.put(Direction.UP, Shapes.join(INPUT_MIDDLE_SHAPE, BOWL_SHAPE, BooleanOp.ONLY_FIRST));
+        map.put(Direction.NORTH, VoxelShapeUtils.rotateX(map.get(Direction.UP), 270));
+        map.put(Direction.DOWN, VoxelShapeUtils.rotateX(map.get(Direction.UP), 180));
+        map.put(Direction.SOUTH, VoxelShapeUtils.rotateX(map.get(Direction.UP), 90));
+        map.put(Direction.WEST, VoxelShapeUtils.rotateY(map.get(Direction.NORTH), 270));
+        map.put(Direction.EAST, VoxelShapeUtils.rotateY(map.get(Direction.NORTH), 90));
+    });
+    private static final Map<Direction,VoxelShape> INPUT_SHAPES_INTERACT = Util.make(new EnumMap<>(Direction.class), map -> {
+        map.put(Direction.UP, INPUT_MIDDLE_SHAPE);
+        map.put(Direction.DOWN, VoxelShapeUtils.rotateX(map.get(Direction.UP), 180));
+        map.put(Direction.NORTH, VoxelShapeUtils.rotateX(map.get(Direction.UP), 270));
+        map.put(Direction.SOUTH, VoxelShapeUtils.rotateX(map.get(Direction.UP), 90));
+        map.put(Direction.WEST, VoxelShapeUtils.rotateY(map.get(Direction.NORTH), 270));
+        map.put(Direction.EAST, VoxelShapeUtils.rotateY(map.get(Direction.NORTH), 90));
+    });
+    private static final Map<Direction,VoxelShape> OUTPUT_SHAPES = Util.make(new EnumMap<>(Direction.class), map -> {
+        map.put(Direction.DOWN, OUTPUT_DOWN_SHAPE);
+        map.put(Direction.UP, VoxelShapeUtils.rotateX(map.get(Direction.DOWN), 180));
+        map.put(Direction.NORTH, VoxelShapeUtils.rotateX(map.get(Direction.DOWN), 90));
+        map.put(Direction.SOUTH, VoxelShapeUtils.rotateX(map.get(Direction.DOWN), 270));
+        map.put(Direction.WEST, VoxelShapeUtils.rotateY(map.get(Direction.NORTH), 270));
+        map.put(Direction.EAST, VoxelShapeUtils.rotateY(map.get(Direction.NORTH), 90));
+    });
 
     private static final VoxelShape[] SHAPE_CACHE = new VoxelShape[36];
+    private static final VoxelShape[] INTERACTION_SHAPE_CACHE = new VoxelShape[36];
 
     // standard FACING property is used for the output direction
     public static final EnumProperty<Direction> INPUT_FACING = EnumProperty.create("input", Direction.class);
@@ -92,14 +104,23 @@ public class OmnidirectionalHopperBlock extends AbstractPneumaticCraftBlock
 
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+        return getCachedShape(state, SHAPE_CACHE, INPUT_SHAPES);
+    }
+
+    @Override
+    protected VoxelShape getInteractionShape(BlockState state, BlockGetter level, BlockPos pos) {
+        return getCachedShape(state, INTERACTION_SHAPE_CACHE, INPUT_SHAPES_INTERACT);
+    }
+
+    private VoxelShape getCachedShape(BlockState state, VoxelShape[] cache, Map<Direction, VoxelShape> inputMap) {
         int idx = state.getValue(INPUT_FACING).get3DDataValue() + state.getValue(directionProperty()).get3DDataValue() * 6;
-        if (SHAPE_CACHE[idx] == null) {
-            SHAPE_CACHE[idx] = Shapes.join(
-                    INPUT_SHAPES[state.getValue(INPUT_FACING).get3DDataValue()],
-                    OUTPUT_SHAPES[state.getValue(directionProperty()).get3DDataValue()],
+        if (cache[idx] == null) {
+            cache[idx] = Shapes.join(
+                    inputMap.get(state.getValue(INPUT_FACING)),
+                    OUTPUT_SHAPES.get(state.getValue(directionProperty())),
                     BooleanOp.OR);
         }
-        return SHAPE_CACHE[idx];
+        return cache[idx];
     }
 
     @Override
@@ -111,9 +132,10 @@ public class OmnidirectionalHopperBlock extends AbstractPneumaticCraftBlock
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext ctx) {
         BlockState state = super.getStateForPlacement(ctx);
-        if (state == null) return state;
-        return state.setValue(BlockStateProperties.FACING, ctx.getClickedFace().getOpposite())
-                .setValue(INPUT_FACING, ctx.getNearestLookingDirection().getOpposite());
+        return state == null ?
+                null :
+                state.setValue(BlockStateProperties.FACING, ctx.getClickedFace().getOpposite())
+                        .setValue(INPUT_FACING, ctx.getNearestLookingDirection().getOpposite());
     }
 
     @Override
@@ -163,7 +185,6 @@ public class OmnidirectionalHopperBlock extends AbstractPneumaticCraftBlock
         return 0xFFFFFFFF;
     }
 
-    @org.jetbrains.annotations.Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new OmnidirectionalHopperBlockEntity(pPos, pState);
