@@ -18,15 +18,14 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.spawning.PressurizedSpawnerBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class PressurizedSpawnerBlock extends AbstractPneumaticCraftBlock implements PneumaticCraftEntityBlock {
-    public PressurizedSpawnerBlock() {
-        super(ModBlocks.defaultProps().noOcclusion());
+    public PressurizedSpawnerBlock(Properties props) {
+        super(props);
     }
 
     @Override

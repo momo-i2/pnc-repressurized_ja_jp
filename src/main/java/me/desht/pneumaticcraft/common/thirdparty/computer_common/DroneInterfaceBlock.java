@@ -20,7 +20,6 @@ package me.desht.pneumaticcraft.common.thirdparty.computer_common;
 import me.desht.pneumaticcraft.common.block.AbstractPneumaticCraftBlock;
 import me.desht.pneumaticcraft.common.block.PneumaticCraftEntityBlock;
 import me.desht.pneumaticcraft.common.item.CreativeTabStackProvider;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.thirdparty.ThirdPartyManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.ItemStack;
@@ -36,8 +35,8 @@ import java.util.stream.Stream;
 public class DroneInterfaceBlock extends AbstractPneumaticCraftBlock implements PneumaticCraftEntityBlock, CreativeTabStackProvider {
     static final BooleanProperty CONNECTED = BooleanProperty.create("connected");
 
-    public DroneInterfaceBlock() {
-        super(ModBlocks.defaultProps());
+    public DroneInterfaceBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState().setValue(CONNECTED, false));
     }

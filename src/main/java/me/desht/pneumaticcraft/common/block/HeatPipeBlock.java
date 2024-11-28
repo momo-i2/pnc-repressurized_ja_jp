@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.heat.HeatPipeBlockEntity;
 import me.desht.pneumaticcraft.common.heat.HeatExchangerManager;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.DirectionUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -53,8 +52,8 @@ public class HeatPipeBlock extends AbstractCamouflageBlock implements SimpleWate
 
     private static final VoxelShape[] SHAPE_CACHE = new VoxelShape[64];  // 2^6 shapes
 
-    public HeatPipeBlock() {
-        super(ModBlocks.defaultProps().noOcclusion().forceSolidOn());
+    public HeatPipeBlock(Properties props) {
+        super(props);
 
         BlockState state = defaultBlockState();
         for (BooleanProperty prop : CONNECTION_PROPERTIES) {

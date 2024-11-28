@@ -47,8 +47,8 @@ public class ElevatorBaseBlock extends AbstractCamouflageBlock implements Pneuma
     private static final VoxelShape CORE = box(3, 1, 3, 13, 15, 13);
     private static final VoxelShape SHAPE = Shapes.or(BASE, CORE, TOP);
 
-    public ElevatorBaseBlock() {
-        super(ModBlocks.defaultProps().noOcclusion());  // notSolid() because of camo requirements
+    public ElevatorBaseBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState()
                 .setValue(AbstractPneumaticCraftBlock.NORTH, false)
                 .setValue(AbstractPneumaticCraftBlock.SOUTH, false)

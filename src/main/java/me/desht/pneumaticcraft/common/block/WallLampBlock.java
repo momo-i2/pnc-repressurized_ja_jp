@@ -61,13 +61,17 @@ public class WallLampBlock extends AbstractPneumaticCraftBlock implements ColorH
     private final DyeColor color;
     private final boolean inverted;
 
-    public WallLampBlock(DyeColor color, boolean inverted) {
-        super(ModBlocks.defaultProps().lightLevel(getLightValue()));
+    public WallLampBlock(Properties props, DyeColor color, boolean inverted) {
+        super(props);
 
         this.color = color;
         this.inverted = inverted;
 
         registerDefaultState(defaultBlockState().setValue(LIT, inverted));
+    }
+
+    public static Properties wallLampProperties() {
+        return ModBlocks.defaultProps().lightLevel(getLightValue());
     }
 
     @Override

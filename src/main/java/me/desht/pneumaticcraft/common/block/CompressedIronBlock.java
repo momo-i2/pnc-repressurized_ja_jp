@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.block.entity.heat.CompressedIronBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,8 +27,8 @@ import org.jetbrains.annotations.Nullable;
 public class CompressedIronBlock extends AbstractPneumaticCraftBlock
         implements ColorHandlers.IHeatTintable, PneumaticCraftEntityBlock, IBlockComparatorSupport
 {
-    public CompressedIronBlock() {
-        super(ModBlocks.defaultProps());
+    public CompressedIronBlock(Properties props) {
+        super(props);
     }
 
     @Nullable

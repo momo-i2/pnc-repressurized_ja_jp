@@ -1,6 +1,5 @@
 package me.desht.pneumaticcraft.common.block;
 
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.thirdparty.ModdedWrenchUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -31,8 +30,8 @@ public class ThermalLaggingBlock extends AbstractPneumaticCraftBlock {
             Block.box(15.5, 0, 0, 16, 16, 16),
     };
 
-    public ThermalLaggingBlock() {
-        super(ModBlocks.defaultProps().noOcclusion().noCollission());
+    public ThermalLaggingBlock(Properties props) {
+        super(props);
     }
 
     @Override

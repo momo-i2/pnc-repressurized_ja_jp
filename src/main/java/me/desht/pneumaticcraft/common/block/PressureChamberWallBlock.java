@@ -24,8 +24,8 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 
 public class PressureChamberWallBlock extends AbstractPressureWallBlock {
-    public PressureChamberWallBlock() {
-        super(IBlockPressureChamber.pressureChamberBlockProps());
+    public PressureChamberWallBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(PNCBlockStateProperties.WALL_STATE, PressureChamberWallState.NONE));
     }
 

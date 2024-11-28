@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.block.entity.processing.UVLightBoxBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -35,8 +34,8 @@ public class UVLightBoxBlock extends AbstractPneumaticCraftBlock implements Colo
 
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_E, SHAPE_S, SHAPE_W, SHAPE_N };
 
-    public UVLightBoxBlock() {
-        super(ModBlocks.defaultProps().lightLevel(state -> state.getValue(LIT) ? 15 : 0));
+    public UVLightBoxBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(LOADED, false).setValue(LIT, false));
     }
 

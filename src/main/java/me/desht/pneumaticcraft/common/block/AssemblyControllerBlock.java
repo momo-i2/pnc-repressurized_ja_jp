@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.processing.AssemblyControllerBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -42,8 +41,8 @@ public class AssemblyControllerBlock extends AbstractPneumaticCraftBlock impleme
             Block.box(0, 0, 0, 16, 1, 16)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public AssemblyControllerBlock() {
-        super(ModBlocks.defaultProps());
+    public AssemblyControllerBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState()
                 .setValue(NORTH, false)
                 .setValue(SOUTH, false)

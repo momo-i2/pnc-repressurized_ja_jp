@@ -17,7 +17,6 @@
 
 package me.desht.pneumaticcraft.common.block;
 
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -45,8 +44,8 @@ public class DrillPipeBlock extends AbstractPneumaticCraftBlock {
             Block.box(5.75, 2, 10, 10.25, 3, 10.25)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public DrillPipeBlock() {
-        super(ModBlocks.defaultProps());
+    public DrillPipeBlock(Properties props) {
+        super(props);
     }
 
     @Override

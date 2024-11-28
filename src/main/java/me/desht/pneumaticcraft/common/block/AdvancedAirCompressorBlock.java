@@ -24,6 +24,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class AdvancedAirCompressorBlock extends AirCompressorBlock {
+    public AdvancedAirCompressorBlock(Properties props) {
+        super(props);
+    }
+
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {

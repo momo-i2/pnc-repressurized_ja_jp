@@ -20,7 +20,6 @@ package me.desht.pneumaticcraft.common.block;
 import me.desht.pneumaticcraft.common.block.entity.drone.ProgrammerBlockEntity;
 import me.desht.pneumaticcraft.common.network.NetworkHandler;
 import me.desht.pneumaticcraft.common.network.PacketProgrammerSync;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
@@ -60,8 +59,8 @@ public class ProgrammerBlock extends AbstractPneumaticCraftBlock implements Pneu
     private static final VoxelShape SHAPE_W = VoxelShapeUtils.rotateY(SHAPE_S, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public ProgrammerBlock() {
-        super(ModBlocks.defaultProps());
+    public ProgrammerBlock(Properties props) {
+        super(props);
     }
 
     @Override

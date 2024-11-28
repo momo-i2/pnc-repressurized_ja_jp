@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.compressor.ElectrostaticCompressorBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -42,8 +41,8 @@ public class ElectrostaticCompressorBlock extends AbstractPneumaticCraftBlock im
             Block.box(2, 12, 2, 14, 13, 14)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public ElectrostaticCompressorBlock() {
-        super(ModBlocks.defaultProps());
+    public ElectrostaticCompressorBlock(Properties props) {
+        super(props);
     }
 
     @Override

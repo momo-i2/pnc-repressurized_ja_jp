@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.processing.AssemblyPlatformBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -40,8 +39,8 @@ public class AssemblyPlatformBlock extends AbstractPneumaticCraftBlock implement
             Block.box(0, 0, 0, 16, 1, 16)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public AssemblyPlatformBlock() {
-        super(ModBlocks.defaultProps());
+    public AssemblyPlatformBlock(Properties props) {
+        super(props);
     }
 
     @Override

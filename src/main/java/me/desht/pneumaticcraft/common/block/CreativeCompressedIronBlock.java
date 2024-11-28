@@ -20,7 +20,6 @@ package me.desht.pneumaticcraft.common.block;
 import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.block.entity.heat.CreativeCompressedIronBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
@@ -35,8 +34,8 @@ import org.jetbrains.annotations.Nullable;
 public class CreativeCompressedIronBlock extends AbstractPneumaticCraftBlock
         implements ColorHandlers.IHeatTintable, PneumaticCraftEntityBlock
 {
-    public CreativeCompressedIronBlock() {
-        super(ModBlocks.defaultProps());
+    public CreativeCompressedIronBlock(Properties props) {
+        super(props);
     }
 
     @Override

@@ -25,6 +25,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import javax.annotation.Nullable;
 
 public class AdvancedLiquidCompressorBlock extends LiquidCompressorBlock {
+    public AdvancedLiquidCompressorBlock(Properties props) {
+        super(props);
+    }
+
     @Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {

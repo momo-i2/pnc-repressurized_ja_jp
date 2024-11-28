@@ -24,6 +24,10 @@ import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 public class TagWorkbenchBlock extends DisplayTableBlock {
+    public TagWorkbenchBlock(Properties props) {
+        super(props);
+    }
+
     @Override
     public @Nullable BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new TagWorkbenchBlockEntity(pPos, pState);

@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.compressor.CreativeCompressorBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.BlockItem;
@@ -59,8 +58,8 @@ public class CreativeCompressorBlock extends AbstractPneumaticCraftBlock impleme
             Block.box(4, 4, 0, 12, 12, 2)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public CreativeCompressorBlock() {
-        super(ModBlocks.defaultProps());
+    public CreativeCompressorBlock(Properties props) {
+        super(props);
     }
 
     @Override

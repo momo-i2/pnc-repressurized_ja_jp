@@ -1,7 +1,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.VacuumPumpBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -37,8 +36,8 @@ public class VacuumPumpBlock extends AbstractPneumaticCraftBlock implements Pneu
 
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_E, SHAPE_S, SHAPE_W, SHAPE_N };
 
-    public VacuumPumpBlock() {
-        super(ModBlocks.defaultProps());
+    public VacuumPumpBlock(Properties props) {
+        super(props);
     }
 
     @Override

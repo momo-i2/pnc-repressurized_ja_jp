@@ -40,8 +40,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class ElevatorCallerBlock extends AbstractCamouflageBlock implements PneumaticCraftEntityBlock {
-    public ElevatorCallerBlock() {
-        super(ModBlocks.defaultProps().noOcclusion());
+    public ElevatorCallerBlock(Properties props) {
+        super(props);
     }
 
     @Override

@@ -21,7 +21,6 @@ import me.desht.pneumaticcraft.common.block.entity.utility.SecurityStationBlockE
 import me.desht.pneumaticcraft.common.config.ConfigHelper;
 import me.desht.pneumaticcraft.common.pneumatic_armor.CommonArmorHandler;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.upgrades.ModUpgrades;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
@@ -64,8 +63,8 @@ public class SecurityStationBlock extends AbstractPneumaticCraftBlock implements
     private static final VoxelShape SHAPE_W = VoxelShapeUtils.rotateY(SHAPE_S, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public SecurityStationBlock() {
-        super(ModBlocks.defaultProps());
+    public SecurityStationBlock(Properties props) {
+        super(props);
     }
 
     @Override

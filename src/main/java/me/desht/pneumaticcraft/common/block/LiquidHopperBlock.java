@@ -40,8 +40,8 @@ import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
 import net.neoforged.neoforge.fluids.capability.templates.FluidHandlerItemStack;
 
 public class LiquidHopperBlock extends OmnidirectionalHopperBlock implements PneumaticCraftEntityBlock {
-    public LiquidHopperBlock() {
-        super();
+    public LiquidHopperBlock(Properties props) {
+        super(props);
     }
 
     @org.jetbrains.annotations.Nullable

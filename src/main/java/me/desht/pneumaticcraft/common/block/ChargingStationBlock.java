@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.ChargingStationBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
@@ -90,8 +89,8 @@ public class ChargingStationBlock extends AbstractCamouflageBlock implements Pne
     private static final VoxelShape[] CHARGING_STATION_WITH_PAD = new VoxelShape[] { CHARGING_STATION_WITH_PAD_S, CHARGING_STATION_WITH_PAD_W, CHARGING_STATION_WITH_PAD_N, CHARGING_STATION_WITH_PAD_E };
     private static final VoxelShape[] CHARGING_STATION_WITH_PAD_COLL = new VoxelShape[] { CHARGING_STATION_WITH_PAD_S_COLL, CHARGING_STATION_WITH_PAD_W_COLL, CHARGING_STATION_WITH_PAD_N_COLL, CHARGING_STATION_WITH_PAD_E_COLL };
 
-    public ChargingStationBlock() {
-        super(ModBlocks.defaultProps());
+    public ChargingStationBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(CHARGE_PAD, false));
     }
 

@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.compressor.ManualCompressorBlockEntity;
 import me.desht.pneumaticcraft.common.config.ConfigHelper;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -42,8 +41,8 @@ public class ManualCompressorBlock extends AbstractPneumaticCraftBlock implement
     private static final VoxelShape SHAPE_E = VoxelShapeUtils.rotateY(SHAPE_N, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public ManualCompressorBlock() {
-        super(ModBlocks.defaultProps());
+    public ManualCompressorBlock(Properties props) {
+        super(props);
     }
 
     @Override

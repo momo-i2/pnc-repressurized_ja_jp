@@ -74,8 +74,8 @@ public class RefineryOutputBlock extends AbstractPneumaticCraftBlock
     private static final VoxelShape SHAPE_W = VoxelShapeUtils.rotateY(SHAPE_S, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public RefineryOutputBlock() {
-        super(ModBlocks.defaultProps());
+    public RefineryOutputBlock(Properties props) {
+        super(props);
     }
 
     @Override

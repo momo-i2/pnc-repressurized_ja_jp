@@ -23,16 +23,14 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.AirBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.Nullable;
 
 public class DroneRedstoneEmitterBlock extends AirBlock implements PneumaticCraftEntityBlock {
-    public DroneRedstoneEmitterBlock() {
-        super(Block.Properties.ofFullCopy(Blocks.AIR));
+    public DroneRedstoneEmitterBlock(Properties props) {
+        super(props);
     }
 
     @Override

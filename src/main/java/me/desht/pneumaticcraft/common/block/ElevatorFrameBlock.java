@@ -65,8 +65,8 @@ public class ElevatorFrameBlock extends AbstractPneumaticCraftBlock
     private static final BooleanProperty SW = BooleanProperty.create("sw");
     private static final BooleanProperty NW = BooleanProperty.create("nw");
 
-    public ElevatorFrameBlock() {
-        super(ModBlocks.defaultProps());
+    public ElevatorFrameBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
                 .setValue(NE, false).setValue(SE, false).setValue(SW, false).setValue(NW, false));

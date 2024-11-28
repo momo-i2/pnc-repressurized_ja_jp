@@ -1,7 +1,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.compressor.SolarCompressorBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
@@ -54,8 +53,8 @@ public class SolarCompressorBlock extends AbstractPNCBlockWithBoundingBlocks {
     private static final VoxelShape SHAPE_E = VoxelShapeUtils.rotateY(SHAPE_N, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public SolarCompressorBlock() {
-        super(ModBlocks.defaultProps());
+    public SolarCompressorBlock(Properties props) {
+        super(props);
     }
 
     @Override

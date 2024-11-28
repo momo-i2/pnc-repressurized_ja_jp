@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.api.block.PNCBlockStateProperties;
 import me.desht.pneumaticcraft.common.block.entity.compressor.PneumaticDynamoBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -56,8 +55,8 @@ public class PneumaticDynamoBlock extends AbstractPneumaticCraftBlock implements
             SHAPE_DOWN, SHAPE_UP, SHAPE_NORTH, SHAPE_SOUTH, SHAPE_WEST, SHAPE_EAST  // DUNSWE order
     };
 
-    public PneumaticDynamoBlock() {
-        super(ModBlocks.defaultProps());
+    public PneumaticDynamoBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(PNCBlockStateProperties.ACTIVE, false));
     }
 

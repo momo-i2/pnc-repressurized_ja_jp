@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.spawning.VacuumTrapBlockEntity;
 import me.desht.pneumaticcraft.common.item.SpawnerCoreItem;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
@@ -66,8 +65,8 @@ public class VacuumTrapBlock extends AbstractPneumaticCraftBlock implements Simp
     private static final VoxelShape SHAPE_W_CLOSED = VoxelShapeUtils.rotateY(SHAPE_S_CLOSED, 90);
     private static final VoxelShape[] SHAPES_CLOSED = new VoxelShape[] {SHAPE_S_CLOSED, SHAPE_W_CLOSED, SHAPE_N_CLOSED, SHAPE_E_CLOSED};
 
-    public VacuumTrapBlock() {
-        super(ModBlocks.defaultProps());
+    public VacuumTrapBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
                 .setValue(OPEN, false)

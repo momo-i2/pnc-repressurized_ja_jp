@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.AerialInterfaceBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
@@ -33,8 +32,8 @@ import net.neoforged.neoforge.common.util.FakePlayer;
 import org.jetbrains.annotations.Nullable;
 
 public class AerialInterfaceBlock extends AbstractPneumaticCraftBlock implements IBlockComparatorSupport, PneumaticCraftEntityBlock {
-    public AerialInterfaceBlock() {
-        super(ModBlocks.defaultProps());
+    public AerialInterfaceBlock(Properties props) {
+        super(props);
     }
 
     @Override

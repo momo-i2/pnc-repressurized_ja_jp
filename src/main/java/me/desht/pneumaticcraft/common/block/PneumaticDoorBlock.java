@@ -62,8 +62,8 @@ import java.util.List;
 public class PneumaticDoorBlock extends AbstractPneumaticCraftBlock implements PneumaticCraftEntityBlock {
     public static final BooleanProperty TOP_DOOR = BooleanProperty.create("top_door");
 
-    public PneumaticDoorBlock() {
-        super(ModBlocks.defaultProps());
+    public PneumaticDoorBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
                 .setValue(BlockStateProperties.HORIZONTAL_FACING, Direction.NORTH)

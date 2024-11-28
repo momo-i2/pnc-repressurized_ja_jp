@@ -39,8 +39,8 @@ import java.util.List;
 import static me.desht.pneumaticcraft.common.util.PneumaticCraftUtils.xlate;
 
 public class PressureChamberGlassBlock extends AbstractPressureWallBlock {
-    public PressureChamberGlassBlock() {
-        super(IBlockPressureChamber.pressureChamberBlockProps().noOcclusion());
+    public PressureChamberGlassBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(PNCBlockStateProperties.FORMED, false));
     }
 

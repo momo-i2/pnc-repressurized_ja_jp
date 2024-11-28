@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.processing.FluidMixerBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -88,8 +87,9 @@ public class FluidMixerBlock extends AbstractPneumaticCraftBlock implements Pneu
     private static final VoxelShape SHAPE_W = VoxelShapeUtils.rotateY(SHAPE_S, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public FluidMixerBlock() {
-        super(ModBlocks.defaultProps());
+    public FluidMixerBlock(Properties props) {
+        super(props);
+
         registerDefaultState(defaultBlockState()
                 .setValue(AbstractPneumaticCraftBlock.NORTH, false)
                 .setValue(AbstractPneumaticCraftBlock.SOUTH, false)

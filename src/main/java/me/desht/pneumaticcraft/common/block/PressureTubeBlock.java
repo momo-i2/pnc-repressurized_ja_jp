@@ -20,7 +20,6 @@ package me.desht.pneumaticcraft.common.block;
 import me.desht.pneumaticcraft.api.block.ITubeNetworkConnector;
 import me.desht.pneumaticcraft.common.block.entity.tube.PressureTubeBlockEntity;
 import me.desht.pneumaticcraft.common.item.TubeModuleItem;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.tubemodules.AbstractNetworkedRedstoneModule;
 import me.desht.pneumaticcraft.common.tubemodules.AbstractTubeModule;
@@ -96,8 +95,8 @@ public class PressureTubeBlock extends AbstractCamouflageBlock
 
     private final BiFunction<BlockPos,BlockState,? extends PressureTubeBlockEntity> blockEntityFactory;
 
-    public PressureTubeBlock(BiFunction<BlockPos,BlockState,? extends PressureTubeBlockEntity> blockEntityFactory) {
-        super(ModBlocks.defaultProps().noOcclusion());  // noOcclusion() because of camo requirements
+    public PressureTubeBlock(Properties props, BiFunction<BlockPos,BlockState,? extends PressureTubeBlockEntity> blockEntityFactory) {
+        super(props);
 
         this.blockEntityFactory = blockEntityFactory;
     }

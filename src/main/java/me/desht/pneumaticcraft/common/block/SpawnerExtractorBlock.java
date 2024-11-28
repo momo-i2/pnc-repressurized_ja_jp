@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.spawning.SpawnerExtractorBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.LivingEntity;
@@ -82,8 +81,8 @@ public class SpawnerExtractorBlock extends AbstractPneumaticCraftBlock implement
             Block.box(0.5, 0, 0.5, 15.5, 12, 15.5)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public SpawnerExtractorBlock() {
-        super(ModBlocks.defaultProps());
+    public SpawnerExtractorBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
                 .setValue(NORTH, false)

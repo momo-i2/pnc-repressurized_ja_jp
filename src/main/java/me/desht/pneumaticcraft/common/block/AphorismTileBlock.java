@@ -47,7 +47,6 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -74,8 +73,8 @@ public class AphorismTileBlock extends AbstractPneumaticCraftBlock implements Co
             Block.box(15, 0, 0, 16, 16, 16),
     };
 
-    public AphorismTileBlock() {
-        super(Block.Properties.of().mapColor(MapColor.QUARTZ).strength(1.5f, 4.0f).noCollission());
+    public AphorismTileBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(INVISIBLE, false));
     }
 

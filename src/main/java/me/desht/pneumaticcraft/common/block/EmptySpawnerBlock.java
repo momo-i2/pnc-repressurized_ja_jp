@@ -17,7 +17,6 @@
 
 package me.desht.pneumaticcraft.common.block;
 
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.state.BlockState;
@@ -25,8 +24,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class EmptySpawnerBlock extends AbstractPneumaticCraftBlock {
-    public EmptySpawnerBlock() {
-        super(ModBlocks.defaultProps().noOcclusion());
+    public EmptySpawnerBlock(Properties props) {
+        super(props);
     }
 
     @Override

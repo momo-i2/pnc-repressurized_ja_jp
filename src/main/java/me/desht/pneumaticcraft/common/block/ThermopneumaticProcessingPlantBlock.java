@@ -1,7 +1,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.processing.ThermoPlantBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
@@ -57,8 +56,8 @@ public class ThermopneumaticProcessingPlantBlock extends AbstractPneumaticCraftB
     private static final VoxelShape SHAPE_W = VoxelShapeUtils.rotateY(SHAPE_N, 270);
     private static final VoxelShape[] SHAPES = { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public ThermopneumaticProcessingPlantBlock() {
-        super(ModBlocks.defaultProps().noOcclusion());
+    public ThermopneumaticProcessingPlantBlock(Properties props) {
+        super(props);
     }
 
     @Override

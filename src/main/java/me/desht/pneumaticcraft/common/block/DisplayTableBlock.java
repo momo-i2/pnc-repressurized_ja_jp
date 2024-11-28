@@ -1,7 +1,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.DisplayTableBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.thirdparty.ModdedWrenchUtils;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
 import net.minecraft.core.BlockPos;
@@ -40,8 +39,8 @@ public class DisplayTableBlock extends AbstractPneumaticCraftBlock implements Pn
 
     private static final VoxelShape TOP = Block.box(0, 13, 0, 16, 16, 16);
 
-    public DisplayTableBlock() {
-        super(ModBlocks.defaultProps());
+    public DisplayTableBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState()
                 .setValue(NE, false)
                 .setValue(NW, false)
@@ -236,6 +235,10 @@ public class DisplayTableBlock extends AbstractPneumaticCraftBlock implements Pn
 
     public static class Shelf extends DisplayTableBlock {
         private static final VoxelShape[] SHAPE_CACHE = new VoxelShape[16];
+
+        public Shelf(Properties props) {
+            super(props);
+        }
 
         @Override
         public double getTableHeight() {

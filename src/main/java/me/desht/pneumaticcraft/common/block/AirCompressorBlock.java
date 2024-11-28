@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.api.block.PNCBlockStateProperties;
 import me.desht.pneumaticcraft.common.block.entity.compressor.AirCompressorBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -63,8 +62,9 @@ public class AirCompressorBlock extends AbstractPneumaticCraftBlock implements P
     private static final VoxelShape SHAPE_W = VoxelShapeUtils.rotateY(SHAPE_S, 90);
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_S, SHAPE_W, SHAPE_N, SHAPE_E };
 
-    public AirCompressorBlock() {
-        super(ModBlocks.defaultProps());
+    public AirCompressorBlock(Properties props) {
+        super(props);
+
         registerDefaultState(defaultBlockState().setValue(PNCBlockStateProperties.ON, false));
     }
 

@@ -3,7 +3,6 @@ package me.desht.pneumaticcraft.common.block;
 import me.desht.pneumaticcraft.common.block.entity.AbstractAirHandlingBlockEntity;
 import me.desht.pneumaticcraft.common.block.entity.tube.TubeJunctionBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -43,8 +42,8 @@ public class TubeJunctionBlock extends AbstractPneumaticCraftBlock implements Pn
         SHAPES.put(Axis.X, VoxelShapeUtils.rotateY(SHAPES.get(Axis.Z), 90));
     }
 
-    public TubeJunctionBlock() {
-        super(ModBlocks.defaultProps());
+    public TubeJunctionBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState().setValue(BlockStateProperties.AXIS, Axis.Y));
     }

@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.GasLiftBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -51,8 +50,8 @@ public class GasLiftBlock extends AbstractPneumaticCraftBlock implements Pneumat
             Block.box(14, 14, 2, 16, 16, 14)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public GasLiftBlock() {
-        super(ModBlocks.defaultProps());
+    public GasLiftBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
                 .setValue(UP, false)

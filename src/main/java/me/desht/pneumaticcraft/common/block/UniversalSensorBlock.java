@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.UniversalSensorBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.variables.GlobalVariableManager;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -32,8 +31,8 @@ public class UniversalSensorBlock extends AbstractPneumaticCraftBlock implements
             Block.box(1, 0, 1, 15, 2, 15),
             BooleanOp.OR);
 
-    public UniversalSensorBlock() {
-        super(ModBlocks.defaultProps());
+    public UniversalSensorBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
                 .setValue(NORTH, false)

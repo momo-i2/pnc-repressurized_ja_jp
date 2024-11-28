@@ -4,7 +4,6 @@ import me.desht.pneumaticcraft.common.block.entity.processing.PressureChamberInt
 import me.desht.pneumaticcraft.common.block.entity.processing.PressureChamberValveBlockEntity;
 import me.desht.pneumaticcraft.common.block.entity.processing.PressureChamberWallBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModCriterionTriggers;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
@@ -57,8 +56,8 @@ public class PressureChamberInterfaceBlock extends AbstractPneumaticCraftBlock
         DOORS.put(Direction.EAST, Block.box(14, 3, 3, 15, 13, 13));
     }
 
-    public PressureChamberInterfaceBlock() {
-        super(ModBlocks.defaultProps());
+    public PressureChamberInterfaceBlock(Properties props) {
+        super(props);
     }
 
     @Override

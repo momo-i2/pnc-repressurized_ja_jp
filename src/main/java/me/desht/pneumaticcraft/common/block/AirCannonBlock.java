@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.AirCannonBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -31,8 +30,8 @@ import org.jetbrains.annotations.Nullable;
 public class AirCannonBlock extends AbstractPneumaticCraftBlock implements PneumaticCraftEntityBlock {
     private static final VoxelShape SHAPE = Block.box(1, 0, 1, 15, 3, 15);
 
-    public AirCannonBlock() {
-        super(ModBlocks.defaultProps());
+    public AirCannonBlock(Properties props) {
+        super(props);
     }
 
     @Override

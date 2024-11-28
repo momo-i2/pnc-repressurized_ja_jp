@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.drone.ProgrammableControllerBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -35,8 +34,8 @@ import org.jetbrains.annotations.Nullable;
 
 public class ProgrammableControllerBlock extends AbstractPneumaticCraftBlock implements PneumaticCraftEntityBlock {
 
-    public ProgrammableControllerBlock() {
-        super(ModBlocks.defaultProps());
+    public ProgrammableControllerBlock(Properties props) {
+        super(props);
     }
 
     @Override

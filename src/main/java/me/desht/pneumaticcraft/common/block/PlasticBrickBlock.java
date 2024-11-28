@@ -22,7 +22,6 @@ import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.PNCDamageSource;
 import me.desht.pneumaticcraft.common.config.ConfigHelper;
 import me.desht.pneumaticcraft.common.item.ICustomTooltipName;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.upgrades.ModUpgrades;
 import net.minecraft.core.BlockPos;
@@ -41,7 +40,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -61,11 +59,7 @@ public class PlasticBrickBlock extends Block implements ColorHandlers.ITintableB
     private final DyeColor dyeColor;
     private final int tintColor;
 
-    public PlasticBrickBlock(DyeColor dyeColor) {
-        this(ModBlocks.defaultProps().sound(SoundType.WOOD).strength(2f), dyeColor);
-    }
-
-    PlasticBrickBlock(BlockBehaviour.Properties props, DyeColor dyeColor) {
+    public PlasticBrickBlock(BlockBehaviour.Properties props, DyeColor dyeColor) {
         super(props);
 
         this.dyeColor = dyeColor;

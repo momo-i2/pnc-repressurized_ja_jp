@@ -20,7 +20,6 @@ package me.desht.pneumaticcraft.common.block;
 import me.desht.pneumaticcraft.common.block.entity.utility.KeroseneLampBlockEntity;
 import me.desht.pneumaticcraft.common.config.ConfigHelper;
 import me.desht.pneumaticcraft.common.item.ICustomTooltipName;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.util.DirectionUtil;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
@@ -61,8 +60,8 @@ public class KeroseneLampBlock extends AbstractPneumaticCraftBlock implements Pn
 
     public static final EnumProperty<Direction> CONNECTED = EnumProperty.create("connected", Direction.class);
 
-    public KeroseneLampBlock() {
-        super(ModBlocks.defaultProps().lightLevel(state -> state.getValue(LIT) ? 15 : 0));
+    public KeroseneLampBlock(Properties props) {
+        super(props);
         registerDefaultState(defaultBlockState().setValue(LIT, false));
     }
 

@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.utility.SentryTurretBlockEntity;
 import me.desht.pneumaticcraft.common.registry.ModBlockEntityTypes;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -64,8 +63,8 @@ public class SentryTurretBlock extends AbstractPneumaticCraftBlock implements Pn
             Block.box(14, 3.5, 0, 16, 4.5, 2)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public SentryTurretBlock() {
-        super(ModBlocks.defaultProps());
+    public SentryTurretBlock(Properties props) {
+        super(props);
     }
 
     @Override

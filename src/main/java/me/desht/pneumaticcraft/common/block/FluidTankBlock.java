@@ -22,7 +22,6 @@ import me.desht.pneumaticcraft.client.render.fluid.RenderFluidTank;
 import me.desht.pneumaticcraft.common.block.entity.AbstractFluidTankBlockEntity;
 import me.desht.pneumaticcraft.common.item.IFluidCapProvider;
 import me.desht.pneumaticcraft.common.item.IFluidRendered;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.upgrades.UpgradableItemUtils;
@@ -88,8 +87,8 @@ public class FluidTankBlock extends AbstractPneumaticCraftBlock
 
     private final Size size;
 
-    public FluidTankBlock(Size size) {
-        super(ModBlocks.defaultProps());
+    public FluidTankBlock(Properties props, Size size) {
+        super(props);
         this.size = size;
 
         registerDefaultState(defaultBlockState().setValue(UP, false).setValue(DOWN, false));

@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.block.entity.heat.VortexTubeBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.util.VoxelShapeUtils;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
@@ -72,8 +71,8 @@ public class VortexTubeBlock extends AbstractPneumaticCraftBlock implements Colo
 
     private static final VoxelShape[] SHAPES = new VoxelShape[] { SHAPE_D, SHAPE_U, SHAPE_N, SHAPE_S, SHAPE_W, SHAPE_E };
 
-    public VortexTubeBlock() {
-        super(ModBlocks.defaultProps());
+    public VortexTubeBlock(Properties props) {
+        super(props);
 
         registerDefaultState(defaultBlockState()
             .setValue(DOWN, false)

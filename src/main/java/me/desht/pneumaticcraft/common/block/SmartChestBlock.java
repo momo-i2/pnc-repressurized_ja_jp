@@ -19,7 +19,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.api.item.IInventoryItem;
 import me.desht.pneumaticcraft.common.block.entity.utility.SmartChestBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModDataComponents;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.util.PneumaticCraftUtils;
@@ -47,8 +46,8 @@ import static me.desht.pneumaticcraft.common.util.PneumaticCraftUtils.xlate;
 public class SmartChestBlock extends AbstractPneumaticCraftBlock implements PneumaticCraftEntityBlock, IBlockComparatorSupport {
     private static final VoxelShape SHAPE = box(1, 0, 1, 15, 15, 15);
 
-    public SmartChestBlock() {
-        super(ModBlocks.reinforcedStoneProps());
+    public SmartChestBlock(Properties props) {
+        super(props);
     }
 
     @Override

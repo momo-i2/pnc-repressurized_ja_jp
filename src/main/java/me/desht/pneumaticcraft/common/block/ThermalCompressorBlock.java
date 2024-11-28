@@ -2,7 +2,6 @@ package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.block.entity.compressor.ThermalCompressorBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -41,8 +40,8 @@ public class ThermalCompressorBlock extends AbstractPneumaticCraftBlock
             Block.box(4, 0, 4, 12, 1, 12)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public ThermalCompressorBlock() {
-        super(ModBlocks.defaultProps());
+    public ThermalCompressorBlock(Properties props) {
+        super(props);
     }
 
     @Override

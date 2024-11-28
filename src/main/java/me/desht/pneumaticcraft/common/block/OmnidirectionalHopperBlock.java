@@ -20,7 +20,6 @@ package me.desht.pneumaticcraft.common.block;
 import me.desht.pneumaticcraft.client.ColorHandlers;
 import me.desht.pneumaticcraft.common.block.entity.hopper.AbstractHopperBlockEntity;
 import me.desht.pneumaticcraft.common.block.entity.hopper.OmnidirectionalHopperBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import me.desht.pneumaticcraft.common.registry.ModItems;
 import me.desht.pneumaticcraft.common.upgrades.ModUpgrades;
 import me.desht.pneumaticcraft.common.upgrades.UpgradableItemUtils;
@@ -76,13 +75,14 @@ public class OmnidirectionalHopperBlock extends AbstractPneumaticCraftBlock
     private static final VoxelShape[] OUTPUT_SHAPES = {
             OUTPUT_DOWN, OUTPUT_UP, OUTPUT_NORTH, OUTPUT_SOUTH, OUTPUT_WEST, OUTPUT_EAST
     };
+
     private static final VoxelShape[] SHAPE_CACHE = new VoxelShape[36];
 
     // standard FACING property is used for the output direction
     public static final EnumProperty<Direction> INPUT_FACING = EnumProperty.create("input", Direction.class);
 
-    public OmnidirectionalHopperBlock() {
-        super(ModBlocks.defaultProps());
+    public OmnidirectionalHopperBlock(Properties props) {
+        super(props);
     }
 
     @Override

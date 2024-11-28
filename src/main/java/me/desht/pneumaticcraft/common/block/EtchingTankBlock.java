@@ -18,7 +18,6 @@
 package me.desht.pneumaticcraft.common.block;
 
 import me.desht.pneumaticcraft.common.block.entity.processing.EtchingTankBlockEntity;
-import me.desht.pneumaticcraft.common.registry.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
@@ -51,8 +50,8 @@ public class EtchingTankBlock extends AbstractPneumaticCraftBlock implements Pne
             Block.box(0, 1, 2, 2, 9, 14)
     ).reduce((v1, v2) -> Shapes.join(v1, v2, BooleanOp.OR)).get();
 
-    public EtchingTankBlock() {
-        super(ModBlocks.defaultProps());
+    public EtchingTankBlock(Properties props) {
+        super(props);
     }
 
     @Override

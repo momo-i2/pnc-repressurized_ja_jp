@@ -18,11 +18,9 @@
 package me.desht.pneumaticcraft.common.block;
 
 import net.minecraft.world.level.block.AirBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 public class KeroseneLampLightBlock extends AirBlock {
-    public KeroseneLampLightBlock() {
-        super(Block.Properties.ofFullCopy(Blocks.AIR).lightLevel(blockstate -> 15));
+    public KeroseneLampLightBlock(Properties props) {
+        super(props);
     }
 }
