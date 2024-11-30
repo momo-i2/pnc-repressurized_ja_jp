@@ -53,7 +53,7 @@ public class DroneColorCrafting extends ShapelessRecipe {
     @Override
     public ItemStack assemble(CraftingInput container, HolderLookup.Provider registryAccess) {
         List<ItemStack> stacks = ModCraftingHelper.findItems(container, ITEM_PREDICATES);
-        ItemStack drone = stacks.get(0).copy();
+        ItemStack drone = stacks.get(0).copyWithCount(1);
         DyeColor dyeColor = DyeColor.getColor(stacks.get(1));
         if (drone.isEmpty() || dyeColor == null) {
             return ItemStack.EMPTY;
