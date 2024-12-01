@@ -16,6 +16,7 @@ Changes are in reverse chronological order; newest changes at the top.
 * Only fluid container items which have a crafting remaining item can now be used to craft Speed Upgrades
   * Avoids problems with fluid tanks (e.g. Mekanism tanks) being consumed when crafting
 * Fixed the Creative Compressor adjuster GUI not functioning correctly in some locales
+* Fixed crafting-related item dupe issue
 
 ## [8.2.4]
 
