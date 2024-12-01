@@ -34,6 +34,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.common.util.Lazy;
 import net.neoforged.neoforge.fluids.FluidUtil;
 import net.neoforged.neoforge.fluids.capability.IFluidHandler;
 import net.neoforged.neoforge.fluids.capability.IFluidHandlerItem;
@@ -44,14 +45,13 @@ public class LiquidHopperBlock extends OmnidirectionalHopperBlock implements Pne
         super(props);
     }
 
-    @org.jetbrains.annotations.Nullable
     @Override
     public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
         return new LiquidHopperBlockEntity(pPos, pState);
     }
 
     public static class ItemBlockLiquidHopper extends BlockItem implements ColorHandlers.ITintableItem, IFluidRendered, IFluidCapProvider {
-        RenderLiquidHopper.ItemRenderInfoProvider renderInfoProvider = null;
+        Lazy<RenderLiquidHopper.ItemRenderInfoProvider> renderInfoProvider = Lazy.of(RenderLiquidHopper.ItemRenderInfoProvider::new);
 
         public ItemBlockLiquidHopper(Block block) {
             super(block, ModItems.defaultProps());
@@ -80,8 +80,7 @@ public class LiquidHopperBlock extends OmnidirectionalHopperBlock implements Pne
 
         @Override
         public IFluidItemRenderInfoProvider getFluidItemRenderer() {
-            if (renderInfoProvider == null) renderInfoProvider = new RenderLiquidHopper.ItemRenderInfoProvider();
-            return renderInfoProvider;
+            return renderInfoProvider.get();
         }
 
         @Override
